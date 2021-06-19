@@ -2,7 +2,7 @@
 layout: post
 title: 进击的 NPM
 date: 2020-12-10 10:10:00
-categories: Node.JS
+categories: Node.js
 ---
 
 # NPM2

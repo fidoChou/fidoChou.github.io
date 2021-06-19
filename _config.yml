@@ -129,3 +129,17 @@ live2d:
     vOffset: 0  # 调节垂直位置
   mobile:
     show: false
+
+feed:
+  enable: true
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content: false
+  content_limit: false
+  content_limit_delim: " "
+  order_by: -date
+  icon: icon.webp
+  autodiscovery: true
+  template:

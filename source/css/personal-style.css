@@ -2,13 +2,32 @@
   transition-duration: .5s;
   scroll-behavior: smooth;
 }
-body {
+
+html {
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
 }
 
+.article-content blockquote {
+  background: #FFF;
+  padding: 2px 10px
+}
+.article-content blockquote  p {
+  line-height: 1em;
+  font-size: 13px;
+}
+
+.page-header {
+  background: transparent;
+}
+
+body {
+  background: rgba(80, 213, 227, 0.35);
+}
+
+
 .layout {
+  overflow: hidden;
   position: relative;
   display: flex;
   flex-direction: row;
@@ -213,4 +232,8 @@ code {
 .layout .category-box .category-list .category-item .category-size {
   font-family: serif;
   font-weight: bold;
+}
+
+.category-box--top {
+  margin-bottom: 15px;
 }
