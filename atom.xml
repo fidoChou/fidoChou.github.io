@@ -6,7 +6,7 @@
   <link href="http://jocolorful.com/atom.xml" rel="self"/>
   
   <link href="http://jocolorful.com/"/>
-  <updated>2021-06-21T02:10:56.042Z</updated>
+  <updated>2021-06-21T11:28:05.877Z</updated>
   <id>http://jocolorful.com/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>01. Node.js 单测框架对比</title>
+    <link href="http://jocolorful.com/2021/06/21/Node-01-%E6%96%AD%E8%A8%80-1/"/>
+    <id>http://jocolorful.com/2021/06/21/Node-01-%E6%96%AD%E8%A8%80-1/</id>
+    <published>2021-06-21T11:11:22.000Z</published>
+    <updated>2021-06-21T11:28:05.877Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Node.js" scheme="http://jocolorful.com/categories/Node-js/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>晴雅集</title>
     <link href="http://jocolorful.com/2021/06/20/%E6%99%B4%E9%9B%85%E9%9B%86/"/>
     <id>http://jocolorful.com/2021/06/20/%E6%99%B4%E9%9B%85%E9%9B%86/</id>
     <published>2021-06-20T05:37:58.000Z</published>
-    <updated>2021-06-21T02:10:56.042Z</updated>
+    <updated>2021-06-21T11:24:02.945Z</updated>
     
     
       
@@ -422,29 +445,6 @@
     <id>http://jocolorful.com/2020/08/29/climb/</id>
     <published>2020-08-29T10:10:01.000Z</published>
     <updated>2021-06-19T03:06:55.745Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="生活随感" scheme="http://jocolorful.com/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E6%84%9F/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>定时整理 - 夏日随想</title>
-    <link href="http://jocolorful.com/2020/08/06/%E5%A4%8F%E6%97%A5%E9%9A%8F%E6%83%B3/"/>
-    <id>http://jocolorful.com/2020/08/06/%E5%A4%8F%E6%97%A5%E9%9A%8F%E6%83%B3/</id>
-    <published>2020-08-06T05:41:47.000Z</published>
-    <updated>2021-06-19T03:02:05.516Z</updated>
     
     
       
