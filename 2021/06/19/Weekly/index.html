@@ -6,6 +6,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   
   <title>Weekly | Jojo&#39;s World</title>
 
@@ -15,15 +16,15 @@
     <meta name="keywords" content="jojo,前端,户外领队,frontend,nodejs,JavaScript,Outdoor Leader" />
   
 
-  <meta name="description" content="2021.06.14 - 2021.06.20memory-inspector for chrome 2021.06.07 - 2021.06.11Making JavaScript run fast on WebAssemblyhttps:&#x2F;&#x2F;jsonmatic.com&#x2F;https:&#x2F;&#x2F;domevents.dev&#x2F;">
+  <meta name="description" content="2021.06.14 - 2021.06.20JS 内存使用的基准测试  根据v8 团队的研究：网络上 35% 的内存分配与 JavaScript 相关；10% 用于表示内存中的 DOM 元素；剩下的 55% 是图像。measureUserAgentSpecificMemory API 目前仅限于 JS 和 DOM 相关信息，但确实也占据页面实际内存使用量的很大一部分（约 45%）。  总结  内">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Weekly">
 <meta property="og:url" content="http://jocolorful.com/2021/06/19/Weekly/index.html">
 <meta property="og:site_name" content="Jojo&#39;s World">
-<meta property="og:description" content="2021.06.14 - 2021.06.20memory-inspector for chrome 2021.06.07 - 2021.06.11Making JavaScript run fast on WebAssemblyhttps:&#x2F;&#x2F;jsonmatic.com&#x2F;https:&#x2F;&#x2F;domevents.dev&#x2F;">
+<meta property="og:description" content="2021.06.14 - 2021.06.20JS 内存使用的基准测试  根据v8 团队的研究：网络上 35% 的内存分配与 JavaScript 相关；10% 用于表示内存中的 DOM 元素；剩下的 55% 是图像。measureUserAgentSpecificMemory API 目前仅限于 JS 和 DOM 相关信息，但确实也占据页面实际内存使用量的很大一部分（约 45%）。  总结  内">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-06-19T13:20:31.000Z">
-<meta property="article:modified_time" content="2021-06-19T14:11:02.056Z">
+<meta property="article:modified_time" content="2021-06-20T02:31:24.000Z">
 <meta property="article:author" content="Jojo">
 <meta name="twitter:card" content="summary">
 
@@ -146,7 +147,17 @@ ga('send', 'pageview');
 
   <div class="article-content">
     
-      <h4 id="2021-06-14-2021-06-20"><a href="#2021-06-14-2021-06-20" class="headerlink" title="2021.06.14 - 2021.06.20"></a>2021.06.14 - 2021.06.20</h4><p><a href="https://developer.chrome.com/blog/memory-inspector/" target="_blank" rel="noopener">memory-inspector for chrome</a></p>
+      <h4 id="2021-06-14-2021-06-20"><a href="#2021-06-14-2021-06-20" class="headerlink" title="2021.06.14 - 2021.06.20"></a>2021.06.14 - 2021.06.20</h4><p><a href="https://blog.webpagetest.org/posts/benchmarking-javascript-memory-usage/" target="_blank" rel="noopener">JS 内存使用的基准测试</a></p>
+<ol>
+<li>根据v8 团队的研究：网络上 35% 的内存分配与 JavaScript 相关；10% 用于表示内存中的 DOM 元素；剩下的 55% 是图像。<a href="https://web.dev/monitor-total-page-memory-usage/" target="_blank" rel="noopener">measureUserAgentSpecificMemory</a> API 目前仅限于 JS 和 DOM 相关信息，但确实也占据页面实际内存使用量的很大一部分（约 45%）。</li>
+</ol>
+<p>总结</p>
+<ol>
+<li>内存仍然是 Web 性能的一个尚未开发的主要领域，但这可能需要改变。随着发布的 JavaScript 数量不断增加，内存使用量也在增加。</li>
+<li>我们仍然需要更多信息来完善全貌。在任何时间点，浏览器实际可用的内存有多少？内存与关键业务和用户参与度指标有何关联？什么是内存的使用不与JavaScript和DOM的复杂性？</li>
+<li>虽然今天使用真实用户监控为您的站点获取这些数据可能存在挑战，但我在此处进行测试所采用的相同方法（一些 Chrome 标志与自定义指标配对）使您可以开始将内存相关数据提取到您的测试结果今天，我也喜欢看到人们这样做只是所以我们可以更多地了解我们是如何做的今天，其意义是什么，以及如何开始好转。</li>
+</ol>
+<p><a href="https://developer.chrome.com/blog/memory-inspector/" target="_blank" rel="noopener">memory-inspector for chrome</a></p>
 <h4 id="2021-06-07-2021-06-11"><a href="#2021-06-07-2021-06-11" class="headerlink" title="2021.06.07 - 2021.06.11"></a>2021.06.07 - 2021.06.11</h4><p><a href="https://bytecodealliance.org/articles/making-javascript-run-fast-on-webassembly" target="_blank" rel="noopener">Making JavaScript run fast on WebAssembly</a><br><a href="https://jsonmatic.com/" target="_blank" rel="noopener">https://jsonmatic.com/</a><br><a href="https://domevents.dev/" target="_blank" rel="noopener">https://domevents.dev/</a></p>
 
     
@@ -329,5 +340,5 @@ gitalk.render('gitalk-container')
   }
 </script>
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":200,"height":300,"hOffset":250,"vOffset":0},"mobile":{"show":false},"log":false,"tagMode":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":200,"height":300,"hOffset":250,"vOffset":0},"mobile":{"show":true},"log":false,"tagMode":false});</script></body>
 </html>

@@ -6,7 +6,7 @@
   <link href="http://jocolorful.com/atom.xml" rel="self"/>
   
   <link href="http://jocolorful.com/"/>
-  <updated>2021-06-19T14:07:05.929Z</updated>
+  <updated>2021-06-20T06:14:21.000Z</updated>
   <id>http://jocolorful.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>晴雅集</title>
+    <link href="http://jocolorful.com/2021/06/20/%E6%99%B4%E9%9B%85%E9%9B%86/"/>
+    <id>http://jocolorful.com/2021/06/20/%E6%99%B4%E9%9B%85%E9%9B%86/</id>
+    <published>2021-06-20T05:37:58.000Z</published>
+    <updated>2021-06-20T06:14:21.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>奇怪的言论又来了</title>
@@ -63,7 +84,7 @@
     <link href="http://jocolorful.com/2021/06/19/Weekly/"/>
     <id>http://jocolorful.com/2021/06/19/Weekly/</id>
     <published>2021-06-19T13:20:31.000Z</published>
-    <updated>2021-06-19T14:11:02.056Z</updated>
+    <updated>2021-06-20T02:31:24.000Z</updated>
     
     
       
@@ -437,29 +458,6 @@
     
     
     <category term="生活随感" scheme="http://jocolorful.com/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E6%84%9F/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>如何优雅地处理前端异常？</title>
-    <link href="http://jocolorful.com/2020/07/09/catch-error/"/>
-    <id>http://jocolorful.com/2020/07/09/catch-error/</id>
-    <published>2020-07-09T10:02:25.000Z</published>
-    <updated>2021-06-19T03:06:59.529Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="前端相关" scheme="http://jocolorful.com/categories/%E5%89%8D%E7%AB%AF%E7%9B%B8%E5%85%B3/"/>
     
     
   </entry>
