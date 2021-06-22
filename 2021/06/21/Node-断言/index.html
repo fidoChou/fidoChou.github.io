@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   
-  <title>GET 和 POST 的差异 | Jojo&#39;s World</title>
+  <title>Node.js 单测框架 | Jojo&#39;s World</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -16,17 +16,19 @@
     <meta name="keywords" content="jojo,前端,户外领队,frontend,nodejs,JavaScript,Outdoor Leader" />
   
 
-  <meta name="description" content="原文：都9102年了，还问GET和POST的区别  GET 和 POST 只是 HTTP 协议中两种请求方式，而 HTTP 协议是基于 TCP&#x2F;IP 的应用层协议，无论 GET 还是 POST，用的都是同一个传输层协议，所以在传输层上，没有任何区别。  当 GET 和 POST 「不携带参数」时，最大的区别是第一行方法名不同:请求报文第一行 1GET &#x2F;uri HTTP&#x2F;1.1 \r\n  1PO">
+  <meta name="description" content="assert - 断言Node 原生 assert 模块 Node 的原生模块 assert 基于 Node assert 测试框架: power-assert  单测的意义：Egg.js 单元测试 单测框架对比 从 npm 搜索 test framework     测试库 优点 缺点    Mocha     AVA 简单的 API 测试 测试 case 本身比较复杂   power-asse">
 <meta property="og:type" content="article">
-<meta property="og:title" content="GET 和 POST 的差异">
-<meta property="og:url" content="http://jocolorful.com/2020/07/07/2020-POST/index.html">
+<meta property="og:title" content="Node.js 单测框架">
+<meta property="og:url" content="http://jocolorful.com/2021/06/21/Node-%E6%96%AD%E8%A8%80/index.html">
 <meta property="og:site_name" content="Jojo&#39;s World">
-<meta property="og:description" content="原文：都9102年了，还问GET和POST的区别  GET 和 POST 只是 HTTP 协议中两种请求方式，而 HTTP 协议是基于 TCP&#x2F;IP 的应用层协议，无论 GET 还是 POST，用的都是同一个传输层协议，所以在传输层上，没有任何区别。  当 GET 和 POST 「不携带参数」时，最大的区别是第一行方法名不同:请求报文第一行 1GET &#x2F;uri HTTP&#x2F;1.1 \r\n  1PO">
+<meta property="og:description" content="assert - 断言Node 原生 assert 模块 Node 的原生模块 assert 基于 Node assert 测试框架: power-assert  单测的意义：Egg.js 单元测试 单测框架对比 从 npm 搜索 test framework     测试库 优点 缺点    Mocha     AVA 简单的 API 测试 测试 case 本身比较复杂   power-asse">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-07-07T06:43:46.000Z">
-<meta property="article:modified_time" content="2021-06-21T11:12:42.256Z">
+<meta property="og:image" content="http://jocolorful.com/images/test.png">
+<meta property="article:published_time" content="2021-06-21T11:11:22.000Z">
+<meta property="article:modified_time" content="2021-06-22T01:57:09.177Z">
 <meta property="article:author" content="Jojo">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://jocolorful.com/images/test.png">
 
   
 
@@ -99,17 +101,22 @@ ga('send', 'pageview');
   
 
   
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#assert-断言"><span class="toc-text">assert - 断言</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Node-原生-assert-模块"><span class="toc-text">Node 原生 assert 模块</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#单测的意义："><span class="toc-text">单测的意义：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#单测框架对比"><span class="toc-text">单测框架对比</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-text">总结</span></a></li></ol></li></ol>
+  </div>
+
 
 
 <div class="content content-post CENTER">
-   <article id="post-2020-POST" class="article article-type-post" itemprop="blogPost">
+   <article id="post-Node-断言" class="article article-type-post" itemprop="blogPost">
   <header class="article-header">
-    <h1 class="post-title">GET 和 POST 的差异</h1>
+    <h1 class="post-title">Node.js 单测框架</h1>
 
     <div class="article-meta">
       <span>
         <i class="icon-calendar"></i>
-        <span>2020.07.07</span>
+        <span>2021.06.21</span>
       </span>
 
       
@@ -122,7 +129,7 @@ ga('send', 'pageview');
       
   <span class="article-category">
     <i class="icon-list"></i>
-    <a class="article-category-link" href="/categories/%E5%8D%8F%E8%AE%AE-%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/">协议 - 相关知识</a>
+    <a class="article-category-link" href="/categories/Node-js/">Node.js</a>
   </span>
 
 
@@ -142,27 +149,56 @@ ga('send', 'pageview');
 
   <div class="article-content">
     
-      <p>原文：<a href="https://segmentfault.com/a/1190000018129846" target="_blank" rel="noopener">都9102年了，还问GET和POST的区别</a></p>
-<ol>
-<li><p>GET 和 POST 只是 HTTP 协议中两种请求方式，而 HTTP 协议是基于 TCP/IP 的应用层协议，无论 GET 还是 POST，用的都是同一个传输层协议，所以在传输层上，没有任何区别。</p>
-<ol>
-<li><p>当 GET 和 POST 「不携带参数」时，最大的区别是第一行方法名不同:<br>请求报文第一行</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">GET /uri HTTP/1.1 \r\n<br></code></pre></td></tr></table></figure>
-
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">POST /uri HTTP/1.1 \r\n<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>当 GET 和 POST 「携带参数」时，安装约定 GET 方法的参数应该放在 URL 里，POST 方法的参数应该放在  body 中</p>
-<p>GET 简约版报文</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sh">GET /index.php?name=qiming.c&amp;age=22 HTTP/1.1<br>Host: localhost<br></code></pre></td></tr></table></figure>
-
-<p>POST 简约版报文</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs sh">POST /index.php HTTP/1.1<br>Host: localhost<br>Content-Type: application/x-www-form-urlencoded<br>name=qiming.c&amp;age=22<br></code></pre></td></tr></table></figure>
-</li>
-</ol>
-</li>
-<li><p>「浏览器」的 URL 有长度限制是出于「安全」和「性能」考虑，在解析长 URL 时需防止恶意构造长 URL 来进行攻击，和 HTTP 协议本身没有关系。</p>
-</li>
-</ol>
+      <h1 id="assert-断言"><a href="#assert-断言" class="headerlink" title="assert - 断言"></a>assert - 断言</h1><h2 id="Node-原生-assert-模块"><a href="#Node-原生-assert-模块" class="headerlink" title="Node 原生 assert 模块"></a>Node 原生 assert 模块</h2><ul>
+<li>Node 的原生模块 <a href="https://nodejs.org/api/assert.html" target="_blank" rel="noopener">assert</a></li>
+<li>基于 Node assert 测试框架: <a href="https://github.com/power-assert-js/power-assert" target="_blank" rel="noopener">power-assert</a></li>
+</ul>
+<h1 id="单测的意义："><a href="#单测的意义：" class="headerlink" title="单测的意义："></a>单测的意义：</h1><p><a href="https://eggjs.org/zh-cn/core/unittest.html" target="_blank" rel="noopener">Egg.js 单元测试</a></p>
+<h1 id="单测框架对比"><a href="#单测框架对比" class="headerlink" title="单测框架对比"></a>单测框架对比</h1><blockquote>
+<p>从 npm 搜索 <a href="https://www.npmjs.com/search?q=test%20framework&page=1&ranking=popularity" target="_blank" rel="noopener">test framework</a></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>测试库</th>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="http://mochajs.org/" target="_blank" rel="noopener">Mocha</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/avajs/ava" target="_blank" rel="noopener">AVA</a></td>
+<td>简单的 API 测试</td>
+<td>测试 case 本身比较复杂</td>
+</tr>
+<tr>
+<td><a href="https://github.com/power-assert-js/power-assert" target="_blank" rel="noopener">power-assert</a></td>
+<td>基于原生的 assert 模块</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/visionmedia/supertest" target="_blank" rel="noopener">SuperTest</a></td>
+<td>适合接口测试</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://jestjs.io/zh-Hans/" target="_blank" rel="noopener">Jest</a></td>
+<td>elegant！simple！</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/power-assert-js/power-assert" target="_blank" rel="noopener">power-assert</a></td>
+<td>基于原生</td>
+<td>异步支持不优好</td>
+</tr>
+</tbody></table>
+<p>社区使用情况<br><img src="/images/test.png"  width="500px"/></p>
+<p>基于 Jest + supertest 一般可以打造出单测利器出来</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>如果让我重新选择测试单测框架，我会优先选择 Mocha + SuperTest</p>
 
     
   </div>
@@ -174,10 +210,10 @@ ga('send', 'pageview');
 
    
   <div class="box-prev-next clearfix">
-    <a class="show pull-left" href="/2020/07/01/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E9%87%8F%E5%8C%96%E6%A0%87%E5%87%86%E8%AF%BB%E5%90%8E%E6%84%9F/">
+    <a class="show pull-left" href="/2021/06/20/%E6%99%B4%E9%9B%85%E9%9B%86/">
         <i class="icon icon-angle-left"></i>
     </a>
-    <a class="show pull-right" href="/2020/07/09/catch-error/">
+    <a class="show pull-right" href="/2021/06/21/Node-debugger/">
         <i class="icon icon-angle-right"></i>
     </a>
   </div>

@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   
-  <title>assert - 断言 | Jojo&#39;s World</title>
+  <title>前端性能量化标准读后感 | Jojo&#39;s World</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -16,15 +16,15 @@
     <meta name="keywords" content="jojo,前端,户外领队,frontend,nodejs,JavaScript,Outdoor Leader" />
   
 
-  <meta name="description" content="assert - 断言Node 原生 assert 模块 Node 的原生模块 assert 基于 NodeAssert 测试框架: power-assert  单测的意义：Egg.js 单元测试 其他从 npm 搜索 test framework test framework 对比   测试库 优点 缺点    Mocha     ava 简单的 API 测试 测试 case 本身比较复杂">
+  <meta name="description" content="祭出原 issue 👉 前端性能量化标准 它正在发生吗？FP：First paint 第一个像素绘制时间FCP：First Content paint 首次内容绘制时间  window.performance.getEntriesByType(‘paint’)  当然也可以使用 lighthouse，这里我全局安装的 lighthouse   它是否有用？FMP： First meaningfu">
 <meta property="og:type" content="article">
-<meta property="og:title" content="assert - 断言">
-<meta property="og:url" content="http://jocolorful.com/2020/06/20/Node/01-%E6%96%AD%E8%A8%80/index.html">
+<meta property="og:title" content="前端性能量化标准读后感">
+<meta property="og:url" content="http://jocolorful.com/2020/07/01/%E5%89%8D%E7%AB%AF-%E6%80%A7%E8%83%BD%E9%87%8F%E5%8C%96%E6%A0%87%E5%87%86%E8%AF%BB%E5%90%8E%E6%84%9F/index.html">
 <meta property="og:site_name" content="Jojo&#39;s World">
-<meta property="og:description" content="assert - 断言Node 原生 assert 模块 Node 的原生模块 assert 基于 NodeAssert 测试框架: power-assert  单测的意义：Egg.js 单元测试 其他从 npm 搜索 test framework test framework 对比   测试库 优点 缺点    Mocha     ava 简单的 API 测试 测试 case 本身比较复杂">
+<meta property="og:description" content="祭出原 issue 👉 前端性能量化标准 它正在发生吗？FP：First paint 第一个像素绘制时间FCP：First Content paint 首次内容绘制时间  window.performance.getEntriesByType(‘paint’)  当然也可以使用 lighthouse，这里我全局安装的 lighthouse   它是否有用？FMP： First meaningfu">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-06-19T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-06-21T11:09:49.786Z">
+<meta property="article:published_time" content="2020-07-01T08:19:22.000Z">
+<meta property="article:modified_time" content="2021-06-22T01:59:38.425Z">
 <meta property="article:author" content="Jojo">
 <meta name="twitter:card" content="summary">
 
@@ -101,20 +101,20 @@ ga('send', 'pageview');
   
   <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#assert-断言"><span class="toc-text">assert - 断言</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Node-原生-assert-模块"><span class="toc-text">Node 原生 assert 模块</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#单测的意义："><span class="toc-text">单测的意义：</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#其他"><span class="toc-text">其他</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#test-framework-对比"><span class="toc-text">test framework 对比</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#它正在发生吗？"><span class="toc-text">它正在发生吗？</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#它是否有用？"><span class="toc-text">它是否有用？</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#它是否令人愉快的"><span class="toc-text">它是否令人愉快的</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#它是否可用-？"><span class="toc-text">它是否可用 ？</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#思考"><span class="toc-text">思考</span></a></li></ol>
   </div>
 
 
 
 <div class="content content-post CENTER">
-   <article id="post-Node/01-断言" class="article article-type-post" itemprop="blogPost">
+   <article id="post-前端-性能量化标准读后感" class="article article-type-post" itemprop="blogPost">
   <header class="article-header">
-    <h1 class="post-title">assert - 断言</h1>
+    <h1 class="post-title">前端性能量化标准读后感</h1>
 
     <div class="article-meta">
       <span>
         <i class="icon-calendar"></i>
-        <span>2020.06.20</span>
+        <span>2020.07.01</span>
       </span>
 
       
@@ -127,7 +127,7 @@ ga('send', 'pageview');
       
   <span class="article-category">
     <i class="icon-list"></i>
-    <a class="article-category-link" href="/categories/Node-js/">Node.js</a>
+    <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF%E7%9B%B8%E5%85%B3/">前端相关</a>
   </span>
 
 
@@ -147,47 +147,25 @@ ga('send', 'pageview');
 
   <div class="article-content">
     
-      <h1 id="assert-断言"><a href="#assert-断言" class="headerlink" title="assert - 断言"></a>assert - 断言</h1><h2 id="Node-原生-assert-模块"><a href="#Node-原生-assert-模块" class="headerlink" title="Node 原生 assert 模块"></a>Node 原生 assert 模块</h2><ol>
-<li>Node 的原生模块 <a href="https://nodejs.org/api/assert.html" target="_blank" rel="noopener">assert</a></li>
-<li>基于 NodeAssert 测试框架: <a href="https://github.com/power-assert-js/power-assert" target="_blank" rel="noopener">power-assert</a></li>
+      <p>祭出原 issue 👉 <a href="https://github.com/frontend9/fe9-library/issues/7" target="_blank" rel="noopener">前端性能量化标准</a></p>
+<h1 id="它正在发生吗？"><a href="#它正在发生吗？" class="headerlink" title="它正在发生吗？"></a>它正在发生吗？</h1><p>FP：First paint 第一个像素绘制时间<br>FCP：First Content paint 首次内容绘制时间</p>
+<ol>
+<li><p>window.performance.getEntriesByType(‘paint’)</p>
+</li>
+<li><p>当然也可以使用 lighthouse，<br>这里我全局安装的 lighthouse</p>
+</li>
 </ol>
-<h1 id="单测的意义："><a href="#单测的意义：" class="headerlink" title="单测的意义："></a>单测的意义：</h1><p><a href="https://eggjs.org/zh-cn/core/unittest.html" target="_blank" rel="noopener">Egg.js 单元测试</a></p>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>从 npm 搜索 <a href="https://www.npmjs.com/search?q=test%20framework&page=1&ranking=popularity" target="_blank" rel="noopener">test framework</a></p>
-<h2 id="test-framework-对比"><a href="#test-framework-对比" class="headerlink" title="test framework 对比"></a>test framework 对比</h2><table>
-<thead>
-<tr>
-<th>测试库</th>
-<th>优点</th>
-<th>缺点</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><a href="http://mochajs.org/" target="_blank" rel="noopener">Mocha</a></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="https://github.com/avajs/ava" target="_blank" rel="noopener">ava</a></td>
-<td>简单的 API 测试</td>
-<td>测试 case 本身比较复杂</td>
-</tr>
-<tr>
-<td><a href="https://github.com/power-assert-js/power-assert" target="_blank" rel="noopener">power-assert</a></td>
-<td>基于原生的 assert 模块</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="https://github.com/visionmedia/supertest" target="_blank" rel="noopener">supertest</a></td>
-<td>适合接口测试</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="https://jestjs.io/zh-Hans/" target="_blank" rel="noopener">jest</a></td>
-<td>elegant！simple！</td>
-<td></td>
-</tr>
-</tbody></table>
-<p>基于 jest + supertest 一般可以打造出简单 test 利器出来</p>
+<h1 id="它是否有用？"><a href="#它是否有用？" class="headerlink" title="它是否有用？"></a>它是否有用？</h1><p>FMP： First meaningful paint<br>hero element timing</p>
+<p>Lighthouse 使用的算法是：页面绘制布局「变化」最大的那次绘制（根据 页面高度/屏幕高度 调节权重）</p>
+<h1 id="它是否令人愉快的"><a href="#它是否令人愉快的" class="headerlink" title="它是否令人愉快的"></a>它是否令人愉快的</h1><p>Long tasks。</p>
+<p>JS 线程与 GUI 线程互斥。JS 如果在执行，那么渲染线程就会被阻塞。如果一个 LT 超过 50 ms ，就说明这个线程有问题。</p>
+<h1 id="它是否可用-？"><a href="#它是否可用-？" class="headerlink" title="它是否可用 ？"></a>它是否可用 ？</h1><p>TTI：Time to interactive（页面已经渲染并且可以响应用户交互）。不能响应用户的原因有：</p>
+<ol>
+<li>JS 的资源还未加载完。</li>
+<li>Long Task 阻塞了主线程</li>
+</ol>
+<h1 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h1><p>当然这片文章还提出了一些优化策略，优化过程应该是一个全链路的解决方案。</p>
+<p>关于测量标准记录这些，策略手段我想我的学习清单又是一篇长笔记！</p>
 
     
   </div>
@@ -202,7 +180,7 @@ ga('send', 'pageview');
     <a class="show pull-left" href="/2020/06/19/CSS%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%9A%848%E4%B8%AA%E6%8A%80%E5%B7%A7/">
         <i class="icon icon-angle-left"></i>
     </a>
-    <a class="show pull-right" href="/2020/07/01/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E9%87%8F%E5%8C%96%E6%A0%87%E5%87%86%E8%AF%BB%E5%90%8E%E6%84%9F/">
+    <a class="show pull-right" href="/2020/07/07/Http-POST-GET/">
         <i class="icon icon-angle-right"></i>
     </a>
   </div>

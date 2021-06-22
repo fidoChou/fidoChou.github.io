@@ -6,7 +6,7 @@
   <link href="http://jocolorful.com/atom.xml" rel="self"/>
   
   <link href="http://jocolorful.com/"/>
-  <updated>2021-06-21T11:28:05.877Z</updated>
+  <updated>2021-06-22T01:57:22.938Z</updated>
   <id>http://jocolorful.com/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>01. Node.js 单测框架对比</title>
-    <link href="http://jocolorful.com/2021/06/21/Node-01-%E6%96%AD%E8%A8%80-1/"/>
-    <id>http://jocolorful.com/2021/06/21/Node-01-%E6%96%AD%E8%A8%80-1/</id>
+    <title>Node.js 调试 - Debugger</title>
+    <link href="http://jocolorful.com/2021/06/21/Node-debugger/"/>
+    <id>http://jocolorful.com/2021/06/21/Node-debugger/</id>
+    <published>2021-06-21T14:05:53.000Z</published>
+    <updated>2021-06-22T01:57:22.938Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="Node.js" scheme="http://jocolorful.com/categories/Node-js/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Node.js 单测框架</title>
+    <link href="http://jocolorful.com/2021/06/21/Node-%E6%96%AD%E8%A8%80/"/>
+    <id>http://jocolorful.com/2021/06/21/Node-%E6%96%AD%E8%A8%80/</id>
     <published>2021-06-21T11:11:22.000Z</published>
-    <updated>2021-06-21T11:28:05.877Z</updated>
+    <updated>2021-06-22T01:57:09.177Z</updated>
     
     
       
@@ -209,10 +232,10 @@
   
   <entry>
     <title>Babel</title>
-    <link href="http://jocolorful.com/2020/12/18/babel/"/>
-    <id>http://jocolorful.com/2020/12/18/babel/</id>
+    <link href="http://jocolorful.com/2020/12/18/%E5%89%8D%E7%AB%AF-babel/"/>
+    <id>http://jocolorful.com/2020/12/18/%E5%89%8D%E7%AB%AF-babel/</id>
     <published>2020-12-18T08:35:19.000Z</published>
-    <updated>2021-06-19T03:07:02.247Z</updated>
+    <updated>2021-06-22T01:59:31.980Z</updated>
     
     
       
@@ -278,10 +301,10 @@
   
   <entry>
     <title>PPT 准备与演讲技巧</title>
-    <link href="http://jocolorful.com/2020/10/29/%E5%87%86%E5%A4%87%E4%B8%8E%E6%BC%94%E8%AE%B2%E6%8A%80%E5%B7%A7/"/>
-    <id>http://jocolorful.com/2020/10/29/%E5%87%86%E5%A4%87%E4%B8%8E%E6%BC%94%E8%AE%B2%E6%8A%80%E5%B7%A7/</id>
+    <link href="http://jocolorful.com/2020/10/29/%E8%BD%AF%E6%8A%80%E8%83%BD-%E5%87%86%E5%A4%87%E4%B8%8E%E6%BC%94%E8%AE%B2%E6%8A%80%E5%B7%A7/"/>
+    <id>http://jocolorful.com/2020/10/29/%E8%BD%AF%E6%8A%80%E8%83%BD-%E5%87%86%E5%A4%87%E4%B8%8E%E6%BC%94%E8%AE%B2%E6%8A%80%E5%B7%A7/</id>
     <published>2020-10-29T01:59:11.000Z</published>
-    <updated>2021-06-19T03:01:16.611Z</updated>
+    <updated>2021-06-22T01:59:48.287Z</updated>
     
     
       
@@ -324,10 +347,10 @@
   
   <entry>
     <title>无头浏览器在前端的应用场景</title>
-    <link href="http://jocolorful.com/2020/10/21/%E6%97%A0%E5%A4%B4%E6%B5%8F%E8%A7%88%E5%99%A8%E5%9C%A8%E5%89%8D%E7%AB%AF%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF/"/>
-    <id>http://jocolorful.com/2020/10/21/%E6%97%A0%E5%A4%B4%E6%B5%8F%E8%A7%88%E5%99%A8%E5%9C%A8%E5%89%8D%E7%AB%AF%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF/</id>
+    <link href="http://jocolorful.com/2020/10/21/Node-%E6%97%A0%E5%A4%B4%E6%B5%8F%E8%A7%88%E5%99%A8%E5%9C%A8%E5%89%8D%E7%AB%AF%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF/"/>
+    <id>http://jocolorful.com/2020/10/21/Node-%E6%97%A0%E5%A4%B4%E6%B5%8F%E8%A7%88%E5%99%A8%E5%9C%A8%E5%89%8D%E7%AB%AF%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF/</id>
     <published>2020-10-21T07:55:35.000Z</published>
-    <updated>2021-06-19T14:02:09.709Z</updated>
+    <updated>2021-06-22T01:58:18.440Z</updated>
     
     
       
@@ -422,29 +445,6 @@
     <id>http://jocolorful.com/2020/09/06/Hackathon/</id>
     <published>2020-09-06T02:45:11.000Z</published>
     <updated>2021-06-19T03:07:08.117Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="生活随感" scheme="http://jocolorful.com/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E6%84%9F/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>🧗‍♀️当我爬山时，我在想什么？</title>
-    <link href="http://jocolorful.com/2020/08/29/climb/"/>
-    <id>http://jocolorful.com/2020/08/29/climb/</id>
-    <published>2020-08-29T10:10:01.000Z</published>
-    <updated>2021-06-19T03:06:55.745Z</updated>
     
     
       
