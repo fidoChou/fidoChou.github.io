@@ -8,25 +8,28 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   
-  <title>晴雅集 | Jojo&#39;s World</title>
+  <title>比特位计数 | Jojo&#39;s World</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   
-    <meta name="keywords" content="jojo,前端,户外领队,frontend,nodejs,JavaScript,Outdoor Leader" />
+    <meta name="keywords" content="位运算," />
   
 
-  <meta name="description" content="2021 书单 《PeterPan》 在读   After all, to die will be an awfully big adventure：梦想不再是奢望，梦中的永无岛就在前方，冒险从此起航。   When the first baby laughed for the first time, its laugh broke into a thousand pieces, and they">
+  <meta name="description" content="LC338: 比特位计数 法一：Brian Kernighan 算法算法：对任何一个数 n，n &amp; ( n − 1 ) 的结果是 n 的比特位最右端的 1 变为 0。 例如，n &#x3D; 12 , n − 1 &#x3D; 11 , 11 &amp; 12 &#x3D; 8    解释：结果 8 的 2 进制中，右边第三位为 1，因此经过 「Brian Kernighan」计算变为了 0 因此只要重复计算对 n 进">
 <meta property="og:type" content="article">
-<meta property="og:title" content="晴雅集">
-<meta property="og:url" content="http://jocolorful.com/2021/06/20/%E6%99%B4%E9%9B%85%E9%9B%86/index.html">
+<meta property="og:title" content="比特位计数">
+<meta property="og:url" content="http://jocolorful.com/2021/06/23/%E7%AE%97%E6%B3%95-%E6%AF%94%E7%89%B9%E4%BD%8D%E8%AE%A1%E6%95%B0/index.html">
 <meta property="og:site_name" content="Jojo&#39;s World">
-<meta property="og:description" content="2021 书单 《PeterPan》 在读   After all, to die will be an awfully big adventure：梦想不再是奢望，梦中的永无岛就在前方，冒险从此起航。   When the first baby laughed for the first time, its laugh broke into a thousand pieces, and they">
+<meta property="og:description" content="LC338: 比特位计数 法一：Brian Kernighan 算法算法：对任何一个数 n，n &amp; ( n − 1 ) 的结果是 n 的比特位最右端的 1 变为 0。 例如，n &#x3D; 12 , n − 1 &#x3D; 11 , 11 &amp; 12 &#x3D; 8    解释：结果 8 的 2 进制中，右边第三位为 1，因此经过 「Brian Kernighan」计算变为了 0 因此只要重复计算对 n 进">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-06-20T05:37:58.000Z">
-<meta property="article:modified_time" content="2021-06-22T05:25:03.716Z">
+<meta property="og:image" content="http://jocolorful.com/images/Brian-Kernighan.jpeg">
+<meta property="article:published_time" content="2021-06-23T01:37:09.000Z">
+<meta property="article:modified_time" content="2021-06-23T02:09:20.451Z">
 <meta property="article:author" content="Jojo">
+<meta property="article:tag" content="位运算">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://jocolorful.com/images/Brian-Kernighan.jpeg">
 
   
 
@@ -101,20 +104,20 @@ ga('send', 'pageview');
   
   <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2021-书单"><span class="toc-text">2021 书单</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2021-观影记录"><span class="toc-text">2021 观影记录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2021-旅行途中"><span class="toc-text">2021 旅行途中</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#北京"><span class="toc-text">北京</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#辽宁"><span class="toc-text">辽宁</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#法一：Brian-Kernighan-算法"><span class="toc-text">法一：Brian Kernighan 算法</span></a></li></ol>
   </div>
 
 
 
 <div class="content content-post CENTER">
-   <article id="post-晴雅集" class="article article-type-post" itemprop="blogPost">
+   <article id="post-算法-比特位计数" class="article article-type-post" itemprop="blogPost">
   <header class="article-header">
-    <h1 class="post-title">晴雅集</h1>
+    <h1 class="post-title">比特位计数</h1>
 
     <div class="article-meta">
       <span>
         <i class="icon-calendar"></i>
-        <span>2021.06.20</span>
+        <span>2021.06.23</span>
       </span>
 
       
@@ -125,6 +128,11 @@ ga('send', 'pageview');
       
 
       
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a>
+  </span>
+
 
 
       
@@ -142,42 +150,17 @@ ga('send', 'pageview');
 
   <div class="article-content">
     
-      <h2 id="2021-书单"><a href="#2021-书单" class="headerlink" title="2021 书单"></a>2021 书单</h2><ul>
-<li><a href="https://book.douban.com/subject/1386094/" target="_blank" rel="noopener">《PeterPan》</a> 在读</li>
-</ul>
-<blockquote>
-<p>After all, to die will be an awfully big adventure：梦想不再是奢望，梦中的永无岛就在前方，冒险从此起航。</p>
-</blockquote>
-<blockquote>
-<p>When the first baby laughed for the first time, its laugh broke into a thousand pieces, and they all went skipping about, and that was the beginning of fairies. 孩子们的第一声啼哭会撞击成千万条碎片，他们蹦蹦跳跳地四处散开便是精灵的开始。</p>
-</blockquote>
-<blockquote>
-<p>Every time a child says，”I don’t believe in fairies”, a fairy somewhere falls down dead. 当一个小孩不在相信童话，某处的精灵便会坠落死去。</p>
-</blockquote>
-<ul>
-<li><p><a href="https://book.douban.com/subject/26422275/" target="_blank" rel="noopener">《向死而生》</a> 作者：李开复 ｜ 推荐指数：🌟🌟🌟</p>
-</li>
-<li><p><a href="https://book.douban.com/subject/11524204/" target="_blank" rel="noopener">《围城》</a> 作者：钱钟书 ｜ 推荐指数：🌟🌟🌟</p>
-<blockquote>
-<p>困住我们的何止婚姻？选择没有对错，只是这名利场让人迷失了一切。</p>
-</blockquote>
-</li>
-<li><p><a href="https://book.douban.com/subject/26278687/" target="_blank" rel="noopener">《皮囊》</a> 作者：蔡崇达 ｜ 推荐指数：🌟🌟🌟🌟</p>
-</li>
-</ul>
-<blockquote>
-<p>海藏不住，也圈不住。对待海最好的办法，就是让每个人自己去寻找到和它相处的方式。每片海，沉浮着不同的景致，也翻滚着各自的危险。生活也是，人的欲望也是。以前以为节制或者自我用逻辑框住，甚至掩耳盗铃地掩藏住，是最好的方法，然而，无论如何，它终究永远在那躁动起伏</p>
-</blockquote>
-<h2 id="2021-观影记录"><a href="#2021-观影记录" class="headerlink" title="2021 观影记录"></a>2021 观影记录</h2><p><a href="https://movie.douban.com/subject/3430271/" target="_blank" rel="noopener">《沙漠之花》</a> 主演：安妮海瑟薇 ｜ 推荐指数：🌟🌟🌟🌟<br><a href="https://movie.douban.com/subject/1920805/" target="_blank" rel="noopener">《成为简·奥斯汀》</a> 主演：安妮海瑟薇 ｜ 推荐指数：🌟🌟🌟<br><a href="https://movie.douban.com/subject/1418200/" target="_blank" rel="noopener">《傲慢与偏见》</a> 地区：🇺🇸 ｜ 短评：一个傲慢，一个偏见。放下这些，身边的人都变得可爱了起来｜推荐指数：🌟🌟🌟<br><a href="https://movie.douban.com/subject/32493124/" target="_blank" rel="noopener">《悬崖之上》</a> 主演：刘浩存 ｜ 推荐指数：🌟🌟🌟🌟<br><a href="https://movie.douban.com/subject/1652587/" target="_blank" rel="noopener">《阿凡达》</a> 地区：🇺🇸 ｜ 推荐指数：🌟🌟🌟🌟<br><a href="https://movie.douban.com/subject/35158160/" target="_blank" rel="noopener">《我的姐姐》</a> 主演：张子枫 ｜ 推荐指数：🌟🌟🌟<br><a href="https://movie.douban.com/subject/26816376/" target="_blank" rel="noopener">《超级的我》</a> 主演：王大陆 ｜ 推荐指数：🌟🌟<br><a href="https://movie.douban.com/subject/33454993/" target="_blank" rel="noopener">《名侦探柯南：绯色的子弹》</a> 推荐指数：🌟🌟<br><a href="https://movie.douban.com/subject/30466931/" target="_blank" rel="noopener">《波斯语课》</a> 地区： ｜ 短评：暗红色的回忆涌动着挣扎、救赎 ｜ 推荐指数：🌟🌟🌟🌟<br><a href="https://movie.douban.com/subject/29984000/" target="_blank" rel="noopener">《热带往事》</a>  主演：彭于晏 ｜ 短评：暗红色的回忆涌动着挣扎、救赎 ｜ 推荐指数：🌟🌟🌟</p>
-<h2 id="2021-旅行途中"><a href="#2021-旅行途中" class="headerlink" title="2021 旅行途中"></a>2021 旅行途中</h2><h3 id="北京"><a href="#北京" class="headerlink" title="北京"></a>北京</h3><ul>
-<li><a href="https://zh.wikipedia.org/zh-hans/%E6%98%8E%E5%8D%81%E4%B8%89%E9%99%B5" target="_blank" rel="noopener">北京十三陵</a> ｜推荐指数：🌟🌟🌟🌟</li>
-<li>黑龙潭 - 风铃节 ｜ 推荐指数：🌟🌟🌟</li>
-<li>居庸关 - 北京市郊铁路S2线  推荐指数：🌟🌟🌟</li>
-<li>北京后花园 - 白虎涧 ｜ 推荐指数：🌟🌟🌟🌟</li>
-</ul>
-<h3 id="辽宁"><a href="#辽宁" class="headerlink" title="辽宁"></a>辽宁</h3><ul>
-<li>葫芦岛 - 东戴河 ｜ 推荐指数：🌟🌟🌟</li>
-</ul>
+      <p><a href="https://leetcode-cn.com/problems/counting-bits/" target="_blank" rel="noopener">LC338: 比特位计数</a></p>
+<h2 id="法一：Brian-Kernighan-算法"><a href="#法一：Brian-Kernighan-算法" class="headerlink" title="法一：Brian Kernighan 算法"></a>法一：Brian Kernighan 算法</h2><p>算法：对任何一个数 n，n &amp; ( n − 1 ) 的结果是 n 的比特位<font color="red">最右端的 1 </font>变为 0。</p>
+<p>例如，n = 12 , n − 1 = 11 , 11 &amp; 12 = 8 </p>
+<center><img src="/images/Brian-Kernighan.jpeg" width="600px" /></center>
+
+<p>解释：结果 8 的 2 进制中，右边第三位为 1，因此经过 「Brian Kernighan」计算变为了 0</p>
+<p>因此只要重复计算对 n 进行重复计算, 直到 n 为 0，其中操作的次数，即为 1 的个数</p>
+<p>伪代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs plain">while (n &gt; 0)<br>	n &#x3D; n &amp; (n - 1)<br>	count ++<br></code></pre></td></tr></table></figure>
+
+<p><strong>位运算：妙不可言！</strong></p>
 
     
   </div>
@@ -189,10 +172,10 @@ ga('send', 'pageview');
 
    
   <div class="box-prev-next clearfix">
-    <a class="show pull-left" href="/2021/06/19/%E6%8A%96%E4%B8%AA%E6%9C%BA%E7%81%B5/">
+    <a class="show pull-left" href="/2021/06/21/Node-debugger/">
         <i class="icon icon-angle-left"></i>
     </a>
-    <a class="show pull-right" href="/2021/06/21/Node-%E6%96%AD%E8%A8%80/">
+    <a class="hide pull-right" href="/">
         <i class="icon icon-angle-right"></i>
     </a>
   </div>
