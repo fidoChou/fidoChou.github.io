@@ -128,7 +128,7 @@ live2d:
     hOffset: 250  # 调节水平位置
     vOffset: 0  # 调节垂直位置
   mobile:
-    show: false
+    show: true
 
 feed:
   enable: true

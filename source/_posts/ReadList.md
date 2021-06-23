@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 我的学习清单
+title: todo-list
 date: 2020-06-19 16:22:58
 tags: 学习清单
 ---
@@ -29,4 +29,6 @@ tags: 学习清单
 # 工具
 
 - [x] iTerm2 的总结
-- [ ] sublime 配置
+- [ ] Sublime Text 配置
+
+	* 高亮显示多余的空格和 Tab： TrailingSpacer
