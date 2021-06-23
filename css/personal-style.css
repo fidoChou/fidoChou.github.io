@@ -121,7 +121,7 @@ code,
 figure.highlight {
   padding-top: 40px;
   background: rgba(255, 255, 255, 0.7) !important;
-  color: #000 !important;
+  background: rgba(0, 0, 0, 1) !important;
   position: relative;
 }
 

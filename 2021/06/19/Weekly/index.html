@@ -16,15 +16,15 @@
     <meta name="keywords" content="jojo,前端,户外领队,frontend,nodejs,JavaScript,Outdoor Leader" />
   
 
-  <meta name="description" content="2021.06.14 - 2021.06.20JS 内存使用的基准测试  根据v8 团队的研究：网络上 35% 的内存分配与 JavaScript 相关；10% 用于表示内存中的 DOM 元素；剩下的 55% 是图像。measureUserAgentSpecificMemory API 目前仅限于 JS 和 DOM 相关信息，但确实也占据页面实际内存使用量的很大一部分（约 45%）。  总结  内">
+  <meta name="description" content="2021.06.21 - 2021.06.28关于 React 18 你所需要知道的 2021.06.14 - 2021.06.20JS 内存使用的基准测试  根据v8 团队的研究：网络上 35% 的内存分配与 JavaScript 相关；10% 用于表示内存中的 DOM 元素；剩下的 55% 是图像。measureUserAgentSpecificMemory API 目前仅限于 JS 和 DO">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Weekly">
 <meta property="og:url" content="http://jocolorful.com/2021/06/19/Weekly/index.html">
 <meta property="og:site_name" content="Jojo&#39;s World">
-<meta property="og:description" content="2021.06.14 - 2021.06.20JS 内存使用的基准测试  根据v8 团队的研究：网络上 35% 的内存分配与 JavaScript 相关；10% 用于表示内存中的 DOM 元素；剩下的 55% 是图像。measureUserAgentSpecificMemory API 目前仅限于 JS 和 DOM 相关信息，但确实也占据页面实际内存使用量的很大一部分（约 45%）。  总结  内">
+<meta property="og:description" content="2021.06.21 - 2021.06.28关于 React 18 你所需要知道的 2021.06.14 - 2021.06.20JS 内存使用的基准测试  根据v8 团队的研究：网络上 35% 的内存分配与 JavaScript 相关；10% 用于表示内存中的 DOM 元素；剩下的 55% 是图像。measureUserAgentSpecificMemory API 目前仅限于 JS 和 DO">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-06-19T13:20:31.000Z">
-<meta property="article:modified_time" content="2021-06-23T02:08:21.960Z">
+<meta property="article:modified_time" content="2021-06-23T07:58:28.615Z">
 <meta property="article:author" content="Jojo">
 <meta name="twitter:card" content="summary">
 
@@ -101,7 +101,7 @@ ga('send', 'pageview');
   
   <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#2021-06-14-2021-06-20"><span class="toc-text">2021.06.14 - 2021.06.20</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2021-06-07-2021-06-11"><span class="toc-text">2021.06.07 - 2021.06.11</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#2021-06-21-2021-06-28"><span class="toc-text">2021.06.21 - 2021.06.28</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2021-06-14-2021-06-20"><span class="toc-text">2021.06.14 - 2021.06.20</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2021-06-07-2021-06-11"><span class="toc-text">2021.06.07 - 2021.06.11</span></a></li></ol>
   </div>
 
 
@@ -147,7 +147,8 @@ ga('send', 'pageview');
 
   <div class="article-content">
     
-      <h4 id="2021-06-14-2021-06-20"><a href="#2021-06-14-2021-06-20" class="headerlink" title="2021.06.14 - 2021.06.20"></a>2021.06.14 - 2021.06.20</h4><p><a href="https://blog.webpagetest.org/posts/benchmarking-javascript-memory-usage/" target="_blank" rel="noopener">JS 内存使用的基准测试</a></p>
+      <h4 id="2021-06-21-2021-06-28"><a href="#2021-06-21-2021-06-28" class="headerlink" title="2021.06.21 - 2021.06.28"></a>2021.06.21 - 2021.06.28</h4><p><a href="/2021/06/23/前端-React-18-所需要知道的/">关于 React 18 你所需要知道的</a></p>
+<h4 id="2021-06-14-2021-06-20"><a href="#2021-06-14-2021-06-20" class="headerlink" title="2021.06.14 - 2021.06.20"></a>2021.06.14 - 2021.06.20</h4><p><a href="https://blog.webpagetest.org/posts/benchmarking-javascript-memory-usage/" target="_blank" rel="noopener">JS 内存使用的基准测试</a></p>
 <ol>
 <li>根据v8 团队的研究：网络上 35% 的内存分配与 JavaScript 相关；10% 用于表示内存中的 DOM 元素；剩下的 55% 是图像。<a href="https://web.dev/monitor-total-page-memory-usage/" target="_blank" rel="noopener">measureUserAgentSpecificMemory</a> API 目前仅限于 JS 和 DOM 相关信息，但确实也占据页面实际内存使用量的很大一部分（约 45%）。</li>
 </ol>
@@ -170,7 +171,7 @@ ga('send', 'pageview');
 
    
   <div class="box-prev-next clearfix">
-    <a class="show pull-left" href="/2021/06/15/%E9%9A%8F%E4%BE%BF%E5%86%99%E5%86%99/">
+    <a class="show pull-left" href="/2021/06/19/about/">
         <i class="icon icon-angle-left"></i>
     </a>
     <a class="show pull-right" href="/2021/06/19/%E7%95%99%E8%A8%80%E6%9D%BF/">
