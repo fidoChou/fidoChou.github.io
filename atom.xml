@@ -6,7 +6,7 @@
   <link href="http://jocolorful.com/atom.xml" rel="self"/>
   
   <link href="http://jocolorful.com/"/>
-  <updated>2021-06-23T07:59:38.561Z</updated>
+  <updated>2021-06-25T01:50:53.312Z</updated>
   <id>http://jocolorful.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>统计字典序元音字符串的数目</title>
+    <link href="http://jocolorful.com/2021/06/25/%E7%AE%97%E6%B3%95-%E7%BB%9F%E8%AE%A1%E5%AD%97%E5%85%B8%E5%BA%8F%E5%85%83%E9%9F%B3%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%95%B0%E7%9B%AE/"/>
+    <id>http://jocolorful.com/2021/06/25/%E7%AE%97%E6%B3%95-%E7%BB%9F%E8%AE%A1%E5%AD%97%E5%85%B8%E5%BA%8F%E5%85%83%E9%9F%B3%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%95%B0%E7%9B%AE/</id>
+    <published>2021-06-25T01:04:20.000Z</published>
+    <updated>2021-06-25T01:50:53.312Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="http://jocolorful.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>React-18-所需要知道的</title>
@@ -46,7 +69,7 @@
     <link href="http://jocolorful.com/2021/06/23/%E5%B7%A5%E5%85%B7%E9%9B%86/"/>
     <id>http://jocolorful.com/2021/06/23/%E5%B7%A5%E5%85%B7%E9%9B%86/</id>
     <published>2021-06-23T06:26:33.000Z</published>
-    <updated>2021-06-23T07:16:31.456Z</updated>
+    <updated>2021-06-25T02:10:58.514Z</updated>
     
     
       
@@ -69,7 +92,7 @@
     <link href="http://jocolorful.com/2021/06/23/%E7%AE%97%E6%B3%95-%E6%AF%94%E7%89%B9%E4%BD%8D%E8%AE%A1%E6%95%B0/"/>
     <id>http://jocolorful.com/2021/06/23/%E7%AE%97%E6%B3%95-%E6%AF%94%E7%89%B9%E4%BD%8D%E8%AE%A1%E6%95%B0/</id>
     <published>2021-06-23T01:37:09.000Z</published>
-    <updated>2021-06-23T06:30:58.230Z</updated>
+    <updated>2021-06-25T01:04:42.319Z</updated>
     
     
       
@@ -85,7 +108,7 @@
     <category term="算法" scheme="http://jocolorful.com/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="位运算" scheme="http://jocolorful.com/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
+    <category term="位运算 动态规划" scheme="http://jocolorful.com/tags/%E4%BD%8D%E8%BF%90%E7%AE%97-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
     
   </entry>
   
@@ -140,7 +163,7 @@
     <link href="http://jocolorful.com/2021/06/20/%E6%99%B4%E9%9B%85%E9%9B%86/"/>
     <id>http://jocolorful.com/2021/06/20/%E6%99%B4%E9%9B%85%E9%9B%86/</id>
     <published>2021-06-20T05:37:58.000Z</published>
-    <updated>2021-06-23T06:30:29.546Z</updated>
+    <updated>2021-06-24T04:50:27.225Z</updated>
     
     
       
@@ -287,7 +310,7 @@
     <link href="http://jocolorful.com/2020/12/18/%E5%89%8D%E7%AB%AF-babel/"/>
     <id>http://jocolorful.com/2020/12/18/%E5%89%8D%E7%AB%AF-babel/</id>
     <published>2020-12-18T08:35:19.000Z</published>
-    <updated>2021-06-22T01:59:31.980Z</updated>
+    <updated>2021-06-23T07:58:27.776Z</updated>
     
     
       
@@ -426,29 +449,6 @@
     <id>http://jocolorful.com/2020/09/28/%E7%94%9F%E6%B4%BB-%E4%B8%80%E4%BB%B6%E6%82%B2%E4%BC%A4%E7%9A%84%E4%BA%8B/</id>
     <published>2020-09-28T08:40:39.000Z</published>
     <updated>2021-06-23T02:08:13.771Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="生活随感" scheme="http://jocolorful.com/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E6%84%9F/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>关于疯狂输出与摸 🐟</title>
-    <link href="http://jocolorful.com/2020/09/27/%E7%94%9F%E6%B4%BB-%E5%85%B3%E4%BA%8E%E7%96%AF%E7%8B%82%E8%BE%93%E5%87%BA%E4%B8%8E%E6%91%B8%F0%9F%90%9F/"/>
-    <id>http://jocolorful.com/2020/09/27/%E7%94%9F%E6%B4%BB-%E5%85%B3%E4%BA%8E%E7%96%AF%E7%8B%82%E8%BE%93%E5%87%BA%E4%B8%8E%E6%91%B8%F0%9F%90%9F/</id>
-    <published>2020-09-27T03:02:05.000Z</published>
-    <updated>2021-06-23T06:30:55.360Z</updated>
     
     
       
