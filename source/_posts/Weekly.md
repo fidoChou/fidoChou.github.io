@@ -6,9 +6,13 @@ categories: Weekly
 ---
 #### 2021.06.21 - 2021.06.28
 
-[关于 React 18 你所需要知道的](/2021/06/23/前端-React-18-所需要知道的/)
-
-
+* [关于 React 18 你所需要知道的](/2021/06/23/前端-React-18-所需要知道的/)
+* [ES2021 Features!](https://h3manth.com/ES2021/)
+*  [Node v16.4.0 (Current) Released ](https://nodejs.org/en/blog/release/v16.4.0/)
+	* AsyncLocalStorage 作用，使用场景？
+* [28 (And Counting) Node CLI App Best Practices](https://github.com/lirantal/nodejs-cli-apps-best-practices)
+* [How to Dynamically Import ECMAScript Modules](https://dmitripavlutin.com/ecmascript-modules-dynamic-import/)
+* [PDF generation with Serverless + AWS Lambda and Puppeteer.](https://shubham-pandey.medium.com/pdf-generation-with-serverless-aws-and-puppeteer-cac3442b1c95)
 
 #### 2021.06.14 - 2021.06.20
 

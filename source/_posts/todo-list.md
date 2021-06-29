@@ -23,6 +23,9 @@ tags: 学习清单
 - [x] [如何优雅处理前端异常？](https://zhuanlan.zhihu.com/p/51800345)
 
 # 阅读书单
+- [ ] [算法图解](https://www.zhihu.com/pub/book/119565177)
+- [ ] [算法（第 4 版)](https://www.zhihu.com/pub/book/119648496)
+
 
 # 电影
 
@@ -30,5 +33,3 @@ tags: 学习清单
 
 - [x] iTerm2 的总结
 - [ ] Sublime Text 配置
-
-	* 高亮显示多余的空格和 Tab： TrailingSpacer
