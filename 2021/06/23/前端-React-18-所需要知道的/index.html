@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   
-  <title>React-18-所需要知道的 | Jojo&#39;s World</title>
+  <title>React18 所需要知道的 | Jojo&#39;s World</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -16,15 +16,15 @@
     <meta name="keywords" content="React," />
   
 
-  <meta name="description" content="自动的批量更新批量更新：React 会尝试将同一上下文中触发的多个更新合并为一个更新好处是：  避免页面的重复渲染 状态按顺序处理，不会出现竞争态问题，最终出发渲染的是异步流程  但值得注意的是，在一个异步的方法回调中，React 并不能进行批量更新。 1234567&#x2F;&#x2F; this code will be re-render-twiceconst handleClick &#x3D;()&#x3D;&gt; &amp;#1">
+  <meta name="description" content="What You Need to Know About React 18 自动的批量更新批量更新：React 会尝试将同一上下文中触发的多个更新合并为一个好处是：  避免页面重复渲染 状态按顺序处理，不会出现竞争态问题，最终触发渲染的是异步流程。  但值得注意的是，在一异步的方法回调中，React 并不能进行批量更新。（这里可以尝试用看似同步的方式调用 async&#x2F;await 的调用，是什么效果）">
 <meta property="og:type" content="article">
-<meta property="og:title" content="React-18-所需要知道的">
+<meta property="og:title" content="React18 所需要知道的">
 <meta property="og:url" content="http://jocolorful.com/2021/06/23/%E5%89%8D%E7%AB%AF-React-18-%E6%89%80%E9%9C%80%E8%A6%81%E7%9F%A5%E9%81%93%E7%9A%84/index.html">
 <meta property="og:site_name" content="Jojo&#39;s World">
-<meta property="og:description" content="自动的批量更新批量更新：React 会尝试将同一上下文中触发的多个更新合并为一个更新好处是：  避免页面的重复渲染 状态按顺序处理，不会出现竞争态问题，最终出发渲染的是异步流程  但值得注意的是，在一个异步的方法回调中，React 并不能进行批量更新。 1234567&#x2F;&#x2F; this code will be re-render-twiceconst handleClick &#x3D;()&#x3D;&gt; &amp;#1">
+<meta property="og:description" content="What You Need to Know About React 18 自动的批量更新批量更新：React 会尝试将同一上下文中触发的多个更新合并为一个好处是：  避免页面重复渲染 状态按顺序处理，不会出现竞争态问题，最终触发渲染的是异步流程。  但值得注意的是，在一异步的方法回调中，React 并不能进行批量更新。（这里可以尝试用看似同步的方式调用 async&#x2F;await 的调用，是什么效果）">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-06-23T07:29:35.000Z">
-<meta property="article:modified_time" content="2021-06-23T07:59:38.561Z">
+<meta property="article:modified_time" content="2021-06-30T00:57:04.861Z">
 <meta property="article:author" content="Jojo">
 <meta property="article:tag" content="React">
 <meta name="twitter:card" content="summary">
@@ -102,7 +102,7 @@ ga('send', 'pageview');
   
   <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#自动的批量更新"><span class="toc-text">自动的批量更新</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#自动的批量更新"><span class="toc-text">自动的批量更新</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#不需要批量更新"><span class="toc-text">不需要批量更新</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#SSR-support-for-Suspense"><span class="toc-text">SSR support for Suspense</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Transition"><span class="toc-text">Transition</span></a></li></ol>
   </div>
 
 
@@ -110,7 +110,7 @@ ga('send', 'pageview');
 <div class="content content-post CENTER">
    <article id="post-前端-React-18-所需要知道的" class="article article-type-post" itemprop="blogPost">
   <header class="article-header">
-    <h1 class="post-title">React-18-所需要知道的</h1>
+    <h1 class="post-title">React18 所需要知道的</h1>
 
     <div class="article-meta">
       <span>
@@ -148,16 +148,39 @@ ga('send', 'pageview');
 
   <div class="article-content">
     
-      <h1 id="自动的批量更新"><a href="#自动的批量更新" class="headerlink" title="自动的批量更新"></a>自动的批量更新</h1><p>批量更新：React 会尝试将同一上下文中触发的多个更新合并为一个更新<br>好处是：</p>
+      <p><a href="https://javascript.plainenglish.io/what-you-need-to-know-about-react-18-54070f6bc4a1" target="_blank" rel="noopener">What You Need to Know About React 18</a></p>
+<h1 id="自动的批量更新"><a href="#自动的批量更新" class="headerlink" title="自动的批量更新"></a>自动的批量更新</h1><p>批量更新：React 会尝试将同一上下文中触发的多个更新合并为一个好处是：</p>
 <ol>
-<li>避免页面的重复渲染</li>
-<li>状态按顺序处理，不会出现竞争态问题，最终出发渲染的是异步流程</li>
+<li>避免页面重复渲染</li>
+<li>状态按顺序处理，不会出现竞争态问题，最终触发渲染的是异步流程。</li>
 </ol>
-<p>但值得注意的是，在一个异步的方法回调中，React 并不能进行批量更新。</p>
+<p>但值得注意的是，在一<font color="red">异步的方法回调</font>中，React 并不能进行批量更新。<br>（这里可以尝试用看似同步的方式调用 async/await 的调用，是什么效果）</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// this code will be re-render-twice</span><br><span class="hljs-keyword">const</span> handleClick =<span class="hljs-function"><span class="hljs-params">()</span>=&gt;</span> &#123;<br>  fetch().then().catch(<span class="hljs-function"><span class="hljs-params">()</span>=&gt;</span> &#123;<br>    setCount(<span class="hljs-function"><span class="hljs-params">c</span> =&gt;</span> c+<span class="hljs-number">1</span>)<br>    setF(<span class="hljs-function"><span class="hljs-params">f</span>=&gt;</span> !f)<br>  &#125;)<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p>这是因为 React 的批量更新只在浏览器的 event 中生效（比如点击时间）。但是上面的代码更新状态是事件已经处理完成，在 fetch 的回调中。</p>
+<p>解释：React 的批量更新只在浏览器的 event 中生效（比如点击时间），但是上面的代码更新状态是事件已经处理完成，在 fetch 的回调中。<br>那么V18 以后，状态管理无论是在哪里，只会被更新一次。</p>
+<h2 id="不需要批量更新"><a href="#不需要批量更新" class="headerlink" title="不需要批量更新"></a>不需要批量更新</h2><p>使用 <code>flushSync</code> 去重新渲染组件</p>
+<h1 id="SSR-support-for-Suspense"><a href="#SSR-support-for-Suspense" class="headerlink" title="SSR support for Suspense"></a>SSR support for Suspense</h1><p>对典型 SSR 的基本扩展。在一个典型的 React SSR 应用中，流程基本上是：</p>
+<ol>
+<li>服务端获取 UI 相关的展示数据</li>
+<li>服务端渲染整个 APP 的 HTML 发送给客户端</li>
+<li>客户端除了 HTML 以外，还需下载 JS bundle 部分</li>
+<li>在最后一步，客户端连接 JS 的逻辑和 HTML 绑定。（称之为：脱水）</li>
+</ol>
+<p>缺点：在下一步可以开始之前，整个应用程序的每个步骤都必须立即完成。这样会导致在初始化时加载时长变慢。</p>
+<p>React 18 中     <code>&lt;Suspense&gt;</code> 组件已经以这样的方式进行了革命性的变更：</p>
+<p>它将应用程序分解为更小的独立单元，这些单元再经历上面提及的每一部分。</p>
+<p>因此：这样一旦用户看到内容，都将是可交互的。</p>
+<h1 id="Transition"><a href="#Transition" class="headerlink" title="Transition"></a>Transition</h1><p>这是即将发布的令人难以置信的功能。它可以让用户解决大屏幕频繁更新的问题。<br>例如，考虑在过滤数据列表的输入字段中键入。您需要将字段的值存储在 state 中，以便您可以过滤数据并控制该输入字段的值。您的代码可能如下所示：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// Update the input value and search results</span><br>setSearchQuery(input)<br></code></pre></td></tr></table></figure>
 
+<p>在这里，每当用户键入一个字符时，我们都会更新输入值并使用新值来搜索列表并显示结果。</p>
+<p>对于大屏幕更新，这可能会导致页面在呈现所有内容时出现延迟，从而使打字或其他交互感觉缓慢且无响应。即使列表不是太长，列表项本身也可能很复杂，每次击键都不同，并且可能没有明确的方法来优化它们的呈现.</p>
+<p>从概念上讲，问题在于需要进行两种不同的更新。</p>
+<p>第一次是紧急更新，用于更改输入字段的值<br>第二个是显示搜索结果的不太紧急的更新</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs plain">&#x2F;&#x2F; Urgent: Show what was typed<br>setInputValue(input)<br><br>&#x2F;&#x2F; Not urgent: Show the results<br>setSearchQuery(input)<br></code></pre></td></tr></table></figure>
+
+<p>新的 <code>startTransition</code> API 通过让您能够将更新标记为「过渡」来解决这个问题：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs plain">import &#123; startTransition &#125; from &#39;react&#39;;<br>&#x2F;&#x2F; Urgent: Show what was typed<br>setInputValue(input);<br>&#x2F;&#x2F; Mark any state updates inside as transitions<br>startTransition(() &#x3D;&gt; &#123;<br>  &#x2F;&#x2F; Transition: Show the results<br>  setSearchQuery(input);<br>&#125;);<br></code></pre></td></tr></table></figure>
     
   </div>
 
