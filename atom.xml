@@ -6,7 +6,7 @@
   <link href="http://jocolorful.com/atom.xml" rel="self"/>
   
   <link href="http://jocolorful.com/"/>
-  <updated>2021-06-30T00:57:04.861Z</updated>
+  <updated>2021-07-01T01:45:18.509Z</updated>
   <id>http://jocolorful.com/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>动态规划</title>
+    <link href="http://jocolorful.com/2021/06/30/%E7%AE%97%E6%B3%95-%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8D/"/>
+    <id>http://jocolorful.com/2021/06/30/%E7%AE%97%E6%B3%95-%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8D/</id>
+    <published>2021-06-30T01:37:20.000Z</published>
+    <updated>2021-07-01T01:45:18.509Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="http://jocolorful.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="动态规划" scheme="http://jocolorful.com/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
     <title>文海拾贝</title>
     <link href="http://jocolorful.com/2021/06/29/%E6%96%87%E6%B5%B7%E6%8B%BE%E8%B4%9D/"/>
     <id>http://jocolorful.com/2021/06/29/%E6%96%87%E6%B5%B7%E6%8B%BE%E8%B4%9D/</id>
     <published>2021-06-29T13:45:12.000Z</published>
-    <updated>2021-06-30T00:57:04.861Z</updated>
+    <updated>2021-07-01T02:52:14.952Z</updated>
     
     
       
@@ -65,7 +90,7 @@
     <link href="http://jocolorful.com/2021/06/23/%E5%89%8D%E7%AB%AF-React-18-%E6%89%80%E9%9C%80%E8%A6%81%E7%9F%A5%E9%81%93%E7%9A%84/"/>
     <id>http://jocolorful.com/2021/06/23/%E5%89%8D%E7%AB%AF-React-18-%E6%89%80%E9%9C%80%E8%A6%81%E7%9F%A5%E9%81%93%E7%9A%84/</id>
     <published>2021-06-23T07:29:35.000Z</published>
-    <updated>2021-06-30T00:57:04.861Z</updated>
+    <updated>2021-07-01T02:41:53.841Z</updated>
     
     
       
@@ -113,7 +138,7 @@
     <link href="http://jocolorful.com/2021/06/23/%E7%AE%97%E6%B3%95-%E6%AF%94%E7%89%B9%E4%BD%8D%E8%AE%A1%E6%95%B0/"/>
     <id>http://jocolorful.com/2021/06/23/%E7%AE%97%E6%B3%95-%E6%AF%94%E7%89%B9%E4%BD%8D%E8%AE%A1%E6%95%B0/</id>
     <published>2021-06-23T01:37:09.000Z</published>
-    <updated>2021-06-25T02:12:16.288Z</updated>
+    <updated>2021-06-30T01:38:22.610Z</updated>
     
     
       
@@ -138,7 +163,7 @@
     <link href="http://jocolorful.com/2021/06/21/Node-debugger/"/>
     <id>http://jocolorful.com/2021/06/21/Node-debugger/</id>
     <published>2021-06-21T14:05:53.000Z</published>
-    <updated>2021-06-22T01:57:22.938Z</updated>
+    <updated>2021-07-01T02:38:41.443Z</updated>
     
     
       
@@ -249,7 +274,7 @@
     <link href="http://jocolorful.com/2021/06/15/%E7%94%9F%E6%B4%BB-%E6%AD%A4%E6%97%B6%E6%AD%A4%E5%88%BB/"/>
     <id>http://jocolorful.com/2021/06/15/%E7%94%9F%E6%B4%BB-%E6%AD%A4%E6%97%B6%E6%AD%A4%E5%88%BB/</id>
     <published>2021-06-15T11:40:02.000Z</published>
-    <updated>2021-06-30T00:59:42.920Z</updated>
+    <updated>2021-06-30T01:00:23.197Z</updated>
     
     
       
@@ -292,10 +317,10 @@
   
   <entry>
     <title>CSP</title>
-    <link href="http://jocolorful.com/2021/03/30/CSP/"/>
-    <id>http://jocolorful.com/2021/03/30/CSP/</id>
+    <link href="http://jocolorful.com/2021/03/30/%E5%89%8D%E7%AB%AF-CSP/"/>
+    <id>http://jocolorful.com/2021/03/30/%E5%89%8D%E7%AB%AF-CSP/</id>
     <published>2021-03-30T12:12:44.000Z</published>
-    <updated>2021-06-19T03:07:06.000Z</updated>
+    <updated>2021-07-01T02:12:05.091Z</updated>
     
     
       
@@ -327,11 +352,32 @@
   </entry>
   
   <entry>
+    <title>不耐烦的 JSer</title>
+    <link href="http://jocolorful.com/2021/03/02/%E5%89%8D%E7%AB%AF-%E6%93%8D%E4%BD%9C%E7%AC%A6%E7%AF%87-%E4%B8%8D%E8%80%90%E7%83%A6%E7%9A%84JSer/"/>
+    <id>http://jocolorful.com/2021/03/02/%E5%89%8D%E7%AB%AF-%E6%93%8D%E4%BD%9C%E7%AC%A6%E7%AF%87-%E4%B8%8D%E8%80%90%E7%83%A6%E7%9A%84JSer/</id>
+    <published>2021-03-02T06:40:32.000Z</published>
+    <updated>2021-07-01T02:47:20.694Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>Babel</title>
     <link href="http://jocolorful.com/2020/12/18/%E5%89%8D%E7%AB%AF-babel/"/>
     <id>http://jocolorful.com/2020/12/18/%E5%89%8D%E7%AB%AF-babel/</id>
     <published>2020-12-18T08:35:19.000Z</published>
-    <updated>2021-06-23T07:58:27.776Z</updated>
+    <updated>2021-07-01T02:39:24.790Z</updated>
     
     
       
@@ -415,52 +461,6 @@
     
     
     <category term="软技能" scheme="http://jocolorful.com/tags/%E8%BD%AF%E6%8A%80%E8%83%BD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>做一颗饱满的麦穗</title>
-    <link href="http://jocolorful.com/2020/10/22/%E7%94%9F%E6%B4%BB-%E5%81%9A%E4%B8%80%E9%A2%97%E9%A5%B1%E6%BB%A1%E7%9A%84%E9%BA%A6%E7%A9%97/"/>
-    <id>http://jocolorful.com/2020/10/22/%E7%94%9F%E6%B4%BB-%E5%81%9A%E4%B8%80%E9%A2%97%E9%A5%B1%E6%BB%A1%E7%9A%84%E9%BA%A6%E7%A9%97/</id>
-    <published>2020-10-22T05:55:41.000Z</published>
-    <updated>2021-06-23T06:29:32.495Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="生活随感" scheme="http://jocolorful.com/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E6%84%9F/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>无头浏览器在前端的应用场景</title>
-    <link href="http://jocolorful.com/2020/10/21/Node-%E6%97%A0%E5%A4%B4%E6%B5%8F%E8%A7%88%E5%99%A8%E5%9C%A8%E5%89%8D%E7%AB%AF%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF/"/>
-    <id>http://jocolorful.com/2020/10/21/Node-%E6%97%A0%E5%A4%B4%E6%B5%8F%E8%A7%88%E5%99%A8%E5%9C%A8%E5%89%8D%E7%AB%AF%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF/</id>
-    <published>2020-10-21T07:55:35.000Z</published>
-    <updated>2021-06-22T01:58:18.440Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Node.js" scheme="http://jocolorful.com/categories/Node-js/"/>
-    
     
   </entry>
   
