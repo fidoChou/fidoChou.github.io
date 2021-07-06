@@ -8,25 +8,33 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   
-  <title>fecth 和 ajax 的区别 | Jojo&#39;s World</title>
+  <title>统计好数字的数目 | Jojo&#39;s World</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   
-    <meta name="keywords" content="jojo,前端,户外领队,frontend,nodejs,JavaScript,Outdoor Leader" />
+    <meta name="keywords" content="快速幂," />
   
 
-  <meta name="description" content="fetchwindow 的一个对象, 他是更加底层的一个API。  默认的请求为get请求 可以使用method:post 来进行配置   第一步中的 response有许多方法 json() text() formData()  Fetch跨域的时候默认不会带cookie 需要手动的指定 credentials:’include’  fetch 是一个 low-level 的 API，所以你需要">
+  <meta name="description" content="不会快速幂的我留下了超时的悔恨泪水  统计好数字的数目 快速幂：油管讲解 快速幂算法简介求 x^n 最简单的方法是通过循环将 n 个 x 乘起来，依次求 x^1, x^2, …, x^{n-1}, x^nx 时间复杂度为 O(n) 。 快速幂法可将时间复杂度降低至 O(log n) ，以下从 「分治法」 和 「二进制」 两个角度解析快速幂法。 二进制角度 利用十进制数字 n 的二进制表示，可对快">
 <meta property="og:type" content="article">
-<meta property="og:title" content="fecth 和 ajax 的区别">
-<meta property="og:url" content="http://jocolorful.com/2020/07/07/%E5%89%8D%E7%AB%AF-Fetch%E5%92%8Cajax%E7%9A%84%E5%8C%BA%E5%88%AB/index.html">
+<meta property="og:title" content="统计好数字的数目">
+<meta property="og:url" content="http://jocolorful.com/2021/07/05/%E7%AE%97%E6%B3%95-%E5%BF%AB%E9%80%9F%E5%B9%82/index.html">
 <meta property="og:site_name" content="Jojo&#39;s World">
-<meta property="og:description" content="fetchwindow 的一个对象, 他是更加底层的一个API。  默认的请求为get请求 可以使用method:post 来进行配置   第一步中的 response有许多方法 json() text() formData()  Fetch跨域的时候默认不会带cookie 需要手动的指定 credentials:’include’  fetch 是一个 low-level 的 API，所以你需要">
+<meta property="og:description" content="不会快速幂的我留下了超时的悔恨泪水  统计好数字的数目 快速幂：油管讲解 快速幂算法简介求 x^n 最简单的方法是通过循环将 n 个 x 乘起来，依次求 x^1, x^2, …, x^{n-1}, x^nx 时间复杂度为 O(n) 。 快速幂法可将时间复杂度降低至 O(log n) ，以下从 「分治法」 和 「二进制」 两个角度解析快速幂法。 二进制角度 利用十进制数字 n 的二进制表示，可对快">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-07-07T06:43:46.000Z">
-<meta property="article:modified_time" content="2021-07-06T00:55:25.201Z">
+<meta property="og:image" content="http://jocolorful.com/images/%E7%AE%97%E6%B3%95/%E5%BF%AB%E9%80%9F%E5%B9%82-01.png">
+<meta property="og:image" content="http://jocolorful.com/images/%E7%AE%97%E6%B3%95/%E5%BF%AB%E9%80%9F%E5%B9%8202.png">
+<meta property="og:image" content="http://jocolorful.com/images/%E7%AE%97%E6%B3%95/%E5%BF%AB%E9%80%9F%E5%B9%8203.png">
+<meta property="og:image" content="http://jocolorful.com/images/%E7%AE%97%E6%B3%95/%E5%BF%AB%E9%80%9F%E5%B9%8204.png">
+<meta property="og:image" content="http://jocolorful.com/images/%E7%AE%97%E6%B3%95/%E5%BF%AB%E9%80%9F%E5%B9%8205.png">
+<meta property="og:image" content="http://jocolorful.com/images/%E7%AE%97%E6%B3%95/%E5%BF%AB%E9%80%9F%E5%B9%8206.png">
+<meta property="article:published_time" content="2021-07-05T00:42:42.000Z">
+<meta property="article:modified_time" content="2021-07-06T02:29:22.605Z">
 <meta property="article:author" content="Jojo">
+<meta property="article:tag" content="快速幂">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://jocolorful.com/images/%E7%AE%97%E6%B3%95/%E5%BF%AB%E9%80%9F%E5%B9%82-01.png">
 
   
 
@@ -101,20 +109,20 @@ ga('send', 'pageview');
   
   <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#fetch"><span class="toc-text">fetch</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ajax"><span class="toc-text">ajax</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#快速幂算法简介"><span class="toc-text">快速幂算法简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#二进制角度"><span class="toc-text">二进制角度</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#n-为-2-的幂，以-a-64-为例："><span class="toc-text">n 为 2 的幂，以 a^64 为例：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#n-不为-2-的幂，以-a-105-为例："><span class="toc-text">n 不为 2 的幂，以 a^105 为例：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#伪代码且以-7-105-为例："><span class="toc-text">伪代码且以 7^105 为例：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JS-伪代码"><span class="toc-text">JS 伪代码</span></a></li></ol></li></ol></li></ol>
   </div>
 
 
 
 <div class="content content-post CENTER">
-   <article id="post-前端-Fetch和ajax的区别" class="article article-type-post" itemprop="blogPost">
+   <article id="post-算法-快速幂" class="article article-type-post" itemprop="blogPost">
   <header class="article-header">
-    <h1 class="post-title">fecth 和 ajax 的区别</h1>
+    <h1 class="post-title">统计好数字的数目</h1>
 
     <div class="article-meta">
       <span>
         <i class="icon-calendar"></i>
-        <span>2020.07.07</span>
+        <span>2021.07.05</span>
       </span>
 
       
@@ -127,7 +135,7 @@ ga('send', 'pageview');
       
   <span class="article-category">
     <i class="icon-list"></i>
-    <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF%E7%9B%B8%E5%85%B3/">前端相关</a>
+    <a class="article-category-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a>
   </span>
 
 
@@ -147,21 +155,52 @@ ga('send', 'pageview');
 
   <div class="article-content">
     
-      <h1 id="fetch"><a href="#fetch" class="headerlink" title="fetch"></a>fetch</h1><p>window 的一个对象, 他是更加底层的一个API。</p>
+      <blockquote>
+<p>不会快速幂的我留下了超时的悔恨泪水</p>
+</blockquote>
+<p><a href="https://leetcode-cn.com/problems/count-good-numbers/" target="_blank" rel="noopener">统计好数字的数目</a></p>
+<p><a href="https://www.youtube.com/watch?v=GbDtCFhq20A" target="_blank" rel="noopener">快速幂：油管讲解</a></p>
+<h1 id="快速幂算法简介"><a href="#快速幂算法简介" class="headerlink" title="快速幂算法简介"></a>快速幂算法简介</h1><p>求 x^n 最简单的方法是通过循环将 n 个 x 乘起来，依次求 x^1, x^2, …, x^{n-1}, x^nx 时间复杂度为 O(n) 。</p>
+<p>快速幂法可将时间复杂度降低至 O(log n) ，以下从 「分治法」 和 「二进制」 两个角度解析快速幂法。</p>
+<h2 id="二进制角度"><a href="#二进制角度" class="headerlink" title="二进制角度"></a>二进制角度</h2><blockquote>
+<p>利用十进制数字 n 的二进制表示，可对快速幂进行数学化解释</p>
+</blockquote>
+<h3 id="n-为-2-的幂，以-a-64-为例："><a href="#n-为-2-的幂，以-a-64-为例：" class="headerlink" title="n 为 2 的幂，以 a^64 为例："></a>n 为 2 的幂，以 a^64 为例：</h3><blockquote>
+<p>其中 n = 64 为 2 的幂</p>
+</blockquote>
 <ol>
-<li><p>默认的请求为get请求 可以使用method:post 来进行配置 </p>
-</li>
-<li><p>第一步中的 response有许多方法 json() text() formData()</p>
-</li>
-<li><p>Fetch跨域的时候默认不会带cookie 需要手动的指定 credentials:’include’</p>
-</li>
-<li><p>fetch 是一个 low-level 的 API，所以你需要自己 encode HTTP 请求的 payload，还要自己指定 HTTP Header 中的 Content-Type 字段。</p>
-</li>
-<li><p>按照 MDN 的说法，fetch 只有在遇到网络错误的时候才会 reject 这个 promise，比如用户断网或请求地址的域名无法解析等。只要服务器能够返回 HTTP 响应（甚至只是 CORS preflight 的 OPTIONS 响应），promise 一定是 resolved 的状态。</p>
-</li>
+<li>朴素算法进行逐个相乘：a * a … * a (时间复杂度为 O(n))</li>
 </ol>
-<h1 id="ajax"><a href="#ajax" class="headerlink" title="ajax"></a>ajax</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs plain">var xml&#x3D;new XMLHttpRequest();<br>    xml.open(&#39;GET&#39;,&#39;a.json&#39;,true);  &#x2F;&#x2F;第三个参数表示是否异步<br>    xml.send(null);&#x2F;&#x2F;参数为要给服务器传递的参数  若只是单纯的向服务器取数据  则传递null<br>  xml.onreadystatechange&#x3D;function () &#123;<br>      if(xml.readyState&#x3D;&#x3D;4)&#123;<br>          console.log(11)<br>          if(xml.status&#x3D;&#x3D;200)&#123;<br>              console.log(xml.responseText)<br>          &#125;<br>      &#125;<br>  &#125;<br></code></pre></td></tr></table></figure>
+<center>
+    <img src="/images/算法/快速幂-01.png"  width="700px"/>
+</center>
 
+<ol start="2">
+<li>当 n 为 2 的幂时，我们只需 6 次乘法，时间复杂度为 O(log n)</li>
+</ol>
+<center>
+    <img src="/images/算法/快速幂02.png"  width="700px"/>
+</center>
+
+<h3 id="n-不为-2-的幂，以-a-105-为例："><a href="#n-不为-2-的幂，以-a-105-为例：" class="headerlink" title="n 不为 2 的幂，以 a^105 为例："></a>n 不为 2 的幂，以 a^105 为例：</h3><center>
+    <img src="/images/算法/快速幂03.png"  width="700px"/>
+</center>
+
+<center>
+    <img src="/images/算法/快速幂04.png"  width="700px"/>
+</center>
+
+<p>以上：计算 a^8，a^32，a^64次方事件容易的事，所以算法关键在于<font color="red">将 n 转化为 2 的幂之和</font></p>
+<p>105 的二进制表示为：1101001，将这几个数字拆开刚好得到：a^1, a^8，a^32，a^64</p>
+<center>
+    <img src="/images/算法/快速幂05.png"  width="700px"/>
+</center>
+
+<h3 id="伪代码且以-7-105-为例："><a href="#伪代码且以-7-105-为例：" class="headerlink" title="伪代码且以 7^105 为例："></a>伪代码且以 7^105 为例：</h3><center>
+    <img src="/images/算法/快速幂06.png"  width="700px"/>
+</center>
+
+<h3 id="JS-伪代码"><a href="#JS-伪代码" class="headerlink" title="JS 伪代码"></a>JS 伪代码</h3>
     
   </div>
 
@@ -172,10 +211,10 @@ ga('send', 'pageview');
 
    
   <div class="box-prev-next clearfix">
-    <a class="show pull-left" href="/2020/07/01/%E5%89%8D%E7%AB%AF-%E6%80%A7%E8%83%BD%E9%87%8F%E5%8C%96%E6%A0%87%E5%87%86%E8%AF%BB%E5%90%8E%E6%84%9F/">
+    <a class="show pull-left" href="/2021/07/02/%E7%AE%97%E6%B3%95-%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8/">
         <i class="icon icon-angle-left"></i>
     </a>
-    <a class="show pull-right" href="/2020/07/07/Http-POST-GET/">
+    <a class="hide pull-right" href="/">
         <i class="icon icon-angle-right"></i>
     </a>
   </div>
