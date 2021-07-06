@@ -39,7 +39,7 @@ categories: 前端相关
 
 3. 预设顺序：从右往左
 
-```js
+```json
 {
   "presets": ["@babel/preset-env", "@babel/preset-react"]
 }
