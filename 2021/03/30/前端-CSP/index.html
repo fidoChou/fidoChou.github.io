@@ -16,12 +16,12 @@
     <meta name="keywords" content="jojo,前端,户外领队,frontend,nodejs,JavaScript,Outdoor Leader" />
   
 
-  <meta name="description" content="PM 要求将 iframe 里面的某个元素，对 window 进行定位。主要解决思路：我参考了👉解决 iframe 中 fixed 失效的问题。 这个过程主要分为两步：  使该元素 fixed。并且计算出相对真实 window 的 marginTop 值 监听 window 的滚动事件，滚动偏移量即是 fixed 的 top 值  在实践的过程中，我主要遇到了以下问题 Q1: iframe 通信">
+  <meta name="description" content="PM 要求将 iframe 里面的某个元素，对 window 进行定位。 主要解决思路：我参考了👉解决 iframe 中 fixed 失效的问题。 这个过程主要分为两步：  使该元素 fixed。并且计算出相对真实 window 的 marginTop 值 监听 window 的滚动事件，滚动偏移量即是 fixed 的 top 值  在实践的过程中，我主要遇到了以下问题 Q1: iframe 通">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSP">
 <meta property="og:url" content="http://jocolorful.com/2021/03/30/%E5%89%8D%E7%AB%AF-CSP/index.html">
 <meta property="og:site_name" content="Jojo&#39;s World">
-<meta property="og:description" content="PM 要求将 iframe 里面的某个元素，对 window 进行定位。主要解决思路：我参考了👉解决 iframe 中 fixed 失效的问题。 这个过程主要分为两步：  使该元素 fixed。并且计算出相对真实 window 的 marginTop 值 监听 window 的滚动事件，滚动偏移量即是 fixed 的 top 值  在实践的过程中，我主要遇到了以下问题 Q1: iframe 通信">
+<meta property="og:description" content="PM 要求将 iframe 里面的某个元素，对 window 进行定位。 主要解决思路：我参考了👉解决 iframe 中 fixed 失效的问题。 这个过程主要分为两步：  使该元素 fixed。并且计算出相对真实 window 的 marginTop 值 监听 window 的滚动事件，滚动偏移量即是 fixed 的 top 值  在实践的过程中，我主要遇到了以下问题 Q1: iframe 通">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-03-30T12:12:44.000Z">
 <meta property="article:modified_time" content="2021-07-01T02:12:05.091Z">
@@ -101,7 +101,7 @@ ga('send', 'pageview');
   
   <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Q1-iframe-通信问题"><span class="toc-text">Q1: iframe 通信问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#A1-解决方案"><span class="toc-text">A1: 解决方案</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#深入-CSP"><span class="toc-text">深入 CSP</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#如何使用："><span class="toc-text">如何使用：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#主要目标："><span class="toc-text">主要目标：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#相关策略"><span class="toc-text">相关策略</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#上报机制"><span class="toc-text">上报机制</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#总结"><span class="toc-text">总结</span></a>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Q1-iframe-通信问题"><span class="toc-text">Q1: iframe 通信问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#A1-解决方案"><span class="toc-text">A1: 解决方案</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#深入-CSP"><span class="toc-text">深入 CSP</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#如何使用："><span class="toc-text">如何使用：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#主要目标："><span class="toc-text">主要目标：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#相关策略"><span class="toc-text">相关策略</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#上报机制"><span class="toc-text">上报机制</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-text">总结</span></a>
   </div>
 
 
@@ -147,30 +147,38 @@ ga('send', 'pageview');
 
   <div class="article-content">
     
-      <p>PM 要求将 iframe 里面的某个元素，对 window 进行定位。<br>主要解决思路：我参考了👉<a href="https://blog.csdn.net/hejiancsdn/article/details/80495333" target="_blank" rel="noopener">解决 iframe 中 fixed 失效的问题</a>。</p>
+      <p>PM 要求将 iframe 里面的某个元素，对 window 进行定位。<br>
+主要解决思路：我参考了👉<a href="https://blog.csdn.net/hejiancsdn/article/details/80495333" target="_blank" rel="noopener">解决 iframe 中 fixed 失效的问题</a>。</p>
 <p>这个过程主要分为两步：</p>
 <ol>
 <li>使该元素 fixed。并且计算出相对真实 window 的 marginTop 值</li>
 <li>监听 window 的滚动事件，滚动偏移量即是 fixed 的 top 值</li>
 </ol>
 <p>在实践的过程中，我主要遇到了以下问题</p>
-<h3 id="Q1-iframe-通信问题"><a href="#Q1-iframe-通信问题" class="headerlink" title="Q1: iframe 通信问题"></a>Q1: iframe 通信问题</h3><p>在本地开发模式中，由于a、b 两个项目，端口号不同，根据浏览器的同源策略，在 iframe 中监听上层 window 时报错如图下：</p>
-<h3 id="A1-解决方案"><a href="#A1-解决方案" class="headerlink" title="A1: 解决方案"></a>A1: 解决方案</h3><p>直接暴力启动一个允许跨域的浏览器，先保证开发正常进行</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir=<span class="hljs-string">"/tmp/chrome_dev_test"</span> --<span class="hljs-built_in">disable</span>-web-security<br></code></pre></td></tr></table></figure>
-
-<h2 id="深入-CSP"><a href="#深入-CSP" class="headerlink" title="深入 CSP"></a>深入 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CSP" target="_blank" rel="noopener">CSP</a></h2><p>既然问题出现，那就再深入一点，多剖析一下 CSP 相关内容：</p>
+<h3 id="Q1-iframe-通信问题">Q1: iframe 通信问题</h3>
+<p>在本地开发模式中，由于a、b 两个项目，端口号不同，根据浏览器的同源策略，在 iframe 中监听上层 window 时报错如图下：</p>
+<h3 id="A1-解决方案">A1: 解决方案</h3>
+<p>直接暴力启动一个允许跨域的浏览器，先保证开发正常进行</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir=<span class="string">"/tmp/chrome_dev_test"</span> --<span class="built_in">disable</span>-web-security</span><br></pre></td></tr></table></figure>
+<h2 id="深入-CSP">深入 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CSP" target="_blank" rel="noopener">CSP</a></h2>
+<p>既然问题出现，那就再深入一点，多剖析一下 CSP 相关内容：</p>
 <p>Content Secure Policy：内容安全策略</p>
-<h3 id="如何使用："><a href="#如何使用：" class="headerlink" title="如何使用："></a>如何使用：</h3><ol>
-<li><p>通过添加 <code>Content-Security-Policy</code> 头部指定</p>
+<h3 id="如何使用：">如何使用：</h3>
+<ol>
+<li>
+<p>通过添加 <code> Content-Security-Policy</code> 头部指定</p>
 </li>
-<li><p>通过 <code>meta</code> 标签来指定</p>
+<li>
+<p>通过 <code>meta</code> 标签来指定</p>
 </li>
 </ol>
-<h3 id="主要目标："><a href="#主要目标：" class="headerlink" title="主要目标："></a>主要目标：</h3><ol>
+<h3 id="主要目标：">主要目标：</h3>
+<ol>
 <li>CSP 的主要目标是减少和报告 XSS 攻击 ，XSS 攻击利用了浏览器对于从服务器所获取的内容的信任。</li>
 <li>数据包嗅探攻击：除加载域以外，还可以限制协议。如：https</li>
 </ol>
-<h3 id="相关策略"><a href="#相关策略" class="headerlink" title="相关策略"></a>相关策略</h3><ul>
+<h3 id="相关策略">相关策略</h3>
+<ul>
 <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/default-src" target="_blank" rel="noopener">default-src</a>: 这个是为其他以下几个指令提供 fallback 机制</li>
 <li>img-src</li>
 <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/connect-src" target="_blank" rel="noopener">connect-src</a> a 标签、fetch、ajax</li>
@@ -179,9 +187,11 @@ ga('send', 'pageview');
 <li>script-src</li>
 <li>style-src</li>
 </ul>
-<h3 id="上报机制"><a href="#上报机制" class="headerlink" title="上报机制"></a>上报机制</h3><p>通过 <code>report-uri</code> 进行一个 post 上报</p>
+<h3 id="上报机制">上报机制</h3>
+<p>通过 <code> report-uri</code> 进行一个 post 上报</p>
 <p>开源的 <a href="https://github.com/helmetjs/helmet/blob/042ee406c753c492a84d7c771010e38477f8c5cb/middlewares/content-security-policy/index.ts#L213" target="_blank" rel="noopener">koa-hemlet</a>本质也就是设置 Content-Secuiry-Policy</p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>CSP 只是作为一种为网站策略增强的一种手段。和 iFrame 通信并没有什么联系。只是可以控制网站加载 iFrame 的源。所以我应该还去了解并且动手实现跨域的情况下，如何实现window 和 iframe 的通信。</p>
+<h1>总结</h1>
+<p>CSP 只是作为一种为网站策略增强的一种手段。和 iFrame 通信并没有什么联系。只是可以控制网站加载 iFrame 的源。所以我应该还去了解并且动手实现跨域的情况下，如何实现window 和 iframe 的通信。</p>
 
     
   </div>

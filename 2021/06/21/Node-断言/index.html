@@ -16,12 +16,12 @@
     <meta name="keywords" content="jojo,前端,户外领队,frontend,nodejs,JavaScript,Outdoor Leader" />
   
 
-  <meta name="description" content="assert - 断言Node 原生 assert 模块 Node 的原生模块 assert 基于 Node assert 测试框架: power-assert  单测的意义：Egg.js 单元测试 单测框架对比 从 npm 搜索 test framework     测试库 优点 缺点    Mocha     AVA 简单的 API 测试 测试 case 本身比较复杂   power-asse">
+  <meta name="description" content="assert - 断言 Node 原生 assert 模块  Node 的原生模块 assert 基于 Node assert 测试框架: power-assert  单测的意义： Egg.js 单元测试 单测框架对比  从 npm 搜索 test framework     测试库 优点 缺点     Mocha     AVA 简单的 API 测试 测试 case 本身比较复杂   power">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Node.js 单测框架">
 <meta property="og:url" content="http://jocolorful.com/2021/06/21/Node-%E6%96%AD%E8%A8%80/index.html">
 <meta property="og:site_name" content="Jojo&#39;s World">
-<meta property="og:description" content="assert - 断言Node 原生 assert 模块 Node 的原生模块 assert 基于 Node assert 测试框架: power-assert  单测的意义：Egg.js 单元测试 单测框架对比 从 npm 搜索 test framework     测试库 优点 缺点    Mocha     AVA 简单的 API 测试 测试 case 本身比较复杂   power-asse">
+<meta property="og:description" content="assert - 断言 Node 原生 assert 模块  Node 的原生模块 assert 基于 Node assert 测试框架: power-assert  单测的意义： Egg.js 单元测试 单测框架对比  从 npm 搜索 test framework     测试库 优点 缺点     Mocha     AVA 简单的 API 测试 测试 case 本身比较复杂   power">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://jocolorful.com/images/test.png">
 <meta property="article:published_time" content="2021-06-21T11:11:22.000Z">
@@ -103,7 +103,7 @@ ga('send', 'pageview');
   
   <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#assert-断言"><span class="toc-text">assert - 断言</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Node-原生-assert-模块"><span class="toc-text">Node 原生 assert 模块</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#单测的意义："><span class="toc-text">单测的意义：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#单测框架对比"><span class="toc-text">单测框架对比</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-text">总结</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-text">assert - 断言</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Node-原生-assert-模块"><span class="toc-text">Node 原生 assert 模块</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-text">单测的意义：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-text">单测框架对比</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-text">总结</span></a></li></ol></li></ol>
   </div>
 
 
@@ -149,13 +149,17 @@ ga('send', 'pageview');
 
   <div class="article-content">
     
-      <h1 id="assert-断言"><a href="#assert-断言" class="headerlink" title="assert - 断言"></a>assert - 断言</h1><h2 id="Node-原生-assert-模块"><a href="#Node-原生-assert-模块" class="headerlink" title="Node 原生 assert 模块"></a>Node 原生 assert 模块</h2><ul>
+      <h1>assert - 断言</h1>
+<h2 id="Node-原生-assert-模块">Node 原生 assert 模块</h2>
+<ul>
 <li>Node 的原生模块 <a href="https://nodejs.org/api/assert.html" target="_blank" rel="noopener">assert</a></li>
 <li>基于 Node assert 测试框架: <a href="https://github.com/power-assert-js/power-assert" target="_blank" rel="noopener">power-assert</a></li>
 </ul>
-<h1 id="单测的意义："><a href="#单测的意义：" class="headerlink" title="单测的意义："></a>单测的意义：</h1><p><a href="https://eggjs.org/zh-cn/core/unittest.html" target="_blank" rel="noopener">Egg.js 单元测试</a></p>
-<h1 id="单测框架对比"><a href="#单测框架对比" class="headerlink" title="单测框架对比"></a>单测框架对比</h1><blockquote>
-<p>从 npm 搜索 <a href="https://www.npmjs.com/search?q=test%20framework&page=1&ranking=popularity" target="_blank" rel="noopener">test framework</a></p>
+<h1>单测的意义：</h1>
+<p><a href="https://eggjs.org/zh-cn/core/unittest.html" target="_blank" rel="noopener">Egg.js 单元测试</a></p>
+<h1>单测框架对比</h1>
+<blockquote>
+<p>从 npm 搜索 <a href="https://www.npmjs.com/search?q=test%20framework&amp;page=1&amp;ranking=popularity" target="_blank" rel="noopener">test framework</a></p>
 </blockquote>
 <table>
 <thead>
@@ -165,7 +169,8 @@ ga('send', 'pageview');
 <th>缺点</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td><a href="http://mochajs.org/" target="_blank" rel="noopener">Mocha</a></td>
 <td></td>
 <td></td>
@@ -195,10 +200,13 @@ ga('send', 'pageview');
 <td>基于原生</td>
 <td>异步支持不优好</td>
 </tr>
-</tbody></table>
-<p>社区使用情况<br><img src="/images/test.png"  width="500px"/></p>
+</tbody>
+</table>
+<p>社区使用情况<br>
+<img src="/images/test.png"  width="500px"/></p>
 <p>基于 Jest + supertest 一般可以打造出单测利器出来</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>如果让我重新选择测试单测框架，我会优先选择 Mocha + SuperTest</p>
+<h2 id="总结">总结</h2>
+<p>如果让我重新选择测试单测框架，我会优先选择 Mocha + SuperTest</p>
 
     
   </div>

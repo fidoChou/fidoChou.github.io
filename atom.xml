@@ -6,7 +6,7 @@
   <link href="http://jocolorful.com/atom.xml" rel="self"/>
   
   <link href="http://jocolorful.com/"/>
-  <updated>2021-07-06T02:29:22.605Z</updated>
+  <updated>2021-07-07T00:41:56.581Z</updated>
   <id>http://jocolorful.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在 Hexo 中使用数学公式</title>
+    <link href="http://jocolorful.com/2021/07/06/%E5%B7%A5%E5%85%B7-%E5%9C%A8hexo%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/"/>
+    <id>http://jocolorful.com/2021/07/06/%E5%B7%A5%E5%85%B7-%E5%9C%A8hexo%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/</id>
+    <published>2021-07-06T13:00:18.000Z</published>
+    <updated>2021-07-07T00:41:56.581Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="工具集合" scheme="http://jocolorful.com/categories/%E5%B7%A5%E5%85%B7%E9%9B%86%E5%90%88/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>统计好数字的数目</title>
@@ -46,7 +69,7 @@
     <link href="http://jocolorful.com/2021/07/02/%E7%AE%97%E6%B3%95-%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8/"/>
     <id>http://jocolorful.com/2021/07/02/%E7%AE%97%E6%B3%95-%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8/</id>
     <published>2021-07-02T01:10:32.000Z</published>
-    <updated>2021-07-02T01:43:11.168Z</updated>
+    <updated>2021-07-06T00:57:34.384Z</updated>
     
     
       
@@ -71,7 +94,7 @@
     <link href="http://jocolorful.com/2021/06/30/%E7%AE%97%E6%B3%95-%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8D/"/>
     <id>http://jocolorful.com/2021/06/30/%E7%AE%97%E6%B3%95-%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8D/</id>
     <published>2021-06-30T01:37:20.000Z</published>
-    <updated>2021-07-01T01:45:18.509Z</updated>
+    <updated>2021-07-05T00:43:22.541Z</updated>
     
     
       
@@ -259,7 +282,7 @@
     <link href="http://jocolorful.com/2021/06/20/%E6%99%B4%E9%9B%85%E9%9B%86/"/>
     <id>http://jocolorful.com/2021/06/20/%E6%99%B4%E9%9B%85%E9%9B%86/</id>
     <published>2021-06-20T05:37:58.000Z</published>
-    <updated>2021-06-30T00:59:26.897Z</updated>
+    <updated>2021-07-07T00:41:56.591Z</updated>
     
     
       
@@ -427,7 +450,7 @@
     <link href="http://jocolorful.com/2020/12/18/%E5%89%8D%E7%AB%AF-babel/"/>
     <id>http://jocolorful.com/2020/12/18/%E5%89%8D%E7%AB%AF-babel/</id>
     <published>2020-12-18T08:35:19.000Z</published>
-    <updated>2021-07-01T02:39:24.790Z</updated>
+    <updated>2021-07-07T00:41:56.581Z</updated>
     
     
       
@@ -441,29 +464,6 @@
     
     
     <category term="前端相关" scheme="http://jocolorful.com/categories/%E5%89%8D%E7%AB%AF%E7%9B%B8%E5%85%B3/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>进击的 NPM</title>
-    <link href="http://jocolorful.com/2020/12/10/Node.js-%E8%BF%9B%E5%87%BB%E7%9A%84-NPM/"/>
-    <id>http://jocolorful.com/2020/12/10/Node.js-%E8%BF%9B%E5%87%BB%E7%9A%84-NPM/</id>
-    <published>2020-12-10T02:10:00.000Z</published>
-    <updated>2021-06-23T06:27:55.746Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="Node.js" scheme="http://jocolorful.com/categories/Node-js/"/>
     
     
   </entry>

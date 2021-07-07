@@ -16,12 +16,12 @@
     <meta name="keywords" content="路由," />
   
 
-  <meta name="description" content="路由 路由是根据不同的 url 地址展示不同的内容或页面 前端路由就是把不同路由对应不同的内容或页面的任务交给前端来做，之前是通过服务端根据 url 的不同返回不同的页面实现的。  Hash路由hash 也 称作 锚点，本身是用来做页面定位的，她可以使对应 id 的元素显示在可视区域内。hash 路由一个明显的标志是带有 #,我们主要是通过监听 url 中的 hash 变化来进行路由跳转。 has">
+  <meta name="description" content="路由  路由是根据不同的 url 地址展示不同的内容或页面 前端路由就是把不同路由对应不同的内容或页面的任务交给前端来做，之前是通过服务端根据 url 的不同返回不同的页面实现的。  Hash路由 hash 也 称作 锚点，本身是用来做页面定位的，她可以使对应 id 的元素显示在可视区域内。 hash 路由一个明显的标志是带有 #,我们主要是通过监听 url 中的 hash 变化来进行路由跳转。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="各类路由的优缺点">
 <meta property="og:url" content="http://jocolorful.com/2019/07/21/%E5%89%8D%E7%AB%AF-%E5%90%84%E7%B1%BB%E8%B7%AF%E7%94%B1%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9/index.html">
 <meta property="og:site_name" content="Jojo&#39;s World">
-<meta property="og:description" content="路由 路由是根据不同的 url 地址展示不同的内容或页面 前端路由就是把不同路由对应不同的内容或页面的任务交给前端来做，之前是通过服务端根据 url 的不同返回不同的页面实现的。  Hash路由hash 也 称作 锚点，本身是用来做页面定位的，她可以使对应 id 的元素显示在可视区域内。hash 路由一个明显的标志是带有 #,我们主要是通过监听 url 中的 hash 变化来进行路由跳转。 has">
+<meta property="og:description" content="路由  路由是根据不同的 url 地址展示不同的内容或页面 前端路由就是把不同路由对应不同的内容或页面的任务交给前端来做，之前是通过服务端根据 url 的不同返回不同的页面实现的。  Hash路由 hash 也 称作 锚点，本身是用来做页面定位的，她可以使对应 id 的元素显示在可视区域内。 hash 路由一个明显的标志是带有 #,我们主要是通过监听 url 中的 hash 变化来进行路由跳转。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2019-07-21T04:46:47.000Z">
 <meta property="article:modified_time" content="2021-07-01T02:49:46.200Z">
@@ -102,7 +102,7 @@ ga('send', 'pageview');
   
   <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#路由"><span class="toc-text">路由</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Hash路由"><span class="toc-text">Hash路由</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#History"><span class="toc-text">History</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-text">路由</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-text">Hash路由</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-text">History</span></a></li></ol>
   </div>
 
 
@@ -148,13 +148,17 @@ ga('send', 'pageview');
 
   <div class="article-content">
     
-      <h1 id="路由"><a href="#路由" class="headerlink" title="路由"></a>路由</h1><ul>
+      <h1>路由</h1>
+<ul>
 <li>路由是根据不同的 url 地址展示不同的内容或页面</li>
 <li>前端路由就是把不同路由对应不同的内容或页面的任务交给前端来做，之前是通过服务端根据 url 的不同返回不同的页面实现的。</li>
 </ul>
-<h1 id="Hash路由"><a href="#Hash路由" class="headerlink" title="Hash路由"></a>Hash路由</h1><p>hash 也 称作 锚点，本身是用来做页面定位的，她可以使对应 id 的元素显示在可视区域内。<br>hash 路由一个明显的标志是带有 #,我们主要是通过监听 url 中的 hash 变化来进行路由跳转。</p>
+<h1>Hash路由</h1>
+<p>hash 也 称作 锚点，本身是用来做页面定位的，她可以使对应 id 的元素显示在可视区域内。<br>
+hash 路由一个明显的标志是带有 #,我们主要是通过监听 url 中的 hash 变化来进行路由跳转。</p>
 <p>hash的优势就是兼容性更好,在老版IE中都有运行,问题在于url中一直存在#不够美观,而且hash路由更像是Hack而非标准,相信随着发展更加标准化的History API会逐步蚕食掉hash路由的市场。</p>
-<h1 id="History"><a href="#History" class="headerlink" title="History"></a>History</h1><ul>
+<h1>History</h1>
+<ul>
 <li>window.history.back();       // 后退</li>
 <li>window.history.forward();    // 前进</li>
 <li>window.history.go(-3);       // 后退三个页面</li>

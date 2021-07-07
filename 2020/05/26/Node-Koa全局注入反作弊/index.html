@@ -104,7 +104,7 @@ ga('send', 'pageview');
   
   <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#中间件"><span class="toc-text">中间件</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-text">中间件</span></a></li></ol>
   </div>
 
 
@@ -155,12 +155,13 @@ ga('send', 'pageview');
 <p>前言：我们的项目是借助 Wepack，配置两套打包的脚本，分别输出服务端渲染「SSR」以及客户端渲染「CSR」所需要的资源。服务端渲染是利用「Koa」 以及渲染引擎 「Mustache」输出首屏内容。</p>
 <p>以上</p>
 <p>反作弊的状态码由后端返回</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs plain">const MEMBER_FROZEN_EXCEPTION_MAP &#x3D; &#123;<br>  40350: &#39;abuseip&#39;,<br>  40351: &#39;imfrozen&#39;,<br>  40352: &#39;unhuman&#39;<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const MEMBER_FROZEN_EXCEPTION_MAP &#x3D; &#123;</span><br><span class="line">  40350: &#39;abuseip&#39;,</span><br><span class="line">  40351: &#39;imfrozen&#39;,</span><br><span class="line">  40352: &#39;unhuman&#39;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>http status 状态码为 403 时需要进行异常处理。</p>
 <p>Node 端和 Client 端本身就是隔离的（所以有了同构技术），需要考虑在不同环境对<code>http status</code>的处理。</p>
 <p>我可以联想到以下关键字👇</p>
 <p>「中间件」「责任链模式」「洋葱模型」「你是否真的懂 try…catch」</p>
-<h1 id="中间件"><a href="#中间件" class="headerlink" title="中间件"></a>中间件</h1><blockquote>
+<h1>中间件</h1>
+<blockquote>
 <p>为什么叫中间件？因为出于 Http 的 Request 和 Response 中间，用来实现某种功能。</p>
 </blockquote>
 <p>我的老板提出这个问题时，我几乎立刻抖了个机灵：写个中间件呗？（因为我室友就是专业写中间件的，hahaha）</p>
@@ -169,10 +170,8 @@ ga('send', 'pageview');
 <p>老板：那 C 端怎么做呢？</p>
 <p>抖机灵：从 fetch 请求直接 reject 出来！</p>
 <img src="/images/koa.png"  width="500px" />
-
 <p>哦! Koa 对标 Express 底层 <a href="https://github.com/senchalabs/connect" target="_blank" rel="noopener">connect</a></p>
 <img src="/images/onion.png"  width="500px" />
-
 <p>嘿嘿嘿，虽然把网上这个图抄过来了。但是我们可以仔细看看这个中间件的设计！什么设计？顺序！</p>
 <p>目前我们的 xen 项目已经有了各类错误上抛的机制，我在想在 中间件 的基础上是否能在加入</p>
 <ol>

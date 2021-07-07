@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
+  <title>在 Hexo 中使用数学公式 | Jojo&#39;s World</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="jojo,前端,户外领队,frontend,nodejs,JavaScript,Outdoor Leader" />
+  
+
+  <meta name="description" content="用法 12345var md &#x3D; window.markdownit();md.use(window.markdownitLatex2img,   &amp;#123;style: &quot;filter: opacity(75%);transform:scale(0.75);text-align:center;&quot;&amp;#125; &#x2F;&#x2F;可选);md.render(input.value); 1 数学公式 1.1 内联">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在 Hexo 中使用数学公式">
+<meta property="og:url" content="http://jocolorful.com/2021/07/06/%E5%B7%A5%E5%85%B7-%E5%9C%A8hexo%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/index.html">
+<meta property="og:site_name" content="Jojo&#39;s World">
+<meta property="og:description" content="用法 12345var md &#x3D; window.markdownit();md.use(window.markdownitLatex2img,   &amp;#123;style: &quot;filter: opacity(75%);transform:scale(0.75);text-align:center;&quot;&amp;#125; &#x2F;&#x2F;可选);md.render(input.value); 1 数学公式 1.1 内联">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://math.now.sh/?inline=a%5E2%252Bb%5E2%253Dc%5E2">
+<meta property="og:image" content="https://math.now.sh/?inline=S_%7Bn%7D%253Dn%20a_%7B1%7D%252B%5Cfrac%7Bn(n-1)%7D%7B2%7D%20d%252C%20n%20%5Cin%20N%5E%7B*%7D">
+<meta property="og:image" content="https://math.now.sh/?inline=%5Cint_%7Ba%7D%5E%7Bb%7D%20f(x)%20d%20x%253DF(b)-F(a)%253D%5Cleft.F(x)%5Cright%7C_%7Ba%7D%20%5E%7Bb%7D">
+<meta property="og:image" content="https://math.now.sh/?inline=P_%7Bn%7D(k)%253DC_%7Bn%7D%5E%7Bk%7D%20p%5E%7Bk%7D%20q%5E%7Bn-k%7D%20%5Cquad%20k%253D0%252C1%252C2%20%5Cldots%20%5Cldots%252C%20n">
+<meta property="og:image" content="https://math.now.sh/?inline=X%20%5Csim%20N(%5Cmu%252C%5Csigma%5E2)">
+<meta property="og:image" content="https://math.now.sh/?from=f(x)%20%253D%20%5Cfrac%7B1%7D%7B%5Csqrt%7B2%5Cpi%7D%5Csigma%7De%5E%7B-%5Cfrac%7B(x-%5Cmu)%5E2%7D%7B2%5Csigma%5E2%7D%7D%0A">
+<meta property="og:image" content="https://math.now.sh/?inline=A_n%253DA_%7Bn-1%7D%252BA_%7Bn-2%7D">
+<meta property="og:image" content="https://math.now.sh/?from=%5Clim_%7Bn%5Cto%20%5Cinfty%7D%5Cfrac%7BA_%7Bn-1%7D%7D%7BA_n%7D%253D%5Cfrac%7B%5Csqrt%7B5%7D-1%7D%7B2%7D.%0A">
+<meta property="og:image" content="https://math.now.sh/?from=%5Cbegin%7Bsplit%7D(x%E2%88%921)(x%E2%88%923)%2526%253Dx%5E2%E2%88%924x%252B3%20%5C%5C%20%0A%2526%253Dx%5E2%E2%88%924x%252B4%E2%88%921%20%5C%5C%20%0A%2526%253D(x%E2%88%922)%5E2%E2%88%921%0A%5Cend%7Bsplit%7D%0A">
+<meta property="og:image" content="https://math.now.sh/?from=D(x)%253D%0A%5Cbegin%7Bcases%7D%0A1%252C%2526%20x%20%5Cin%20Q%20%5C%5C%0A0%252C%2526%20x%20%5Cnotin%20Q%0A%5Cend%7Bcases%7D%0A">
+<meta property="og:image" content="https://math.now.sh/?from=%5Ciiint_%7B%5COmega%7D%5Cleft(%5Cfrac%7B%5Cpartial%20P%7D%7B%5Cpartial%20x%7D%252B%5Cfrac%7B%5Cpartial%20Q%7D%7B%5Cpartial%20y%7D%252B%5Cfrac%7B%5Cpartial%20R%7D%7B%5Cpartial%20z%7D%5Cright)%20d%20v%253D%5Ciint_%7B%5CSigma%7D%20P%20d%20y%20d%20z%252BQ%20d%20z%20d%20x%252BR%20d%20x%20d%20y%0A">
+<meta property="og:image" content="https://math.now.sh/?from=D_%7Bn-1%7D%253D%5Cleft%7C%5Cbegin%7Barray%7D%7Bcccc%7D%0A1%20%2526%201%20%2526%20%5Cdots%20%2526%201%20%5C%5C%0Ax_%7B2%7D%20%2526%20x_%7B3%7D%20%2526%20%5Cdots%20%2526%20x_%7Bn%7D%20%5C%5C%0A%5Cvdots%20%2526%20%5Cvdots%20%2526%20%2526%20%5Cvdots%20%5C%5C%0Ax_%7B2%7D%5E%7Bn-2%7D%20%2526%20x_%7B3%7D%5E%7Bn-2%7D%20%2526%20%5Cdots%20%2526%20x_%7Bn%7D%5E%7Bn-2%7D%0A%5Cend%7Barray%7D%5Cright%7C%253D%5Cprod_%7B2%20%5Cleq%20j%3Ci%20%5Cleq%20n%7D%5Cleft(x_%7Bi%7D-x_%7Bj%7D%5Cright)">
+<meta property="og:image" content="https://math.now.sh/?from=%5Cleft%5C%7B%5Cbegin%7Baligned%7D%0Aa_%7B11%7D%20x_%7B1%7D%252Ba_%7B12%7D%20x_%7B2%7D%252B%5Ccdots%252Ba_%7B1%20n%7D%20x_%7Bn%7D%20%2526%253Db_%7B1%7D%20%5C%5C%0Aa_%7B21%7D%20x_%7B1%7D%252Ba_%7B22%7D%20x_%7B2%7D%252B%5Ccdots%252Ba_%7B2%20n%7D%20x_%7Bn%7D%20%2526%253Db_%7B2%7D%20%5C%5C%0A%5Ccdots%20%5Ccdots%20%5Ccdots%20%5C%5C%0Aa_%7Bm%201%7D%20x_%7B1%7D%252Ba_%7Bm%202%7D%20x_%7B2%7D%252B%5Ccdots%252Ba_%7Bm%20n%7D%20x_%7Bn%7D%20%2526%253Db_%7Bm%7D%0A%5Cend%7Baligned%7D%5Cright.">
+<meta property="og:image" content="https://math.now.sh/?inline=%5Csum%20%5Cvec%7BF%7D_%7Bi%7D%253D%5Cfrac%7B%5Cmathrm%7Bd%7D%20%5Cvec%7Bv%7D%7D%7B%5Cmathrm%7Bd%7D%20t%7D%253D0">
+<meta property="og:image" content="https://math.now.sh/?inline=%5Cvec%7BF%7D%253D%5Cfrac%7B%5Cmathrm%7Bd%7D%20m%7D%7B%5Cmathrm%7Bd%7D%20t%7D%20%5Cvec%7Bv%7D%252Bm%20%5Cfrac%7B%5Cmathrm%7Bd%7D%20%5Cvec%7Bv%7D%7D%7B%5Cmathrm%7Bd%7D%20t%7D%253D%5Cfrac%7B%5Cmathrm%7Bd%7D%20m%7D%7B%5Cmathrm%7Bd%7D%20t%7D%20%5Cvec%7Bv%7D%252Bm%20%5Cvec%7Ba%7D%253D%5Cfrac%7B%5Cmathrm%7Bd%7D%20m%7D%7B%5Cmathrm%7Bd%7D%20t%7D%20%5Cvec%7Bv%7D%252Bm%20%5Cfrac%7B%5Cmathrm%7Bd%7D%5E%7B2%7D%20%5Cvec%7Br%7D%7D%7B%5Cmathrm%7Bd%7D%20t%5E%7B2%7D%7D">
+<meta property="og:image" content="https://math.now.sh/?inline=%5Coverrightarrow%7BF_%7B12%7D%7D%253D-%5Coverrightarrow%7BF_%7B21%7D%7D">
+<meta property="og:image" content="https://math.now.sh/?inline=E%253Dmc%5E2">
+<meta property="og:image" content="https://math.now.sh/?inline=F%253D%5Cfrac%7BG%20M%20m%7D%7Br%5E%7B2%7D%7D">
+<meta property="og:image" content="https://math.now.sh/?from=G%20%5Cfrac%7Bm%20M%7D%7B(r%252Bh)%5E%7B2%7D%7D%253Dm%20%5Cfrac%7B%5Cnu%5E%7B2%7D%7D%7B(r%252Bh)%7D%0A">
+<meta property="og:image" content="https://math.now.sh/?from=%5Cleft%5B%5Cfrac%7B%5Cpartial%5Cleft(%5CDelta_%7Br%7D%20H_%7Bm%7D%5Cright)%7D%7B%5Cpartial%20T%7D%5Cright%5D_%7Bp%7D%253D%5Csum_%7BB%7D%20v_%7BB%7D%20C_%7Bp%252C%20m%7D(B)%0A">
+<meta property="og:image" content="https://math.now.sh/?from=d%20S%20%5Cgeq%20%5Cfrac%7B%5Cdelta%20Q%7D%7BT%7D%0A">
+<meta property="og:image" content="https://math.now.sh/?inline=%5Cce%7BSO4%5E2-%20%252B%20Ba%5E2%252B%20-%3E%20BaSO4%20v%7D">
+<meta property="og:image" content="https://math.now.sh/?from=%5Cce%7BN2%20%252B%203H2%20%3C%253D%3ET%5B%E9%AB%98%E6%B8%A9%E3%80%81%E5%8A%A0%E5%8E%8B%5D%5B%E5%82%AC%E5%8C%96%E5%89%82%5D%202NH3%7D%0A">
+<meta property="og:image" content="https://math.now.sh/?inline=%5Cmathrm%7BZn%7D%252B2%20%5Cmathrm%7BHCl%7D(%5Cmathrm%7Baq%7D)%253D%5Cmathrm%7BH%7D_%7B2%7D%252B%5Cmathrm%7BZnCl%7D_%7B2%7D%20%5Cquad(%5Cmathrm%7Baq%7D)">
+<meta property="og:image" content="https://math.now.sh/?from=K%5E%7B%5Ctheta%7D%253D%5Cfrac%7B%5Cleft%5Bp%5Cleft(%5Cmathrm%7BH%7D_%7B2%7D%5Cright)%20%252F%20p%5E%7B%5Ctheta%7D%5Cright%5D%5Cleft%5Bc%5Cleft(%5Cmathrm%7BZnCl%7D_%7B2%7D%5Cright)%5Cright%5D%7D%7Bc%5E%7B2%7D(%5Cmathrm%7BHC%7D)%7D%0A">
+<meta property="article:published_time" content="2021-07-06T13:00:18.000Z">
+<meta property="article:modified_time" content="2021-07-07T00:41:56.581Z">
+<meta property="article:author" content="Jojo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://math.now.sh/?inline=a%5E2%252Bb%5E2%253Dc%5E2">
+
+  
+
+  
+    <link rel="icon" href="/images/avatar.jpg">
+  
+
+  <link href="/css/styles.css?v=c114cbeddx" rel="stylesheet">
+
+
+  
+    
+<link rel="stylesheet" href="/css/personal-style.css">
+
+  
+
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-38189205-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Jojo's World" type="application/atom+xml">
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#用法"><span class="toc-text">用法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-数学公式"><span class="toc-text">1 数学公式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-内联公式"><span class="toc-text">1.1 内联公式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-块公式"><span class="toc-text">1.2 块公式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-物理公式"><span class="toc-text">2 物理公式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-化学公式"><span class="toc-text">3 化学公式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-语法参考"><span class="toc-text">4 语法参考</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-工具-在hexo中使用数学公式" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">在 Hexo 中使用数学公式</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2021.07.06</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>Jojo</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/%E5%B7%A5%E5%85%B7%E9%9B%86%E5%90%88/">工具集合</a>
+  </span>
+
+
+
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <h2 id="用法">用法</h2>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> md = <span class="built_in">window</span>.markdownit();</span><br><span class="line">md.use(<span class="built_in">window</span>.markdownitLatex2img, </span><br><span class="line">  &#123;<span class="attr">style</span>: <span class="string">"filter: opacity(75%);transform:scale(0.75);text-align:center;"</span>&#125; <span class="comment">//可选</span></span><br><span class="line">);</span><br><span class="line">md.render(input.value);</span><br></pre></td></tr></table></figure>
+<h2 id="1-数学公式">1 数学公式</h2>
+<h3 id="1-1-内联公式">1.1 内联公式</h3>
+<p><strong>开头的<code>$</code>必须在其右边紧跟一个非空格字符，而结尾的<code>$</code>必须在其左边紧接一个非空格字符，并且不能紧跟一个数字。</strong></p>
+<ul>
+<li>勾股定理: <img src="https://math.now.sh?inline=a%5E2%2Bb%5E2%3Dc%5E2" style="display:inline-block;margin: 0;"/></li>
+<li>等差数列求和公式: <img src="https://math.now.sh?inline=S_%7Bn%7D%3Dn%20a_%7B1%7D%2B%5Cfrac%7Bn%28n-1%29%7D%7B2%7D%20d%2C%20n%20%5Cin%20N%5E%7B*%7D" style="display:inline-block;margin: 0;"/></li>
+<li>牛顿-莱布尼茨公式: <img src="https://math.now.sh?inline=%5Cint_%7Ba%7D%5E%7Bb%7D%20f%28x%29%20d%20x%3DF(b)-F(a)%3D%5Cleft.F(x)%5Cright%7C_%7Ba%7D%20%5E%7Bb%7D" style="display:inline-block;margin: 0;"/></li>
+<li>二项分布: <img src="https://math.now.sh?inline=P_%7Bn%7D%28k%29%3DC_%7Bn%7D%5E%7Bk%7D%20p%5E%7Bk%7D%20q%5E%7Bn-k%7D%20%5Cquad%20k%3D0%2C1%2C2%20%5Cldots%20%5Cldots%2C%20n" style="display:inline-block;margin: 0;"/></li>
+</ul>
+<h3 id="1-2-块公式">1.2 块公式</h3>
+<p>正态分布<img src="https://math.now.sh?inline=X%20%5Csim%20N%28%5Cmu%2C%5Csigma%5E2%29" style="display:inline-block;margin: 0;"/>:</p>
+<p style=""><img src="https://math.now.sh?from=f%28x%29%20%3D%20%5Cfrac%7B1%7D%7B%5Csqrt%7B2%5Cpi%7D%5Csigma%7De%5E%7B-%5Cfrac%7B(x-%5Cmu)%5E2%7D%7B2%5Csigma%5E2%7D%7D%0A" /></p><p>斐波那契数列<img src="https://math.now.sh?inline=A_n%3DA_%7Bn-1%7D%2BA_%7Bn-2%7D" style="display:inline-block;margin: 0;"/>,前后两项的比值逐渐收敛到黄金分割比例</p>
+<p style=""><img src="https://math.now.sh?from=%5Clim_%7Bn%5Cto%20%5Cinfty%7D%5Cfrac%7BA_%7Bn-1%7D%7D%7BA_n%7D%3D%5Cfrac%7B%5Csqrt%7B5%7D-1%7D%7B2%7D.%0A" /></p><p>因式分解</p>
+<p style=""><img src="https://math.now.sh?from=%5Cbegin%7Bsplit%7D%28x%E2%88%921%29(x%E2%88%923)%26%3Dx%5E2%E2%88%924x%2B3%20%5C%5C%20%0A%26%3Dx%5E2%E2%88%924x%2B4%E2%88%921%20%5C%5C%20%0A%26%3D(x%E2%88%922)%5E2%E2%88%921%0A%5Cend%7Bsplit%7D%0A" /></p><p>狄利克雷函数</p>
+<p style=""><img src="https://math.now.sh?from=D%28x%29%3D%0A%5Cbegin%7Bcases%7D%0A1%2C%26%20x%20%5Cin%20Q%20%5C%5C%0A0%2C%26%20x%20%5Cnotin%20Q%0A%5Cend%7Bcases%7D%0A" /></p><p>高斯公式</p>
+<p style=""><img src="https://math.now.sh?from=%5Ciiint_%7B%5COmega%7D%5Cleft%28%5Cfrac%7B%5Cpartial%20P%7D%7B%5Cpartial%20x%7D%2B%5Cfrac%7B%5Cpartial%20Q%7D%7B%5Cpartial%20y%7D%2B%5Cfrac%7B%5Cpartial%20R%7D%7B%5Cpartial%20z%7D%5Cright%29%20d%20v%3D%5Ciint_%7B%5CSigma%7D%20P%20d%20y%20d%20z%2BQ%20d%20z%20d%20x%2BR%20d%20x%20d%20y%0A" /></p><p>范德蒙行列式</p>
+<p style=""><img src="https://math.now.sh?from=D_%7Bn-1%7D%3D%5Cleft%7C%5Cbegin%7Barray%7D%7Bcccc%7D%0A1%20%26%201%20%26%20%5Cdots%20%26%201%20%5C%5C%0Ax_%7B2%7D%20%26%20x_%7B3%7D%20%26%20%5Cdots%20%26%20x_%7Bn%7D%20%5C%5C%0A%5Cvdots%20%26%20%5Cvdots%20%26%20%26%20%5Cvdots%20%5C%5C%0Ax_%7B2%7D%5E%7Bn-2%7D%20%26%20x_%7B3%7D%5E%7Bn-2%7D%20%26%20%5Cdots%20%26%20x_%7Bn%7D%5E%7Bn-2%7D%0A%5Cend%7Barray%7D%5Cright%7C%3D%5Cprod_%7B2%20%5Cleq%20j%3Ci%20%5Cleq%20n%7D%5Cleft%28x_%7Bi%7D-x_%7Bj%7D%5Cright%29" /></p><p>线性方程组</p>
+<p style=""><img src="https://math.now.sh?from=%5Cleft%5C%7B%5Cbegin%7Baligned%7D%0Aa_%7B11%7D%20x_%7B1%7D%2Ba_%7B12%7D%20x_%7B2%7D%2B%5Ccdots%2Ba_%7B1%20n%7D%20x_%7Bn%7D%20%26%3Db_%7B1%7D%20%5C%5C%0Aa_%7B21%7D%20x_%7B1%7D%2Ba_%7B22%7D%20x_%7B2%7D%2B%5Ccdots%2Ba_%7B2%20n%7D%20x_%7Bn%7D%20%26%3Db_%7B2%7D%20%5C%5C%0A%5Ccdots%20%5Ccdots%20%5Ccdots%20%5C%5C%0Aa_%7Bm%201%7D%20x_%7B1%7D%2Ba_%7Bm%202%7D%20x_%7B2%7D%2B%5Ccdots%2Ba_%7Bm%20n%7D%20x_%7Bn%7D%20%26%3Db_%7Bm%7D%0A%5Cend%7Baligned%7D%5Cright." /></p><h2 id="2-物理公式">2 物理公式</h2>
+<ul>
+<li>牛顿第一定律: <img src="https://math.now.sh?inline=%5Csum%20%5Cvec%7BF%7D_%7Bi%7D%3D%5Cfrac%7B%5Cmathrm%7Bd%7D%20%5Cvec%7Bv%7D%7D%7B%5Cmathrm%7Bd%7D%20t%7D%3D0" style="display:inline-block;margin: 0;"/></li>
+<li>牛顿第二定律: <img src="https://math.now.sh?inline=%5Cvec%7BF%7D%3D%5Cfrac%7B%5Cmathrm%7Bd%7D%20m%7D%7B%5Cmathrm%7Bd%7D%20t%7D%20%5Cvec%7Bv%7D%2Bm%20%5Cfrac%7B%5Cmathrm%7Bd%7D%20%5Cvec%7Bv%7D%7D%7B%5Cmathrm%7Bd%7D%20t%7D%3D%5Cfrac%7B%5Cmathrm%7Bd%7D%20m%7D%7B%5Cmathrm%7Bd%7D%20t%7D%20%5Cvec%7Bv%7D%2Bm%20%5Cvec%7Ba%7D%3D%5Cfrac%7B%5Cmathrm%7Bd%7D%20m%7D%7B%5Cmathrm%7Bd%7D%20t%7D%20%5Cvec%7Bv%7D%2Bm%20%5Cfrac%7B%5Cmathrm%7Bd%7D%5E%7B2%7D%20%5Cvec%7Br%7D%7D%7B%5Cmathrm%7Bd%7D%20t%5E%7B2%7D%7D" style="display:inline-block;margin: 0;"/></li>
+<li>牛顿第三定律: <img src="https://math.now.sh?inline=%5Coverrightarrow%7BF_%7B12%7D%7D%3D-%5Coverrightarrow%7BF_%7B21%7D%7D" style="display:inline-block;margin: 0;"/></li>
+<li>质能守恒: <img src="https://math.now.sh?inline=E%3Dmc%5E2" style="display:inline-block;margin: 0;"/></li>
+</ul>
+<p>万有引力定律: <img src="https://math.now.sh?inline=F%3D%5Cfrac%7BG%20M%20m%7D%7Br%5E%7B2%7D%7D" style="display:inline-block;margin: 0;"/></p>
+<p style=""><img src="https://math.now.sh?from=G%20%5Cfrac%7Bm%20M%7D%7B%28r%2Bh%29%5E%7B2%7D%7D%3Dm%20%5Cfrac%7B%5Cnu%5E%7B2%7D%7D%7B(r%2Bh)%7D%0A" /></p><p>基尔霍夫定律</p>
+<p style=""><img src="https://math.now.sh?from=%5Cleft%5B%5Cfrac%7B%5Cpartial%5Cleft%28%5CDelta_%7Br%7D%20H_%7Bm%7D%5Cright%29%7D%7B%5Cpartial%20T%7D%5Cright%5D_%7Bp%7D%3D%5Csum_%7BB%7D%20v_%7BB%7D%20C_%7Bp%2C%20m%7D(B)%0A" /></p><p>热力学第二定律</p>
+<p style=""><img src="https://math.now.sh?from=d%20S%20%5Cgeq%20%5Cfrac%7B%5Cdelta%20Q%7D%7BT%7D%0A" /></p><h2 id="3-化学公式">3 化学公式</h2>
+<p>离子反应与沉淀: <img src="https://math.now.sh?inline=%5Cce%7BSO4%5E2-%20%2B%20Ba%5E2%2B%20-%3E%20BaSO4%20v%7D" style="display:inline-block;margin: 0;"/></p>
+<p>氮气氢气合成氨</p>
+<p style=""><img src="https://math.now.sh?from=%5Cce%7BN2%20%2B%203H2%20%3C%3D%3ET%5B%E9%AB%98%E6%B8%A9%E3%80%81%E5%8A%A0%E5%8E%8B%5D%5B%E5%82%AC%E5%8C%96%E5%89%82%5D%202NH3%7D%0A" /></p><p>化学平衡常数:<img src="https://math.now.sh?inline=%5Cmathrm%7BZn%7D%2B2%20%5Cmathrm%7BHCl%7D%28%5Cmathrm%7Baq%7D%29%3D%5Cmathrm%7BH%7D_%7B2%7D%2B%5Cmathrm%7BZnCl%7D_%7B2%7D%20%5Cquad(%5Cmathrm%7Baq%7D)" style="display:inline-block;margin: 0;"/></p>
+<p style=""><img src="https://math.now.sh?from=K%5E%7B%5Ctheta%7D%3D%5Cfrac%7B%5Cleft%5Bp%5Cleft%28%5Cmathrm%7BH%7D_%7B2%7D%5Cright%29%20%2F%20p%5E%7B%5Ctheta%7D%5Cright%5D%5Cleft%5Bc%5Cleft(%5Cmathrm%7BZnCl%7D_%7B2%7D%5Cright)%5Cright%5D%7D%7Bc%5E%7B2%7D(%5Cmathrm%7BHC%7D)%7D%0A" /></p><h2 id="4-语法参考">4 语法参考</h2>
+<p><a href="https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference" target="_blank" rel="noopener">MathJax basic tutorial and quick reference</a></p>
+
+    
+  </div>
+
+</article>
+
+
+   
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2021/07/05/%E7%AE%97%E6%B3%95-%E5%BF%AB%E9%80%9F%E5%B9%82/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="hide pull-right" href="/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              RSS
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+
+<!-- Gitalk评论插件通用代码 -->
+<div id="gitalk-container"></div>
+
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+ <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script src="//cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
+<script>
+const gitalk = new Gitalk({
+  clientID: '6e1bd36a2fd1534ebf18',
+  clientSecret: '07d3d9b1d113a099673fe5180fa67c72263a847a',
+  repo: 'blog-comment',
+  owner: 'fidoChou',
+  // 在这里设置一下截取前50个字符串, 这是因为 github 对 label 的长度有了要求, 如果超过
+  // 50个字符串则会报错.
+  // id: location.pathname.split('/').pop().substring(0, 49),
+  id: md5(location.pathname),
+  admin: ['fidoChou'],
+  // facebook-like distraction free mode
+  distractionFreeMode: false
+})
+gitalk.render('gitalk-container')
+</script>
+<!-- Gitalk代码结束 -->
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":200,"height":300,"hOffset":250,"vOffset":0},"mobile":{"show":true},"log":false,"tagMode":false});</script></body>
+</html>

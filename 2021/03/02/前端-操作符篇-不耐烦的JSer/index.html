@@ -16,12 +16,12 @@
     <meta name="keywords" content="jojo,前端,户外领队,frontend,nodejs,JavaScript,Outdoor Leader" />
   
 
-  <meta name="description" content="11. 运算符11.1. 运算符两个重要的规则1. 强制让运算数变为合适的类型 2. 大多数运算符只对原始类型有效11.1.1. 运算符两个重要的规则一个运算符操作的的数据类型不匹配， JS基本不会抛出异常。相反，它会自动进行强制类型转换。以便于这样看起来是正常运算的。让我们来看下面两个例子。 首先，一个乘法运算只可以让两个数字正常工作，因此，在相乘之前，他会将字符转换成数字。 12&#39;7&#39; * &#39;">
+  <meta name="description" content="11. 运算符 11.1. 运算符两个重要的规则 1. 强制让运算数变为合适的类型 2. 大多数运算符只对原始类型有效  11.1.1. 运算符两个重要的规则 一个运算符操作的的数据类型不匹配， JS基本不会抛出异常。相反，它会自动进行强制类型转换。以便于这样看起来是正常运算的。让我们来看下面两个例子。 首先，一个乘法运算只可以让两个数字正常工作，因此，在相乘之前，他会将字符转换成数字。 12&#39;7">
 <meta property="og:type" content="article">
 <meta property="og:title" content="不耐烦的 JSer">
 <meta property="og:url" content="http://jocolorful.com/2021/03/02/%E5%89%8D%E7%AB%AF-%E6%93%8D%E4%BD%9C%E7%AC%A6%E7%AF%87-%E4%B8%8D%E8%80%90%E7%83%A6%E7%9A%84JSer/index.html">
 <meta property="og:site_name" content="Jojo&#39;s World">
-<meta property="og:description" content="11. 运算符11.1. 运算符两个重要的规则1. 强制让运算数变为合适的类型 2. 大多数运算符只对原始类型有效11.1.1. 运算符两个重要的规则一个运算符操作的的数据类型不匹配， JS基本不会抛出异常。相反，它会自动进行强制类型转换。以便于这样看起来是正常运算的。让我们来看下面两个例子。 首先，一个乘法运算只可以让两个数字正常工作，因此，在相乘之前，他会将字符转换成数字。 12&#39;7&#39; * &#39;">
+<meta property="og:description" content="11. 运算符 11.1. 运算符两个重要的规则 1. 强制让运算数变为合适的类型 2. 大多数运算符只对原始类型有效  11.1.1. 运算符两个重要的规则 一个运算符操作的的数据类型不匹配， JS基本不会抛出异常。相反，它会自动进行强制类型转换。以便于这样看起来是正常运算的。让我们来看下面两个例子。 首先，一个乘法运算只可以让两个数字正常工作，因此，在相乘之前，他会将字符转换成数字。 12&#39;7">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-03-02T06:40:32.000Z">
 <meta property="article:modified_time" content="2021-07-01T02:47:20.694Z">
@@ -142,89 +142,102 @@ ga('send', 'pageview');
 
   <div class="article-content">
     
-      <h2 id="11-运算符"><a href="#11-运算符" class="headerlink" title="11. 运算符"></a>11. 运算符</h2><h3 id="11-1-运算符两个重要的规则"><a href="#11-1-运算符两个重要的规则" class="headerlink" title="11.1. 运算符两个重要的规则"></a>11.1. 运算符两个重要的规则</h3><pre><code>1. 强制让运算数变为合适的类型
-2. 大多数运算符只对原始类型有效</code></pre><h4 id="11-1-1-运算符两个重要的规则"><a href="#11-1-1-运算符两个重要的规则" class="headerlink" title="11.1.1. 运算符两个重要的规则"></a>11.1.1. 运算符两个重要的规则</h4><p>一个运算符操作的的数据类型不匹配， JS基本不会抛出异常。相反，它会自动进行强制类型转换。以便于这样看起来是<code>正常</code>运算的。让我们来看下面两个例子。</p>
+      <h2 id="11-运算符">11. 运算符</h2>
+<h3 id="11-1-运算符两个重要的规则">11.1. 运算符两个重要的规则</h3>
+<pre><code>1. 强制让运算数变为合适的类型
+2. 大多数运算符只对原始类型有效
+</code></pre>
+<h4 id="11-1-1-运算符两个重要的规则">11.1.1. 运算符两个重要的规则</h4>
+<p>一个运算符操作的的数据类型不匹配， JS基本不会抛出异常。相反，它会自动进行强制类型转换。以便于这样看起来是<code>正常</code>运算的。让我们来看下面两个例子。</p>
 <p>首先，一个乘法运算只可以让两个数字正常工作，因此，在相乘之前，他会将字符转换成数字。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-string">'7'</span> * <span class="hljs-string">'3'</span><br><span class="hljs-number">21</span><br></code></pre></td></tr></table></figure>
-
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'7'</span> * <span class="string">'3'</span></span><br><span class="line"><span class="number">21</span></span><br></pre></td></tr></table></figure>
 <p>其次， 用于访问对象属性的操作符[]只能处理字符串或者symbol。其他的值会被强制转换成字符串。其他的字都会转换成字符串。</p>
-<h4 id="11-1-2-大多数运算符只对原始类型起作用"><a href="#11-1-2-大多数运算符只对原始类型起作用" class="headerlink" title="11.1.2. 大多数运算符只对原始类型起作用"></a>11.1.2. 大多数运算符只对原始类型起作用</h4><blockquote>
+<h4 id="11-1-2-大多数运算符只对原始类型起作用">11.1.2. 大多数运算符只对原始类型起作用</h4>
+<blockquote>
 <p>对于JS操作符需要要记住的规则是：大多数运算符只对原始类型起作用</p>
 </blockquote>
 <p>如果运算数是<code>对象</code>，则经常会被强制转换成基本类型。</p>
 <p>例如：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs js">&gt; [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>] + [<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>]<br><span class="hljs-string">'1,2,34,5,6'</span><br></code></pre></td></tr></table></figure>
-
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>] + [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]</span><br><span class="line"><span class="string">'1,2,34,5,6'</span></span><br></pre></td></tr></table></figure>
 <p>为什么？因为 <code>+</code>操作符会首先将运算数转换成原始类型</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs js">&gt; <span class="hljs-built_in">String</span>([<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>])<br><span class="hljs-string">'1,2,3'</span><br>&gt; <span class="hljs-built_in">String</span>([<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>])<br><span class="hljs-string">'4,5,6'</span><br></code></pre></td></tr></table></figure>
-
-<h3 id="11-2-加号plus"><a href="#11-2-加号plus" class="headerlink" title="11.2. 加号plus"></a>11.2. 加号plus</h3><p>在JS中，加号按以下方式工作：首先它会将运算数转换成基本类型，然后它会切到两种模式之一：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="built_in">String</span>([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</span><br><span class="line"><span class="string">'1,2,3'</span></span><br><span class="line">&gt; <span class="built_in">String</span>([<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>])</span><br><span class="line"><span class="string">'4,5,6'</span></span><br></pre></td></tr></table></figure>
+<h3 id="11-2-加号plus">11.2. 加号plus</h3>
+<p>在JS中，加号按以下方式工作：首先它会将运算数转换成基本类型，然后它会切到两种模式之一：</p>
 <ul>
 <li>字符串模式：如果一个被转换成的基本类型有一个是字符串，那么另外一个也会被转换成字符串，最后字符串会进行连接。</li>
 <li>数字模式：除此之外，两边的运算数会被转换成数字，然后进行相加。</li>
 </ul>
 <p>字符串模式可以让你使用<code>+</code>去连接字符串。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs js">&gt; <span class="hljs-string">'There are '</span> + <span class="hljs-number">3</span> + <span class="hljs-string">' items'</span><br><span class="hljs-string">'There are 3 items'</span><br></code></pre></td></tr></table></figure>
-
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="string">'There are '</span> + <span class="number">3</span> + <span class="string">' items'</span></span><br><span class="line"><span class="string">'There are 3 items'</span></span><br></pre></td></tr></table></figure>
 <p>数字模式意味着如果。如果运算数两边都不是数字（或者一个对象变成了字符串）那么都会被变成数字：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs plain">&gt; 4 + true<br>5<br></code></pre></td></tr></table></figure>
-
-<h3 id="11-3-赋值运算符"><a href="#11-3-赋值运算符" class="headerlink" title="11.3. 赋值运算符"></a>11.3. 赋值运算符</h3><h4 id="11-3-1-基本的赋值运算符"><a href="#11-3-1-基本的赋值运算符" class="headerlink" title="11.3.1. 基本的赋值运算符"></a>11.3.1. 基本的赋值运算符</h4><ul>
-<li><p>x = value</p>
-<p>  给一个声明的变量赋值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; 4 + true</span><br><span class="line">5</span><br></pre></td></tr></table></figure>
+<h3 id="11-3-赋值运算符">11.3. 赋值运算符</h3>
+<h4 id="11-3-1-基本的赋值运算符">11.3.1. 基本的赋值运算符</h4>
+<ul>
+<li>
+<p>x = value</p>
+<p>给一个声明的变量赋值</p>
 </li>
-<li><p>const x = value<br>  同时进行声明和复制</p>
+<li>
+<p>const x = value<br>
+同时进行声明和复制</p>
 </li>
-<li><p>obj.propKey = value<br>  给一个属性赋值</p>
+<li>
+<p>obj.propKey = value<br>
+给一个属性赋值</p>
 </li>
-<li><p>arr[index] = value<br>  给数组的某个元素赋值</p>
+<li>
+<p>arr[index] = value<br>
+给数组的某个元素赋值</p>
 </li>
 </ul>
-<h4 id="11-3-2-复合赋值运算符"><a href="#11-3-2-复合赋值运算符" class="headerlink" title="11.3.2. 复合赋值运算符"></a>11.3.2. 复合赋值运算符</h4><p>给出的运算符工作时，以下两种方式是相同的</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs js">myvar op= value<br>myvar = myvar op value<br></code></pre></td></tr></table></figure>
-
+<h4 id="11-3-2-复合赋值运算符">11.3.2. 复合赋值运算符</h4>
+<p>给出的运算符工作时，以下两种方式是相同的</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">myvar op= value</span><br><span class="line">myvar = myvar op value</span><br></pre></td></tr></table></figure>
 <p>举例来说，复合<code>+</code>，然后我们可以得到运算符<code>+=</code>它会像下面的工作：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">let</span> str = <span class="hljs-string">''</span>;<br>str += <span class="hljs-string">'&lt;b&gt;'</span>;<br>str += <span class="hljs-string">'Hello!'</span>;<br>str += <span class="hljs-string">'&lt;/b&gt;'</span>;<br><br>assert.equal(str, <span class="hljs-string">'&lt;b&gt;Hello!&lt;/b&gt;'</span>);<br></code></pre></td></tr></table></figure>
-<h4 id="11-3-3-所有可复合的运算符"><a href="#11-3-3-所有可复合的运算符" class="headerlink" title="11.3.3. 所有可复合的运算符"></a>11.3.3. 所有可复合的运算符</h4><p>数学运算：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js">+= -= *= <span class="hljs-regexp">/= %= **=</span><br></code></pre></td></tr></table></figure>
-
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">''</span>;</span><br><span class="line">str += <span class="string">'&lt;b&gt;'</span>;</span><br><span class="line">str += <span class="string">'Hello!'</span>;</span><br><span class="line">str += <span class="string">'&lt;/b&gt;'</span>;</span><br><span class="line"></span><br><span class="line">assert.equal(str, <span class="string">'&lt;b&gt;Hello!&lt;/b&gt;'</span>);</span><br></pre></td></tr></table></figure>
+<h4 id="11-3-3-所有可复合的运算符">11.3.3. 所有可复合的运算符</h4>
+<p>数学运算：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">+= -= *= <span class="regexp">/= %= **=</span></span><br></pre></td></tr></table></figure>
 <p>+= 同样对字符串连接有效</p>
 <p>按位运算符：</p>
-<h3 id="11-4-相等运算-VS"><a href="#11-4-相等运算-VS" class="headerlink" title="11.4. 相等运算: == VS ==="></a>11.4. 相等运算: == VS ===</h3><p>JS 有两种等号运算符:宽松相等(==)和严格相等(===)，推荐总是使用后者判断是否相等。</p>
-<h4 id="11-4-1-宽松相等-and"><a href="#11-4-1-宽松相等-and" class="headerlink" title="11.4.1. 宽松相等(== and !=)"></a>11.4.1. 宽松相等(== and !=)</h4><p>宽松相等是JS的特性之一。它经常会强制转换操作数，有些强制转换是起作用的：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs js">&gt; <span class="hljs-string">'123'</span> == <span class="hljs-number">123</span><br><span class="hljs-literal">true</span><br>&gt; <span class="hljs-literal">false</span> == <span class="hljs-number">0</span><br><span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
+<h3 id="11-4-相等运算-VS">11.4. 相等运算: == VS ===</h3>
+<p>JS 有两种等号运算符:宽松相等(==)和严格相等(===)，推荐总是使用后者判断是否相等。</p>
+<h4 id="11-4-1-宽松相等-and">11.4.1. 宽松相等(== and !=)</h4>
+<p>宽松相等是JS的特性之一。它经常会强制转换操作数，有些强制转换是起作用的：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="string">'123'</span> == <span class="number">123</span></span><br><span class="line"><span class="literal">true</span></span><br><span class="line">&gt; <span class="literal">false</span> == <span class="number">0</span></span><br><span class="line"><span class="literal">true</span></span><br></pre></td></tr></table></figure>
 <p>大多数情况下意义不大：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs js">&gt; <span class="hljs-string">''</span> == <span class="hljs-number">0</span><br><span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
-
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="string">''</span> == <span class="number">0</span></span><br><span class="line"><span class="literal">true</span></span><br></pre></td></tr></table></figure>
 <p>对象被强制转换成基本类型。当且只当另外一个运算数是基本类型。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs js">&gt; [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>] == <span class="hljs-string">'1,2,3'</span><br><span class="hljs-literal">true</span><br>&gt; [<span class="hljs-string">'1'</span>, <span class="hljs-string">'2'</span>, <span class="hljs-string">'3'</span>] == <span class="hljs-string">'1,2,3'</span><br><span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>] == <span class="string">'1,2,3'</span></span><br><span class="line"><span class="literal">true</span></span><br><span class="line">&gt; [<span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>] == <span class="string">'1,2,3'</span></span><br><span class="line"><span class="literal">true</span></span><br></pre></td></tr></table></figure>
 <p>如果两个操作数都是对象，当他们是同一个对象时才相等：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs js">&gt; [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>] == [<span class="hljs-string">'1'</span>, <span class="hljs-string">'2'</span>, <span class="hljs-string">'3'</span>]<br><span class="hljs-literal">false</span><br>&gt; [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>] == [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]<br><span class="hljs-literal">false</span><br><br>&gt; <span class="hljs-keyword">const</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];<br>&gt; arr == arr<br><span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
-
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt; [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>] == [<span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>]</span><br><span class="line"><span class="literal">false</span></span><br><span class="line">&gt; [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>] == [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"><span class="literal">false</span></span><br><span class="line"></span><br><span class="line">&gt; <span class="keyword">const</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line">&gt; arr == arr</span><br><span class="line"><span class="literal">true</span></span><br></pre></td></tr></table></figure>
 <p>最后，== 允许了undefined和null相等</p>
-<h4 id="11-4-2-严格相等-and"><a href="#11-4-2-严格相等-and" class="headerlink" title="11.4.2. 严格相等 (=== and !==)"></a>11.4.2. 严格相等 (=== and !==)</h4><p>严格相等从不会类型转换。两个相等的值一定会有相同的类型。让我们复习一遍之前的<code>==</code>运算符，然后看<code>===</code>是怎样工作的</p>
+<h4 id="11-4-2-严格相等-and">11.4.2. 严格相等 (=== and !==)</h4>
+<p>严格相等从不会类型转换。两个相等的值一定会有相同的类型。让我们复习一遍之前的<code>==</code>运算符，然后看<code>===</code>是怎样工作的</p>
 <p>如果两个运算数都是对象，当他们是同一个对象时才相等：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs plain">&gt; [1, 2, 3] &#x3D;&#x3D;&#x3D; &#39;1,2,3&#39;<br>false<br>&gt; [&#39;1&#39;, &#39;2&#39;, &#39;3&#39;] &#x3D;&#x3D;&#x3D; &#39;1,2,3&#39;<br>false<br><br>&gt; [1, 2, 3] &#x3D;&#x3D;&#x3D; [&#39;1&#39;, &#39;2&#39;, &#39;3&#39;]<br>false<br>&gt; [1, 2, 3] &#x3D;&#x3D;&#x3D; [1, 2, 3]<br>false<br><br>&gt; const arr &#x3D; [1, 2, 3];<br>&gt; arr &#x3D;&#x3D;&#x3D; arr<br>true<br></code></pre></td></tr></table></figure>
-
-
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&gt; [1, 2, 3] &#x3D;&#x3D;&#x3D; &#39;1,2,3&#39;</span><br><span class="line">false</span><br><span class="line">&gt; [&#39;1&#39;, &#39;2&#39;, &#39;3&#39;] &#x3D;&#x3D;&#x3D; &#39;1,2,3&#39;</span><br><span class="line">false</span><br><span class="line"></span><br><span class="line">&gt; [1, 2, 3] &#x3D;&#x3D;&#x3D; [&#39;1&#39;, &#39;2&#39;, &#39;3&#39;]</span><br><span class="line">false</span><br><span class="line">&gt; [1, 2, 3] &#x3D;&#x3D;&#x3D; [1, 2, 3]</span><br><span class="line">false</span><br><span class="line"></span><br><span class="line">&gt; const arr &#x3D; [1, 2, 3];</span><br><span class="line">&gt; arr &#x3D;&#x3D;&#x3D; arr</span><br><span class="line">true</span><br></pre></td></tr></table></figure>
 <p><code>===</code> 运算符不允许undefined和null相等</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs js">&gt; <span class="hljs-literal">undefined</span> === <span class="hljs-literal">null</span><br><span class="hljs-literal">false</span><br></code></pre></td></tr></table></figure>
-
-<h4 id="11-4-3-推荐：总是使用严格模式"><a href="#11-4-3-推荐：总是使用严格模式" class="headerlink" title="11.4.3. 推荐：总是使用严格模式"></a>11.4.3. 推荐：总是使用严格模式</h4><p>推荐总是使用<code>===</code>。他会让你的代码可读性更高。把你从不得不思考怪异的<code>==</code>中解脱出来。<br>让我们看一下两个case：使用==的和我推荐的替代方案.</p>
-<h5 id="11-4-3-1-使用-比较一个数字和字符串"><a href="#11-4-3-1-使用-比较一个数字和字符串" class="headerlink" title="11.4.3.1. 使用 ==:比较一个数字和字符串"></a>11.4.3.1. 使用 ==:比较一个数字和字符串</h5><p>== 让你去判断一个值x是一个数字，或者作为字符串的数字，通过单个的比较：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">if</span> (x == <span class="hljs-number">123</span>) &#123;<br>  <span class="hljs-comment">// x is either 123 or '123'</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="literal">undefined</span> === <span class="literal">null</span></span><br><span class="line"><span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<h4 id="11-4-3-推荐：总是使用严格模式">11.4.3. 推荐：总是使用严格模式</h4>
+<p>推荐总是使用<code> ===</code>。他会让你的代码可读性更高。把你从不得不思考怪异的<code>==</code>中解脱出来。<br>
+让我们看一下两个case：使用==的和我推荐的替代方案.</p>
+<h5 id="11-4-3-1-使用-比较一个数字和字符串">11.4.3.1. 使用 ==:比较一个数字和字符串</h5>
+<p>== 让你去判断一个值x是一个数字，或者作为字符串的数字，通过单个的比较：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (x == <span class="number">123</span>) &#123;</span><br><span class="line">  <span class="comment">// x is either 123 or '123'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>我更喜欢以下两种替代方案：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">if</span> (x === <span class="hljs-number">123</span> || x === <span class="hljs-string">'123'</span>) ···<br><span class="hljs-keyword">if</span> (<span class="hljs-built_in">Number</span>(x) === <span class="hljs-number">123</span>) ···<br></code></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (x === <span class="number">123</span> || x === <span class="string">'123'</span>) ···</span><br><span class="line"><span class="keyword">if</span> (<span class="built_in">Number</span>(x) === <span class="number">123</span>) ···</span><br></pre></td></tr></table></figure>
 <p>你也可以在第一次遇见他的时候将它进行类型转换：</p>
-<h5 id="11-4-3-2-比较undefined-和-null"><a href="#11-4-3-2-比较undefined-和-null" class="headerlink" title="11.4.3.2 ==: 比较undefined 和 null"></a>11.4.3.2 ==: 比较undefined 和 null</h5><p>使用==的另外一个case是比较undefined 或 null</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">if</span> (x == <span class="hljs-literal">null</span>) &#123;<br>  <span class="hljs-comment">// x is either null or undefined</span><br>&#125;<br></code></pre></td></tr></table></figure>
-
+<h5 id="11-4-3-2-比较undefined-和-null">11.4.3.2 ==: 比较undefined 和 null</h5>
+<p>使用==的另外一个case是比较undefined 或 null</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (x == <span class="literal">null</span>) &#123;</span><br><span class="line">  <span class="comment">// x is either null or undefined</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>这段代码的问题在于，你无法保证是其他人也会用这种方式判断，或者有人有用meant === null的方式。</p>
 <p>我更喜欢一下两者任意替代方式:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs plain">if (x &#x3D;&#x3D;&#x3D; undefined || x &#x3D;&#x3D;&#x3D; null) ···<br>if (x) ···<br></code></pre></td></tr></table></figure>
-
-<p>第二种替代方式是相对更常见，但是塔毁坏了一些在JS中的一些模式。<br>在 <a href="http://exploringjs.com/impatient-js/ch_operators.html/ch_booleans.html#falsiness-truthiness" target="_blank" rel="noopener">the chapter on booleans</a>会解释到, 我们会看到现象与本质。</p>
-<h3 id="11-5-排序运算"><a href="#11-5-排序运算" class="headerlink" title="11.5. 排序运算"></a>11.5. 排序运算</h3><p>Table 2: JavaScript’s ordering operators. </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">if (x &#x3D;&#x3D;&#x3D; undefined || x &#x3D;&#x3D;&#x3D; null) ···</span><br><span class="line">if (x) ···</span><br></pre></td></tr></table></figure>
+<p>第二种替代方式是相对更常见，但是塔毁坏了一些在JS中的一些模式。<br>
+在 <a href="http://exploringjs.com/impatient-js/ch_operators.html/ch_booleans.html#falsiness-truthiness" target="_blank" rel="noopener">the chapter on booleans</a>会解释到, 我们会看到现象与本质。</p>
+<h3 id="11-5-排序运算">11.5. 排序运算</h3>
+<p>Table 2: JavaScript’s ordering operators.</p>
 <table>
 <thead>
 <tr>
@@ -232,7 +245,8 @@ ga('send', 'pageview');
 <th>name</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>&lt;</td>
 <td>小于</td>
 </tr>
@@ -248,17 +262,21 @@ ga('send', 'pageview');
 <td>&gt;=</td>
 <td>大于等于</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <p>JS的比较运算符规则(tbl. <a href="http://exploringjs.com/impatient-js/ch_operators.html/#tbl:ordering_operators" target="_blank" rel="noopener">2</a>) 对字符串和数字同样生效。</p>
 <p>警告：这些运算符在比较人类语言中的文本（大写、重音等）时效果不佳。有关详细信息，请参阅[字符串章节](<a href="http://exploringjs.com/unatint" target="_blank" rel="noopener">http://exploringjs.com/unatint</a> js/ch_operators.html/ch_strings.html比较字符串)。</p>
-<h3 id="11-6-其他的运算符"><a href="#11-6-其他的运算符" class="headerlink" title="11.6. 其他的运算符"></a>11.6. 其他的运算符</h3><ul>
-<li><p><a href="http://speakingjs.com/es5/ch09.html#comma_operator" target="_blank" rel="noopener">逗号运算符</a>: a, b</p>
-</li>
-<li><p><a href="http://speakingjs.com/es5/ch09.html#void_operator" target="_blank" rel="noopener">void 运算符</a>: void 0</p>
-</li>
-</ul>
+<h3 id="11-6-其他的运算符">11.6. 其他的运算符</h3>
 <ul>
-<li>对于布尔，字符串，数组或对象在本书其他章节也有提到。</li>
+<li>
+<p><a href="http://speakingjs.com/es5/ch09.html#comma_operator" target="_blank" rel="noopener">逗号运算符</a>: a, b</p>
+</li>
+<li>
+<p><a href="http://speakingjs.com/es5/ch09.html#void_operator" target="_blank" rel="noopener">void 运算符</a>: void 0</p>
+</li>
+<li>
+<p>对于布尔，字符串，数组或对象在本书其他章节也有提到。</p>
+</li>
 </ul>
 
     

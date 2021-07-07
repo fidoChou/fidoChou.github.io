@@ -16,12 +16,12 @@
     <meta name="keywords" content="jojo,前端,户外领队,frontend,nodejs,JavaScript,Outdoor Leader" />
   
 
-  <meta name="description" content="安全问题xss跨站脚本攻击(Cascading Style Sheets, CSS) 原理： 通过篡改网页，插入恶意脚本。从用户浏览网页时开始，控制用户浏览器。XSS成功的条件：向页面注入恶意的HTML 代码；这些恶意代码能够执行。  类型：  反射型，诱导用户去访问一个包含恶意代码的UI了，这段恶意代码会直接在受害者主机上的浏览器执行。一次性的。前端发送恶意脚本，后端不做任何处理返回前端  用户">
+  <meta name="description" content="安全问题 xss跨站脚本攻击(Cascading Style Sheets, CSS)  原理： 通过篡改网页，插入恶意脚本。从用户浏览网页时开始，控制用户浏览器。XSS成功的条件：向页面注入恶意的HTML 代码；这些恶意代码能够执行。 类型：   反射型，诱导用户去访问一个包含恶意代码的UI了，这段恶意代码会直接在受害者主机上的浏览器执行。一次性的。前端发送恶意脚本，后端不做任何处理返回前端">
 <meta property="og:type" content="article">
 <meta property="og:title" content="前端安全">
 <meta property="og:url" content="http://jocolorful.com/2019/03/29/%E5%89%8D%E7%AB%AF-%E5%AE%89%E5%85%A8%E7%AF%87/index.html">
 <meta property="og:site_name" content="Jojo&#39;s World">
-<meta property="og:description" content="安全问题xss跨站脚本攻击(Cascading Style Sheets, CSS) 原理： 通过篡改网页，插入恶意脚本。从用户浏览网页时开始，控制用户浏览器。XSS成功的条件：向页面注入恶意的HTML 代码；这些恶意代码能够执行。  类型：  反射型，诱导用户去访问一个包含恶意代码的UI了，这段恶意代码会直接在受害者主机上的浏览器执行。一次性的。前端发送恶意脚本，后端不做任何处理返回前端  用户">
+<meta property="og:description" content="安全问题 xss跨站脚本攻击(Cascading Style Sheets, CSS)  原理： 通过篡改网页，插入恶意脚本。从用户浏览网页时开始，控制用户浏览器。XSS成功的条件：向页面注入恶意的HTML 代码；这些恶意代码能够执行。 类型：   反射型，诱导用户去访问一个包含恶意代码的UI了，这段恶意代码会直接在受害者主机上的浏览器执行。一次性的。前端发送恶意脚本，后端不做任何处理返回前端">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2019-03-29T04:46:47.000Z">
 <meta property="article:modified_time" content="2021-07-01T02:49:47.860Z">
@@ -101,7 +101,7 @@ ga('send', 'pageview');
   
   <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#安全问题"><span class="toc-text">安全问题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#xss跨站脚本攻击-Cascading-Style-Sheets-CSS"><span class="toc-text">xss跨站脚本攻击(Cascading Style Sheets, CSS)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP劫持"><span class="toc-text">HTTP劫持</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DNS劫持"><span class="toc-text">DNS劫持</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSRF-跨站请求伪造"><span class="toc-text">CSRF(跨站请求伪造)</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-text">安全问题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#xss跨站脚本攻击-Cascading-Style-Sheets-CSS"><span class="toc-text">xss跨站脚本攻击(Cascading Style Sheets, CSS)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP劫持"><span class="toc-text">HTTP劫持</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DNS劫持"><span class="toc-text">DNS劫持</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSRF-跨站请求伪造"><span class="toc-text">CSRF(跨站请求伪造)</span></a></li></ol></li></ol>
   </div>
 
 
@@ -147,28 +147,37 @@ ga('send', 'pageview');
 
   <div class="article-content">
     
-      <h1 id="安全问题"><a href="#安全问题" class="headerlink" title="安全问题"></a>安全问题</h1><h2 id="xss跨站脚本攻击-Cascading-Style-Sheets-CSS"><a href="#xss跨站脚本攻击-Cascading-Style-Sheets-CSS" class="headerlink" title="xss跨站脚本攻击(Cascading Style Sheets, CSS)"></a>xss跨站脚本攻击(Cascading Style Sheets, CSS)</h2><ol>
-<li><p>原理： 通过篡改网页，插入恶意脚本。从用户浏览网页时开始，控制用户浏览器。XSS成功的条件：向页面注入恶意的HTML 代码；这些恶意代码能够执行。</p>
-</li>
-<li><p>类型：</p>
+      <h1>安全问题</h1>
+<h2 id="xss跨站脚本攻击-Cascading-Style-Sheets-CSS">xss跨站脚本攻击(Cascading Style Sheets, CSS)</h2>
 <ol>
-<li><p>反射型，诱导用户去访问一个包含恶意代码的UI了，这段恶意代码会直接在受害者主机上的浏览器执行。一次性的。前端发送恶意脚本，后端不做任何处理返回前端</p>
+<li>原理： 通过篡改网页，插入恶意脚本。从用户浏览网页时开始，控制用户浏览器。XSS成功的条件：向页面注入恶意的HTML 代码；这些恶意代码能够执行。</li>
+<li>类型：
+<ol>
+<li>
+<p>反射型，诱导用户去访问一个包含恶意代码的UI了，这段恶意代码会直接在受害者主机上的浏览器执行。一次性的。前端发送恶意脚本，后端不做任何处理返回前端</p>
 <ul>
 <li>用户输入内容不包含特殊字符</li>
 <li>特殊字符转意 (小明转义URL的case，特殊字符转化为HTML实体)</li>
-<li>a 标签根据实际情况: 禁止掉：”javascript:” 、链接、非法 scheme 等</li>
+<li>a 标签根据实际情况: 禁止掉：“javascript:” 、链接、非法 scheme 等</li>
 </ul>
 </li>
-<li><p>存储型XSS：把攻击存放在服务端。发表了文章之类的，加入了代码。如果过滤不严格，就会存在服务器端。</p>
+<li>
+<p>存储型XSS：把攻击存放在服务端。发表了文章之类的，加入了代码。如果过滤不严格，就会存在服务器端。</p>
 </li>
-<li><p>DOM-base型：DOM XSS 是由于浏览器解析机制导致的漏洞，服务器不参与，而存储型与反射型都需要服务器响应参与，反射型的一种。避免一些重定向的操作。</p>
+<li>
+<p>DOM-base型：DOM XSS 是由于浏览器解析机制导致的漏洞，服务器不参与，而存储型与反射型都需要服务器响应参与，反射型的一种。避免一些重定向的操作。</p>
 </li>
 </ol>
 </li>
 </ol>
-<h2 id="HTTP劫持"><a href="#HTTP劫持" class="headerlink" title="HTTP劫持"></a>HTTP劫持</h2><p>运营商HTTP劫持，当我们使用HTTP请求请求一个网站页面的时候，网络运营商会在正常的数据流中插入精心设计的网络数据报文，让客户端（通常是浏览器）展示“错误”的数据，通常是一些弹窗，宣传性广告或者直接显示某网站的内容，大家应该都有遇到过。</p>
-<h2 id="DNS劫持"><a href="#DNS劫持" class="headerlink" title="DNS劫持"></a>DNS劫持</h2><p>重定向</p>
-<h2 id="CSRF-跨站请求伪造"><a href="#CSRF-跨站请求伪造" class="headerlink" title="CSRF(跨站请求伪造)"></a>CSRF(跨站请求伪造)</h2><p>维基百科举的例子：银行转账image表现<br>refer头部<br>增加token校验</p>
+<h2 id="HTTP劫持">HTTP劫持</h2>
+<p>运营商HTTP劫持，当我们使用HTTP请求请求一个网站页面的时候，网络运营商会在正常的数据流中插入精心设计的网络数据报文，让客户端（通常是浏览器）展示“错误”的数据，通常是一些弹窗，宣传性广告或者直接显示某网站的内容，大家应该都有遇到过。</p>
+<h2 id="DNS劫持">DNS劫持</h2>
+<p>重定向</p>
+<h2 id="CSRF-跨站请求伪造">CSRF(跨站请求伪造)</h2>
+<p>维基百科举的例子：银行转账image表现<br>
+refer头部<br>
+增加token校验</p>
 
     
   </div>

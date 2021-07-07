@@ -16,12 +16,12 @@
     <meta name="keywords" content="快速幂," />
   
 
-  <meta name="description" content="不会快速幂的我留下了超时的悔恨泪水  统计好数字的数目 快速幂：油管讲解 快速幂算法简介求 x^n 最简单的方法是通过循环将 n 个 x 乘起来，依次求 x^1, x^2, …, x^{n-1}, x^nx 时间复杂度为 O(n) 。 快速幂法可将时间复杂度降低至 O(log n) ，以下从 「分治法」 和 「二进制」 两个角度解析快速幂法。 二进制角度 利用十进制数字 n 的二进制表示，可对快">
+  <meta name="description" content="不会快速幂的我留下了超时的悔恨泪水  统计好数字的数目 快速幂：油管讲解 快速幂算法简介 求 x^n 最简单的方法是通过循环将 n 个 x 乘起来，依次求 x^1, x^2, …, x^{n-1}, x^nx 时间复杂度为 O(n) 。 快速幂法可将时间复杂度降低至 O(log n) ，以下从 「分治法」 和 「二进制」 两个角度解析快速幂法。 二进制角度  利用十进制数字 n 的二进制表示，可">
 <meta property="og:type" content="article">
 <meta property="og:title" content="统计好数字的数目">
 <meta property="og:url" content="http://jocolorful.com/2021/07/05/%E7%AE%97%E6%B3%95-%E5%BF%AB%E9%80%9F%E5%B9%82/index.html">
 <meta property="og:site_name" content="Jojo&#39;s World">
-<meta property="og:description" content="不会快速幂的我留下了超时的悔恨泪水  统计好数字的数目 快速幂：油管讲解 快速幂算法简介求 x^n 最简单的方法是通过循环将 n 个 x 乘起来，依次求 x^1, x^2, …, x^{n-1}, x^nx 时间复杂度为 O(n) 。 快速幂法可将时间复杂度降低至 O(log n) ，以下从 「分治法」 和 「二进制」 两个角度解析快速幂法。 二进制角度 利用十进制数字 n 的二进制表示，可对快">
+<meta property="og:description" content="不会快速幂的我留下了超时的悔恨泪水  统计好数字的数目 快速幂：油管讲解 快速幂算法简介 求 x^n 最简单的方法是通过循环将 n 个 x 乘起来，依次求 x^1, x^2, …, x^{n-1}, x^nx 时间复杂度为 O(n) 。 快速幂法可将时间复杂度降低至 O(log n) ，以下从 「分治法」 和 「二进制」 两个角度解析快速幂法。 二进制角度  利用十进制数字 n 的二进制表示，可">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://jocolorful.com/images/%E7%AE%97%E6%B3%95/%E5%BF%AB%E9%80%9F%E5%B9%82-01.png">
 <meta property="og:image" content="http://jocolorful.com/images/%E7%AE%97%E6%B3%95/%E5%BF%AB%E9%80%9F%E5%B9%8202.png">
@@ -109,7 +109,7 @@ ga('send', 'pageview');
   
   <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#快速幂算法简介"><span class="toc-text">快速幂算法简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#二进制角度"><span class="toc-text">二进制角度</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#n-为-2-的幂，以-a-64-为例："><span class="toc-text">n 为 2 的幂，以 a^64 为例：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#n-不为-2-的幂，以-a-105-为例："><span class="toc-text">n 不为 2 的幂，以 a^105 为例：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#伪代码且以-7-105-为例："><span class="toc-text">伪代码且以 7^105 为例：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JS-伪代码"><span class="toc-text">JS 伪代码</span></a></li></ol></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-text">快速幂算法简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#二进制角度"><span class="toc-text">二进制角度</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#n-为-2-的幂，以-a-64-为例："><span class="toc-text">n 为 2 的幂，以 a^64 为例：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#n-不为-2-的幂，以-a-105-为例："><span class="toc-text">n 不为 2 的幂，以 a^105 为例：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#伪代码且以-7-105-为例："><span class="toc-text">伪代码且以 7^105 为例：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JS-伪代码"><span class="toc-text">JS 伪代码</span></a></li></ol></li></ol></li></ol>
   </div>
 
 
@@ -160,47 +160,47 @@ ga('send', 'pageview');
 </blockquote>
 <p><a href="https://leetcode-cn.com/problems/count-good-numbers/" target="_blank" rel="noopener">统计好数字的数目</a></p>
 <p><a href="https://www.youtube.com/watch?v=GbDtCFhq20A" target="_blank" rel="noopener">快速幂：油管讲解</a></p>
-<h1 id="快速幂算法简介"><a href="#快速幂算法简介" class="headerlink" title="快速幂算法简介"></a>快速幂算法简介</h1><p>求 x^n 最简单的方法是通过循环将 n 个 x 乘起来，依次求 x^1, x^2, …, x^{n-1}, x^nx 时间复杂度为 O(n) 。</p>
+<h1>快速幂算法简介</h1>
+<p>求 x^n 最简单的方法是通过循环将 n 个 x 乘起来，依次求 x^1, x^2, …, x^{n-1}, x^nx 时间复杂度为 O(n) 。</p>
 <p>快速幂法可将时间复杂度降低至 O(log n) ，以下从 「分治法」 和 「二进制」 两个角度解析快速幂法。</p>
-<h2 id="二进制角度"><a href="#二进制角度" class="headerlink" title="二进制角度"></a>二进制角度</h2><blockquote>
+<h2 id="二进制角度">二进制角度</h2>
+<blockquote>
 <p>利用十进制数字 n 的二进制表示，可对快速幂进行数学化解释</p>
 </blockquote>
-<h3 id="n-为-2-的幂，以-a-64-为例："><a href="#n-为-2-的幂，以-a-64-为例：" class="headerlink" title="n 为 2 的幂，以 a^64 为例："></a>n 为 2 的幂，以 a^64 为例：</h3><blockquote>
+<h3 id="n-为-2-的幂，以-a-64-为例：">n 为 2 的幂，以 a^64 为例：</h3>
+<blockquote>
 <p>其中 n = 64 为 2 的幂</p>
 </blockquote>
 <ol>
 <li>朴素算法进行逐个相乘：a * a … * a (时间复杂度为 O(n))</li>
 </ol>
 <center>
-    <img src="/images/算法/快速幂-01.png"  width="700px"/>
+	<img src="/images/算法/快速幂-01.png"  width="700px"/>
 </center>
-
 <ol start="2">
 <li>当 n 为 2 的幂时，我们只需 6 次乘法，时间复杂度为 O(log n)</li>
 </ol>
 <center>
-    <img src="/images/算法/快速幂02.png"  width="700px"/>
+	<img src="/images/算法/快速幂02.png"  width="700px"/>
 </center>
-
-<h3 id="n-不为-2-的幂，以-a-105-为例："><a href="#n-不为-2-的幂，以-a-105-为例：" class="headerlink" title="n 不为 2 的幂，以 a^105 为例："></a>n 不为 2 的幂，以 a^105 为例：</h3><center>
-    <img src="/images/算法/快速幂03.png"  width="700px"/>
-</center>
-
+<h3 id="n-不为-2-的幂，以-a-105-为例：">n 不为 2 的幂，以 a^105 为例：</h3>
 <center>
-    <img src="/images/算法/快速幂04.png"  width="700px"/>
+	<img src="/images/算法/快速幂03.png"  width="700px"/>
 </center>
-
+<center>
+	<img src="/images/算法/快速幂04.png"  width="700px"/>
+</center>
 <p>以上：计算 a^8，a^32，a^64次方事件容易的事，所以算法关键在于<font color="red">将 n 转化为 2 的幂之和</font></p>
 <p>105 的二进制表示为：1101001，将这几个数字拆开刚好得到：a^1, a^8，a^32，a^64</p>
 <center>
-    <img src="/images/算法/快速幂05.png"  width="700px"/>
+	<img src="/images/算法/快速幂05.png"  width="700px"/>
 </center>
-
-<h3 id="伪代码且以-7-105-为例："><a href="#伪代码且以-7-105-为例：" class="headerlink" title="伪代码且以 7^105 为例："></a>伪代码且以 7^105 为例：</h3><center>
-    <img src="/images/算法/快速幂06.png"  width="700px"/>
+<h3 id="伪代码且以-7-105-为例：">伪代码且以 7^105 为例：</h3>
+<center>
+	<img src="/images/算法/快速幂06.png"  width="700px"/>
 </center>
+<h3 id="JS-伪代码">JS 伪代码</h3>
 
-<h3 id="JS-伪代码"><a href="#JS-伪代码" class="headerlink" title="JS 伪代码"></a>JS 伪代码</h3>
     
   </div>
 
@@ -214,7 +214,7 @@ ga('send', 'pageview');
     <a class="show pull-left" href="/2021/07/02/%E7%AE%97%E6%B3%95-%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8/">
         <i class="icon icon-angle-left"></i>
     </a>
-    <a class="hide pull-right" href="/">
+    <a class="show pull-right" href="/2021/07/06/%E5%B7%A5%E5%85%B7-%E5%9C%A8hexo%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/">
         <i class="icon icon-angle-right"></i>
     </a>
   </div>

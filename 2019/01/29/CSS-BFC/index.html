@@ -16,15 +16,15 @@
     <meta name="keywords" content="jojo,前端,户外领队,frontend,nodejs,JavaScript,Outdoor Leader" />
   
 
-  <meta name="description" content="BFC 概念它是页面中的一块渲染区域，并且有一套渲染规则，它决定了其子元素将如何定位，以及和其他元素的关系和相互作用。 具有 BFC 特性的元素可以看作是隔离了的独立容器，容器里面的元素不会在布局上影响到外面的元素，并且 BFC 具有普通容器所没有的一些特性。 通俗一点来讲，可以把 BFC 理解为一个封闭的大箱子，箱子内部的元素无论如何翻江倒海，都不会影响到外部。 触发 BFC只要元素满足下面任一">
+  <meta name="description" content="BFC 概念 它是页面中的一块渲染区域，并且有一套渲染规则，它决定了其子元素将如何定位，以及和其他元素的关系和相互作用。 具有 BFC 特性的元素可以看作是隔离了的独立容器，容器里面的元素不会在布局上影响到外面的元素，并且 BFC 具有普通容器所没有的一些特性。 通俗一点来讲，可以把 BFC 理解为一个封闭的大箱子，箱子内部的元素无论如何翻江倒海，都不会影响到外部。 触发 BFC 只要元素满足下面">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS 加载会造成阻塞吗？">
 <meta property="og:url" content="http://jocolorful.com/2019/01/29/CSS-BFC/index.html">
 <meta property="og:site_name" content="Jojo&#39;s World">
-<meta property="og:description" content="BFC 概念它是页面中的一块渲染区域，并且有一套渲染规则，它决定了其子元素将如何定位，以及和其他元素的关系和相互作用。 具有 BFC 特性的元素可以看作是隔离了的独立容器，容器里面的元素不会在布局上影响到外面的元素，并且 BFC 具有普通容器所没有的一些特性。 通俗一点来讲，可以把 BFC 理解为一个封闭的大箱子，箱子内部的元素无论如何翻江倒海，都不会影响到外部。 触发 BFC只要元素满足下面任一">
+<meta property="og:description" content="BFC 概念 它是页面中的一块渲染区域，并且有一套渲染规则，它决定了其子元素将如何定位，以及和其他元素的关系和相互作用。 具有 BFC 特性的元素可以看作是隔离了的独立容器，容器里面的元素不会在布局上影响到外面的元素，并且 BFC 具有普通容器所没有的一些特性。 通俗一点来讲，可以把 BFC 理解为一个封闭的大箱子，箱子内部的元素无论如何翻江倒海，都不会影响到外部。 触发 BFC 只要元素满足下面">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2019-01-29T08:40:32.000Z">
-<meta property="article:modified_time" content="2021-07-02T01:47:06.284Z">
+<meta property="article:modified_time" content="2021-07-02T03:33:49.256Z">
 <meta property="article:author" content="Jojo">
 <meta name="twitter:card" content="summary">
 
@@ -101,7 +101,7 @@ ga('send', 'pageview');
   
   <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#BFC-概念"><span class="toc-text">BFC 概念</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#触发-BFC"><span class="toc-text">触发 BFC</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#BFC-特性及应用"><span class="toc-text">BFC 特性及应用</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-text">BFC 概念</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-text">触发 BFC</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-text">BFC 特性及应用</span></a></li></ol>
   </div>
 
 
@@ -147,10 +147,12 @@ ga('send', 'pageview');
 
   <div class="article-content">
     
-      <h1 id="BFC-概念"><a href="#BFC-概念" class="headerlink" title="BFC 概念"></a>BFC 概念</h1><p>它是页面中的一块渲染区域，并且有一套渲染规则，它决定了其<font  color="red">子元素</font>将如何定位，以及<font  color="red">和其他元素</font>的关系和相互作用。</p>
+      <h1>BFC 概念</h1>
+<p>它是页面中的一块渲染区域，并且有一套渲染规则，它决定了其<font  color="red">子元素</font>将如何定位，以及<font  color="red">和其他元素</font>的关系和相互作用。</p>
 <p>具有 BFC 特性的元素可以看作是隔离了的独立容器，容器里面的元素不会在布局上影响到外面的元素，并且 BFC 具有普通容器所没有的一些特性。</p>
 <p>通俗一点来讲，可以把 BFC 理解为一个封闭的大箱子，箱子内部的元素无论如何翻江倒海，都不会影响到外部。</p>
-<h1 id="触发-BFC"><a href="#触发-BFC" class="headerlink" title="触发 BFC"></a>触发 BFC</h1><p>只要元素满足下面任一条件即可触发 BFC 特性：</p>
+<h1>触发 BFC</h1>
+<p>只要元素满足下面任一条件即可触发 BFC 特性：</p>
 <ul>
 <li>body 根元素</li>
 <li>浮动元素：float 除 none 以外的值</li>
@@ -158,7 +160,8 @@ ga('send', 'pageview');
 <li>display 为 inline-block、table-cells、flex</li>
 <li>overflow 除了 visible 以外的值 (hidden、auto、scroll)</li>
 </ul>
-<h1 id="BFC-特性及应用"><a href="#BFC-特性及应用" class="headerlink" title="BFC 特性及应用"></a>BFC 特性及应用</h1><ul>
+<h1>BFC 特性及应用</h1>
+<ul>
 <li><font  color="red">同一个 BFC </font>下外边距会发生折叠</li>
 <li>BFC 可以包含浮动的元素（清除浮动）overflow: hidden</li>
 <li>BFC 可以阻止元素被浮动元素覆盖</li>
@@ -174,10 +177,10 @@ ga('send', 'pageview');
 
    
   <div class="box-prev-next clearfix">
-    <a class="show pull-left" href="/2019/01/29/CSS-%E4%BB%A4%E4%BA%BA%E8%BF%B7%E8%8C%AB%E7%9A%84px/">
+    <a class="show pull-left" href="/2019/01/29/%E5%89%8D%E7%AB%AF-Web%E5%AD%98%E5%82%A8/">
         <i class="icon icon-angle-left"></i>
     </a>
-    <a class="show pull-right" href="/2019/01/30/%E5%89%8D%E7%AB%AF-iframe/">
+    <a class="show pull-right" href="/2019/01/29/CSS-%E4%BB%A4%E4%BA%BA%E8%BF%B7%E8%8C%AB%E7%9A%84px/">
         <i class="icon icon-angle-right"></i>
     </a>
   </div>

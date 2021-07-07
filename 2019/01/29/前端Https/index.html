@@ -16,15 +16,15 @@
     <meta name="keywords" content="jojo,前端,户外领队,frontend,nodejs,JavaScript,Outdoor Leader" />
   
 
-  <meta name="description" content="HTTPSHttp和TCP 之间多了一层(SSL&#x2F;TLS) ##对称加密 将加密的内容 + 钥匙 都发送给对方 （DES&#x2F;AES） 非对称加密(RSA、DSA) 生成一对密钥 (k1, k2)。凡是 k1 加密的数据，k1 自身不能解密，而需要 k2 才能解密； 凡是 k2 加密的数据，k2 不能解密，需要 k1 才能解密。 散列加密SHA-1、MD5 (128 bit) HTTPS把对称加密、非">
+  <meta name="description" content="HTTPS Http和TCP 之间多了一层(SSL&#x2F;TLS) ##对称加密 将加密的内容 + 钥匙 都发送给对方 （DES&#x2F;AES ） 非对称加密 (RSA、DSA) 生成一对密钥 (k1, k2)。 凡是 k1 加密的数据，k1 自身不能解密，而需要 k2 才能解密； 凡是 k2 加密的数据，k2 不能解密，需要 k1 才能解密。 散列加密 SHA-1、MD5 (128 bit) HTTPS把对">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HTTPS 使用与原理">
 <meta property="og:url" content="http://jocolorful.com/2019/01/29/%E5%89%8D%E7%AB%AFHttps/index.html">
 <meta property="og:site_name" content="Jojo&#39;s World">
-<meta property="og:description" content="HTTPSHttp和TCP 之间多了一层(SSL&#x2F;TLS) ##对称加密 将加密的内容 + 钥匙 都发送给对方 （DES&#x2F;AES） 非对称加密(RSA、DSA) 生成一对密钥 (k1, k2)。凡是 k1 加密的数据，k1 自身不能解密，而需要 k2 才能解密； 凡是 k2 加密的数据，k2 不能解密，需要 k1 才能解密。 散列加密SHA-1、MD5 (128 bit) HTTPS把对称加密、非">
+<meta property="og:description" content="HTTPS Http和TCP 之间多了一层(SSL&#x2F;TLS) ##对称加密 将加密的内容 + 钥匙 都发送给对方 （DES&#x2F;AES ） 非对称加密 (RSA、DSA) 生成一对密钥 (k1, k2)。 凡是 k1 加密的数据，k1 自身不能解密，而需要 k2 才能解密； 凡是 k2 加密的数据，k2 不能解密，需要 k1 才能解密。 散列加密 SHA-1、MD5 (128 bit) HTTPS把对">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2019-01-29T04:46:47.000Z">
-<meta property="article:modified_time" content="2021-07-01T02:52:37.432Z">
+<meta property="article:modified_time" content="2021-07-06T00:55:15.381Z">
 <meta property="article:author" content="Jojo">
 <meta name="twitter:card" content="summary">
 
@@ -101,7 +101,7 @@ ga('send', 'pageview');
   
   <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#HTTPS"><span class="toc-text">HTTPS</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#非对称加密"><span class="toc-text">非对称加密</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#散列加密"><span class="toc-text">散列加密</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CA-证书"><span class="toc-text">CA 证书</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#HTTP"><span class="toc-text">HTTP</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#HTTP1-1"><span class="toc-text">HTTP1.1</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP1-0和1-1现存的一些问题"><span class="toc-text">HTTP1.0和1.1现存的一些问题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#SPDY"><span class="toc-text">SPDY</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#HTTP2-0的新特性"><span class="toc-text">HTTP2.0的新特性</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-text">HTTPS</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#非对称加密"><span class="toc-text">非对称加密</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#散列加密"><span class="toc-text">散列加密</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CA-证书"><span class="toc-text">CA 证书</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-text">HTTP</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-text">HTTP1.1</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP1-0和1-1现存的一些问题"><span class="toc-text">HTTP1.0和1.1现存的一些问题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-text">SPDY</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-text">HTTP2.0的新特性</span></a></li></ol>
   </div>
 
 
@@ -147,43 +147,55 @@ ga('send', 'pageview');
 
   <div class="article-content">
     
-      <h1 id="HTTPS"><a href="#HTTPS" class="headerlink" title="HTTPS"></a>HTTPS</h1><p>Http和TCP 之间多了一层(SSL/TLS)</p>
+      <h1>HTTPS</h1>
+<p>Http和TCP 之间多了一层(SSL/TLS)</p>
 <p>##对称加密</p>
 <p>将加密的内容 + 钥匙 都发送给对方</p>
-<p>（DES/AES<br>）</p>
-<h2 id="非对称加密"><a href="#非对称加密" class="headerlink" title="非对称加密"></a>非对称加密</h2><p>(RSA、DSA)</p>
-<p>生成一对密钥 (k1, k2)。<br>凡是 k1 加密的数据，k1 自身不能解密，而需要 k2 才能解密；</p>
+<p>（DES/AES<br>
+）</p>
+<h2 id="非对称加密">非对称加密</h2>
+<p>(RSA、DSA)</p>
+<p>生成一对密钥 (k1, k2)。<br>
+凡是 k1 加密的数据，k1 自身不能解密，而需要 k2 才能解密；</p>
 <p>凡是 k2 加密的数据，k2 不能解密，需要 k1 才能解密。</p>
-<h2 id="散列加密"><a href="#散列加密" class="headerlink" title="散列加密"></a>散列加密</h2><p>SHA-1、MD5 (128 bit)</p>
+<h2 id="散列加密">散列加密</h2>
+<p>SHA-1、MD5 (128 bit)</p>
 <p>HTTPS把对称加密、非对称加密和CA结合起来以保证数据安全。如果想对对称加密和非对称加密以及SSL/TLS要更多了解可以参考下面两篇文章：</p>
-<h2 id="CA-证书"><a href="#CA-证书" class="headerlink" title="CA 证书"></a>CA 证书</h2><p>解决公钥</p>
+<h2 id="CA-证书">CA 证书</h2>
+<p>解决公钥</p>
 <p>godaddy</p>
-<h1 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h1><p>影响Http的因素主要有两个：</p>
+<h1>HTTP</h1>
+<p>影响Http的因素主要有两个：</p>
 <ul>
 <li>带宽</li>
-<li>延迟<ul>
+<li>延迟
+<ul>
 <li>浏览器的阻塞，基于同一个域名，超过最大请求连接个数，请求会被阻塞。</li>
 <li>DNS的查询</li>
 <li>TCP的建立</li>
 </ul>
 </li>
 </ul>
-<h1 id="HTTP1-1"><a href="#HTTP1-1" class="headerlink" title="HTTP1.1"></a>HTTP1.1</h1><p>目前应用最广泛</p>
+<h1>HTTP1.1</h1>
+<p>目前应用最广泛</p>
 <ul>
 <li>缓存</li>
 <li>带宽优化以及网络连接的使用，请求头引入range头域。它允许只请求资源的某个部分.即返回码是206（Partial Content）</li>
 <li>错误通知的管理</li>
 <li>长连接（PersistentConnection），Pipelining。一个TCP的连接，允许建立多个Http和请求和响应，减少了建立和关闭的消耗和延迟，默认开启Connection ：keep-alive。弥补Http1.0每次请求都要重新建立新连接的缺点。</li>
 </ul>
-<h2 id="HTTP1-0和1-1现存的一些问题"><a href="#HTTP1-0和1-1现存的一些问题" class="headerlink" title="HTTP1.0和1.1现存的一些问题"></a>HTTP1.0和1.1现存的一些问题</h2><ul>
+<h2 id="HTTP1-0和1-1现存的一些问题">HTTP1.0和1.1现存的一些问题</h2>
+<ul>
 <li>明文传输</li>
 <li>keep-alive使用过多会给服务器增加压力,单个文件不断被请求的服务，keep-alive可能会极大的影响性能，因为它在文件被请求之后还保持了不必要的连接很长时间。</li>
 <li>header内容过大，last-Modify</li>
 </ul>
-<h1 id="SPDY"><a href="#SPDY" class="headerlink" title="SPDY"></a>SPDY</h1><ul>
+<h1>SPDY</h1>
+<ul>
 <li>降低延迟</li>
 </ul>
-<h1 id="HTTP2-0的新特性"><a href="#HTTP2-0的新特性" class="headerlink" title="HTTP2.0的新特性"></a>HTTP2.0的新特性</h1><ul>
+<h1>HTTP2.0的新特性</h1>
+<ul>
 <li>二进制：HTTP2.0的协议解析决定采用二进制格式，实现方便且健壮。</li>
 <li>多路复用：二进制数据帧和流的概念，同样是因为有了序列，服务器就可以并行的传输数据，这就是流所做的事情。</li>
 <li>header压缩</li>

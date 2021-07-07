@@ -16,12 +16,12 @@
     <meta name="keywords" content="jojo,前端,户外领队,frontend,nodejs,JavaScript,Outdoor Leader" />
   
 
-  <meta name="description" content="离线存储什么是Cache Manifest浏览器会首先检查manifest文件是否有变动，如果有变动就会把相应的变得跟新下来，同时改变浏览器里面的app cache，如果没有变动，就会直接把app cache的资源返回，基本流程是这样的。 Manifest的特点 离线浏览: 用户可以在离线状态下浏览网站内容。 更快的速度: 因为数据被存储在本地，所以速度会更快. 减轻服务器的负载: 浏览器只会下载">
+  <meta name="description" content="离线存储 什么是Cache Manifest 浏览器会首先检查manifest文件是否有变动，如果有变动就会把相应的变得跟新下来，同时改变浏览器里面的app cache，如果没有变动，就会直接把app cache的资源返回，基本流程是这样的。 Manifest的特点  离线浏览: 用户可以在离线状态下浏览网站内容。 更快的速度: 因为数据被存储在本地，所以速度会更快. 减轻服务器的负载: 浏览器只">
 <meta property="og:type" content="article">
 <meta property="og:title" content="离线存储">
 <meta property="og:url" content="http://jocolorful.com/2019/04/19/%E5%89%8D%E7%AB%AF-%E7%A6%BB%E7%BA%BF%E5%AD%98%E5%82%A8/index.html">
 <meta property="og:site_name" content="Jojo&#39;s World">
-<meta property="og:description" content="离线存储什么是Cache Manifest浏览器会首先检查manifest文件是否有变动，如果有变动就会把相应的变得跟新下来，同时改变浏览器里面的app cache，如果没有变动，就会直接把app cache的资源返回，基本流程是这样的。 Manifest的特点 离线浏览: 用户可以在离线状态下浏览网站内容。 更快的速度: 因为数据被存储在本地，所以速度会更快. 减轻服务器的负载: 浏览器只会下载">
+<meta property="og:description" content="离线存储 什么是Cache Manifest 浏览器会首先检查manifest文件是否有变动，如果有变动就会把相应的变得跟新下来，同时改变浏览器里面的app cache，如果没有变动，就会直接把app cache的资源返回，基本流程是这样的。 Manifest的特点  离线浏览: 用户可以在离线状态下浏览网站内容。 更快的速度: 因为数据被存储在本地，所以速度会更快. 减轻服务器的负载: 浏览器只">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2019-04-19T04:46:47.000Z">
 <meta property="article:modified_time" content="2021-07-01T02:49:55.601Z">
@@ -101,7 +101,7 @@ ga('send', 'pageview');
   
   <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#离线存储"><span class="toc-text">离线存储</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是Cache-Manifest"><span class="toc-text">什么是Cache Manifest</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Manifest的特点"><span class="toc-text">Manifest的特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Manifest文件"><span class="toc-text">Manifest文件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CACHE-（必须）"><span class="toc-text">CACHE:（必须）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#注意事项"><span class="toc-text">注意事项</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-text">离线存储</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是Cache-Manifest"><span class="toc-text">什么是Cache Manifest</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Manifest的特点"><span class="toc-text">Manifest的特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Manifest文件"><span class="toc-text">Manifest文件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CACHE-（必须）"><span class="toc-text">CACHE:（必须）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-text">注意事项</span></a></li></ol>
   </div>
 
 
@@ -147,26 +147,33 @@ ga('send', 'pageview');
 
   <div class="article-content">
     
-      <h1 id="离线存储"><a href="#离线存储" class="headerlink" title="离线存储"></a>离线存储</h1><h2 id="什么是Cache-Manifest"><a href="#什么是Cache-Manifest" class="headerlink" title="什么是Cache Manifest"></a>什么是Cache Manifest</h2><p>浏览器会首先检查manifest文件是否有变动，如果有变动就会把相应的变得跟新下来，同时改变浏览器里面的app cache，如果没有变动，就会直接把app cache的资源返回，基本流程是这样的。</p>
-<h2 id="Manifest的特点"><a href="#Manifest的特点" class="headerlink" title="Manifest的特点"></a>Manifest的特点</h2><ul>
+      <h1>离线存储</h1>
+<h2 id="什么是Cache-Manifest">什么是Cache Manifest</h2>
+<p>浏览器会首先检查manifest文件是否有变动，如果有变动就会把相应的变得跟新下来，同时改变浏览器里面的app cache，如果没有变动，就会直接把app cache的资源返回，基本流程是这样的。</p>
+<h2 id="Manifest的特点">Manifest的特点</h2>
+<ul>
 <li>离线浏览: 用户可以在离线状态下浏览网站内容。</li>
 <li>更快的速度: 因为数据被存储在本地，所以速度会更快.</li>
 <li>减轻服务器的负载: 浏览器只会下载在服务器上发生改变的资源。</li>
 </ul>
-<h2 id="Manifest文件"><a href="#Manifest文件" class="headerlink" title="Manifest文件"></a>Manifest文件</h2><h3 id="CACHE-（必须）"><a href="#CACHE-（必须）" class="headerlink" title="CACHE:（必须）"></a>CACHE:（必须）</h3><p>FALLBACK:（可选）</p>
+<h2 id="Manifest文件">Manifest文件</h2>
+<h3 id="CACHE-（必须）">CACHE:（必须）</h3>
+<p>FALLBACK:（可选）</p>
 <p>如何更新缓存</p>
 <ul>
 <li>更新manifest文件</li>
 <li>通过javascript操作</li>
 <li>清除浏览器缓存</li>
 </ul>
-<h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><ul>
+<h1>注意事项</h1>
+<ul>
 <li>浏览器对缓存数据的容量限制可能不太一样（某些浏览器设置的限制是每个站点 5MB）。</li>
 <li>如果manifest文件，或者内部列举的某一个文件不能正常下载，整个更新过程都将失败，浏览器继续全部使用老的缓存。</li>
 <li>引用manifest的html必须与manifest文件同源，在同一个域下。</li>
 <li>FALLBACK中的资源必须和manifest文件同源。</li>
 <li>当一个资源被缓存后，该浏览器直接请求这个绝对路径也会访问缓存中的资源。</li>
-<li>站点中的其他页面即使没有设置manifest属性，请求的资源如果在缓存中也从缓存中访问。<br>当manifest文件发生改变时，资源请求本身也会触发更新。</li>
+<li>站点中的其他页面即使没有设置manifest属性，请求的资源如果在缓存中也从缓存中访问。<br>
+当manifest文件发生改变时，资源请求本身也会触发更新。</li>
 </ul>
 
     
