@@ -6,7 +6,7 @@
   <link href="http://jocolorful.com/atom.xml" rel="self"/>
   
   <link href="http://jocolorful.com/"/>
-  <updated>2021-07-07T00:41:56.581Z</updated>
+  <updated>2021-07-08T01:49:29.063Z</updated>
   <id>http://jocolorful.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>二进制求和</title>
+    <link href="http://jocolorful.com/2021/07/08/%E7%AE%97%E6%B3%95-%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%B1%82%E5%92%8C/"/>
+    <id>http://jocolorful.com/2021/07/08/%E7%AE%97%E6%B3%95-%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%B1%82%E5%92%8C/</id>
+    <published>2021-07-08T01:21:21.000Z</published>
+    <updated>2021-07-08T01:49:29.063Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="http://jocolorful.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="位运算" scheme="http://jocolorful.com/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
+    
+  </entry>
   
   <entry>
     <title>在 Hexo 中使用数学公式</title>
@@ -44,7 +69,7 @@
     <link href="http://jocolorful.com/2021/07/05/%E7%AE%97%E6%B3%95-%E5%BF%AB%E9%80%9F%E5%B9%82/"/>
     <id>http://jocolorful.com/2021/07/05/%E7%AE%97%E6%B3%95-%E5%BF%AB%E9%80%9F%E5%B9%82/</id>
     <published>2021-07-05T00:42:42.000Z</published>
-    <updated>2021-07-06T02:29:22.605Z</updated>
+    <updated>2021-07-08T01:22:14.613Z</updated>
     
     
       
@@ -188,7 +213,7 @@
     <link href="http://jocolorful.com/2021/06/23/%E5%B7%A5%E5%85%B7%E9%9B%86/"/>
     <id>http://jocolorful.com/2021/06/23/%E5%B7%A5%E5%85%B7%E9%9B%86/</id>
     <published>2021-06-23T06:26:33.000Z</published>
-    <updated>2021-06-25T02:32:43.697Z</updated>
+    <updated>2021-07-08T01:04:35.531Z</updated>
     
     
       
@@ -324,7 +349,7 @@
     <link href="http://jocolorful.com/2021/06/19/Weekly/"/>
     <id>http://jocolorful.com/2021/06/19/Weekly/</id>
     <published>2021-06-19T13:20:31.000Z</published>
-    <updated>2021-06-30T00:57:04.858Z</updated>
+    <updated>2021-07-08T01:02:59.858Z</updated>
     
     
       
@@ -441,29 +466,6 @@
       
     
     
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Babel</title>
-    <link href="http://jocolorful.com/2020/12/18/%E5%89%8D%E7%AB%AF-babel/"/>
-    <id>http://jocolorful.com/2020/12/18/%E5%89%8D%E7%AB%AF-babel/</id>
-    <published>2020-12-18T08:35:19.000Z</published>
-    <updated>2021-07-07T00:41:56.581Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="前端相关" scheme="http://jocolorful.com/categories/%E5%89%8D%E7%AB%AF%E7%9B%B8%E5%85%B3/"/>
     
     
   </entry>
