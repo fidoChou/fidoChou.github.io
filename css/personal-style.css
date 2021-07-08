@@ -3,6 +3,12 @@
   scroll-behavior: smooth;
 }
 
+code, kbd, pre, samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+  color: #abb2bf;
+}
+
 html {
   width: 100vw;
   height: 100vh;
