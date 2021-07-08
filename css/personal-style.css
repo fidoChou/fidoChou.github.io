@@ -20,16 +20,17 @@ body {
 
 .article-content blockquote {
   background: rgba(0, 0, 0, 0.02);
-  border-left: 6px solid rgba(0, 0, 0, 0.2);
+  border-left: 6px solid #6190e8;
   padding: 1px 10px;
   border-radius: 5px;
   margin: 0 14px 14px;
+  opacity: 0.9;
 }
 
 .article-content blockquote  p {
   line-height: 24px;
   border-radius: 5px;
-  font-size: 13px;
+  font-size: 14px;
 }
 .article-content li {
   margin-bottom: 10px;
@@ -38,8 +39,6 @@ body {
 .page-header {
   background: transparent;
 }
-
-
 
 .layout {
   overflow: hidden;
@@ -136,6 +135,9 @@ code {
   position: relative;
 }
 
+.highlight pre {
+  white-space: pre !important;
+}
 
 .highlight::after {
   top: 12px;
